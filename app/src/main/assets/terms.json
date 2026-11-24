@@ -1,0 +1,2052 @@
+[
+  {
+    "term": "API",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆော့ဖ်ဝဲနှစ်ခု တစ်ခုနှင့်တစ်ခု စကားပြောဆက်သွယ်နိုင်အောင် စည်းမျဉ်းများ သတ်မှတ်ပေးထားသော ကြားခံစနစ်ဖြစ်သည်။",
+    "meaningEn": "Application Programming Interface: a set of rules that lets two software applications communicate with each other.",
+    "example": "စားသောက်ဆိုင်တွင် မှာယူသူနှင့် စားဖိုမှူးကြား အမှာစာပို့ပေးသော စားပွဲထိုးကဲ့သို့ မိုးလေဝသအက်ပ်က ဆာဗာမှ အချက်အလက်ကို API ဖြင့် တောင်းယူသည်။",
+    "codeSnippet": "GET /api/v1/terms/42 HTTP/1.1\nHost: api.example.com\nAccept: application/json\n\nHTTP/1.1 200 OK\n{\"id\": 42, \"term\": \"API\"}",
+    "codeLanguage": "http",
+    "usageNote": "မိုဘိုင်းအက်ပ်နှင့် ဝဘ်အက်ပ်များက Backend ဆာဗာမှ ဒေတာရယူခြင်းနှင့် ပေးပို့ခြင်းအတွက် နေ့စဉ်အသုံးပြုသည်။"
+  },
+  {
+    "term": "Algorithm",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ပြဿနာတစ်ခုကို ဖြေရှင်းရန် သို့မဟုတ် အလုပ်တစ်ခုပြီးမြောက်ရန် အဆင့်ဆင့် သတ်မှတ်ထားသော လုပ်ဆောင်ချက်အစီအစဉ်ဖြစ်သည်။",
+    "meaningEn": "A step-by-step set of instructions designed to solve a specific problem or perform a computation.",
+    "example": "ဟင်းချက်နည်းစာအုပ်ထဲက အဆင့်ဆင့်ညွှန်ကြားချက်လိုပင် မြေပုံအက်ပ်က အတိုဆုံးလမ်းကြောင်းရှာရာတွင် Algorithm ကို သုံးသည်။",
+    "codeSnippet": "fun binarySearch(nums: List<Int>, target: Int): Int {\n    var lo = 0; var hi = nums.lastIndex\n    while (lo <= hi) {\n        val mid = (lo + hi) ushr 1\n        when {\n            nums[mid] == target -> return mid\n            nums[mid] < target -> lo = mid + 1\n            else -> hi = mid - 1",
+    "codeLanguage": "kotlin",
+    "usageNote": "ဒေတာအမြောက်အမြားကို မြန်မြန်ဆန်ဆန် ရှာဖွေစီစစ်ရန်နှင့် CPU/Memory သက်သာစေရန် သင့်တော်သော Algorithm ရွေးချယ်သုံးရသည်။"
+  },
+  {
+    "term": "Compiler",
+    "category": "Programming",
+    "difficulty": "Intermediate",
+    "meaningMy": "လူသားနားလည်သော ပရိုဂရမ်းမင်းကုဒ်ကို ကွန်ပျူတာတိုက်ရိုက်ဖတ်နိုင်သော စက်ဘာသာစကားအဖြစ် တစ်ခါတည်း ဘာသာပြန်ပေးသည့် ပရိုဂရမ်ဖြစ်သည်။",
+    "meaningEn": "A program that translates human-readable source code into machine code before execution.",
+    "example": "စာအုပ်တစ်အုပ်လုံးကို ကြိုတင်ဘာသာပြန်ပြီးမှ ဖတ်သကဲ့သို့ Kotlin သို့မဟုတ် C++ ကုဒ်ကို Compiler က အက်ပ်ဖိုင်အဖြစ် ပြောင်းပေးသည်။",
+    "codeSnippet": "# Compile Kotlin file to executable JAR\nkotlinc Main.kt -include-runtime -d app.jar\njava -jar app.jar",
+    "codeLanguage": "bash",
+    "usageNote": "ကုဒ်မRunမီ Type အမှားနှင့် Syntax အမှားများကို ကြိုတင်ဖမ်းမိစေပြီး စွမ်းဆောင်ရည်မြင့် စက်ကုဒ်ထုတ်ပေးရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Framework",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆော့ဖ်ဝဲများကို မြန်မြန်ဆန်ဆန်နှင့် စနစ်တကျ တည်ဆောက်နိုင်ရန် အခြေခံတည်ဆောက်ပုံနှင့် ကိရိယာများ အသင့်ပါဝင်သော စနစ်ဖြစ်သည်။",
+    "meaningEn": "A reusable software foundation providing structure and pre-built components for developing applications.",
+    "example": "အိမ်ဆောက်ရာတွင် အခြေခံအရိုးအထည်ကို အသင့်ချပေးထားသကဲ့သို့ Jetpack Compose သို့မဟုတ် React သည် အက်ပ်တည်ဆောက်ရန် Framework ဖြစ်သည်။",
+    "codeSnippet": "@Composable\nfun Greeting(name: String) {\n    Text(text = \"Hello, $name!\")\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "အခြေခံတည်ဆောက်ပုံကို အစကနေပြန်မရေးရဘဲ အက်ပ်၏ အဓိကလုပ်ဆောင်ချက်များကို မြန်မြန်တည်ဆောက်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Open Source",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "မည်သူမဆို ရင်းမြစ်ကုဒ်ကို လွတ်လပ်စွာ ကြည့်ရှု၊ ပြင်ဆင်၊ မျှဝေအသုံးပြုနိုင်သော ဆော့ဖ်ဝဲလိုင်စင်ပုံစံဖြစ်သည်။",
+    "meaningEn": "Software whose source code is publicly accessible for anyone to inspect, modify, and share.",
+    "example": "လူတိုင်းကြည့်ပြီး ပိုကောင်းအောင် ပြင်ဆင်နိုင်သော ဟင်းချက်နည်းကဲ့သို့ Linux နှင့် Android AOSP တို့သည် Open Source ဖြစ်သည်။",
+    "codeSnippet": "git clone https://github.com/org/project.git\ncd project\ncat LICENSE",
+    "codeLanguage": "bash",
+    "usageNote": "စိတ်ချရသော Library များကို အခမဲ့သုံးစွဲရန်၊ ကုဒ်အတွင်းပိုင်းကို စစ်ဆေးလေ့လာရန်နှင့် Community နှင့် ပူးပေါင်းပြင်ဆင်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Git",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "ကုဒ်ပြောင်းလဲမှုများကို မှတ်တမ်းတင်ထားနိုင်ပြီး အဖွဲ့လိုက်ပူးပေါင်းရေးသားရာတွင် အသုံးပြုသော ဗားရှင်းထိန်းချုပ်စနစ်ဖြစ်သည်။",
+    "meaningEn": "A distributed version control system for tracking source code changes and collaborating in teams.",
+    "example": "စာတမ်းရေးရာတွင် ယခင်မူကွဲများကို ပြန်ကြည့်နိုင်သကဲ့သို့ ကုဒ်မှားသွားလျှင် Git ဖြင့် အရင်အခြေအနေသို့ ပြန်သွားနိုင်သည်။",
+    "codeSnippet": "git init\ngit status\ngit log --oneline -n 5",
+    "codeLanguage": "git",
+    "usageNote": "ပရောဂျက်ကုဒ်ပြောင်းလဲမှုတိုင်းကို မှတ်တမ်းတင်ထားပြီး အဖွဲ့လိုက် အမှားမရှိ ပူးပေါင်းရေးသားရန် မဖြစ်မနေသုံးရသည်။"
+  },
+  {
+    "term": "Variable",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ပရိုဂရမ်အလုပ်လုပ်နေစဉ် အချက်အလက်တန်ဖိုးများကို ယာယီသိမ်းဆည်းထားရန် အမည်ပေးထားသော နေရာဖြစ်သည်။",
+    "meaningEn": "A named storage location in memory that holds a value which can be read or updated by a program.",
+    "example": "အမည်ကပ်ထားသော သေတ္တာတစ်လုံးထဲ ပစ္စည်းထည့်သိမ်းသကဲ့သို့ အသုံးပြုသူ၏ အသက်ကို age ဟူသော Variable ထဲတွင် သိမ်းထားသည်။",
+    "codeSnippet": "val appName = \"TechTerms\"   // read-only\nvar count = 0               // mutable\ncount += 1",
+    "codeLanguage": "kotlin",
+    "usageNote": "ပြောင်းလဲမှုမလိုသော တန်ဖိုးများအတွက် val ကို ဦးစားပေးသုံးခြင်းဖြင့် မထင်မှတ်သော Bug များကို လျှော့ချနိုင်သည်။"
+  },
+  {
+    "term": "Function",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "တိကျသောအလုပ်တစ်ခုကို လုပ်ဆောင်ရန် စုစည်းရေးသားထားပြီး လိုအပ်တိုင်း ပြန်ခေါ်သုံးနိုင်သော ကုဒ်အပိုင်းဖြစ်သည်။",
+    "meaningEn": "A reusable block of code designed to perform a specific task when called.",
+    "example": "ကော်ဖီဖျော်စက်ခလုတ်တစ်ချက်နှိပ်ရုံဖြင့် ကော်ဖီရသကဲ့သို့ စျေးနှုန်းပေါင်းပေးသည့် Function ကို လိုအပ်သည့်နေရာတိုင်းတွင် ပြန်ခေါ်သုံးနိုင်သည်။",
+    "codeSnippet": "fun calculateTotal(price: Double, qty: Int): Double {\n    return price * qty\n}\nval total = calculateTotal(1500.0, 2)",
+    "codeLanguage": "kotlin",
+    "usageNote": "ထပ်ခါတလဲလဲသုံးရသော Logic များကို သီးသန့်ခွဲထုတ်ရေးခြင်းဖြင့် ကုဒ်ဖတ်ရလွယ်ပြီး Unit Test ရေးရန် ပိုအဆင်ပြေစေသည်။"
+  },
+  {
+    "term": "Recursion",
+    "category": "Programming",
+    "difficulty": "Intermediate",
+    "meaningMy": "Function တစ်ခုက ပြဿနာကြီးကို အပိုင်းငယ်များခွဲပြီး ဖြေရှင်းရန် မိမိကိုယ်ကို ပြန်လည်ခေါ်ဆိုသည့် နည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "A programming technique where a function calls itself to solve smaller subproblems until a base case is reached.",
+    "example": "ဖိုလ်ဒါထဲတွင် ဖိုလ်ဒါအသေးများ ထပ်ဆင့်ပါနေချိန် ဖိုင်အားလုံးကို ရှာဖွေရာ၌ Recursion ကို အသုံးပြုလေ့ရှိသည်။",
+    "codeSnippet": "fun factorial(n: Int): Long {\n    if (n <= 1) return 1L\n    return n * factorial(n - 1)\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "Tree သို့မဟုတ် ဖိုလ်ဒါအဆင့်ဆင့်ကဲ့သို့ ထပ်ဆင့်တည်ဆောက်ပုံများကို ရှင်းလင်းစွာ ဖြေရှင်းရာတွင် အသုံးဝင်သည်။"
+  },
+  {
+    "term": "IDE",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ကုဒ်ရေးခြင်း၊ စမ်းသပ်ခြင်းနှင့် အမှားရှာခြင်းတို့ကို တစ်နေရာတည်းတွင် လုပ်ဆောင်နိုင်သော ဆော့ဖ်ဝဲရေးသားရေးကိရိယာဖြစ်သည်။",
+    "meaningEn": "Integrated Development Environment: an all-in-one application for writing, building, and debugging code.",
+    "example": "လက်သမားအတွက် ကိရိယာစုံပါသော အလုပ်ရုံကဲ့သို့ Android အက်ပ်ရေးရာတွင် Android Studio သည် IDE ဖြစ်သည်။"
+  },
+  {
+    "term": "Debugging",
+    "category": "Programming",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆော့ဖ်ဝဲထဲတွင် ဖြစ်ပေါ်နေသော အမှားများ (Bugs) ကို ရှာဖွေဖော်ထုတ်ပြီး ပြုပြင်ခြင်းလုပ်ငန်းစဉ်ဖြစ်သည်။",
+    "meaningEn": "The process of identifying, analyzing, and fixing defects or unexpected behavior in software.",
+    "example": "ကားစက်မနှိုးသည့်အခါ ဘယ်အစိတ်အပိုင်းချို့ယွင်းနေလဲ စစ်ဆေးပြုပြင်သကဲ့သို့ အက်ပ်ပိတ်သွားသည့်အကြောင်းရင်းကို ရှာဖွေပြင်ဆင်ခြင်းဖြစ်သည်။",
+    "codeSnippet": "Log.d(\"TermRepo\", \"Loaded ${terms.size} terms\")\ncheck(terms.isNotEmpty()) { \"Terms table is empty\" }",
+    "codeLanguage": "kotlin",
+    "usageNote": "Breakpoint ချခြင်းနှင့် Log စစ်ခြင်းဖြင့် Runtime အမှားများ၏ အရင်းအမြစ်ကို တိတိကျကျ ရှာဖွေပြင်ဆင်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Object-Oriented Programming",
+    "category": "Programming",
+    "difficulty": "Intermediate",
+    "meaningMy": "အချက်အလက်နှင့် လုပ်ဆောင်ချက်များကို Object များအဖြစ် စုစည်းတည်ဆောက်သည့် ပရိုဂရမ်းမင်းပုံစံဖြစ်သည်။",
+    "meaningEn": "A programming paradigm that organizes software around objects combining data and behavior.",
+    "example": "ကားတစ်စီးတွင် အရောင်ဟူသော အချက်အလက်နှင့် မောင်းနှင်ခြင်းဟူသော လုပ်ဆောင်ချက်ကို Car Object တစ်ခုတည်းအဖြစ် ဖန်တီးရေးသားခြင်းဖြစ်သည်။",
+    "codeSnippet": "interface Greeter { fun greet(): String }\nclass User(val name: String) : Greeter {\n    override fun greet() = \"Hello, $name\"\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "စနစ်ကြီးများတွင် ဒေတာနှင့် လုပ်ဆောင်ချက်များကို Module ခွဲ၍ ထိန်းသိမ်းပြင်ဆင်ရလွယ်အောင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Concurrency",
+    "category": "Programming",
+    "difficulty": "Advanced",
+    "meaningMy": "အလုပ်များစွာကို တစ်ပြိုင်နက်တည်း သို့မဟုတ် အလှည့်ကျ လျင်မြန်စွာ စီမံလုပ်ဆောင်နိုင်သော စွမ်းရည်ဖြစ်သည်။",
+    "meaningEn": "The ability of a system to manage multiple tasks whose execution overlaps in time.",
+    "example": "စားဖိုမှူးတစ်ဦးက ထမင်းအိုးတည်ထားစဉ် ဟင်းရွက်လှီးနေသကဲ့သို့ အက်ပ်က ဒေတာဖတ်နေစဉ် မျက်နှာပြင်မရပ်တန့်စေရန် Coroutines ဖြင့် လုပ်ဆောင်သည်။",
+    "codeSnippet": "viewModelScope.launch {\n    val term = withContext(Dispatchers.IO) {\n        repository.getTermOfTheDay()\n    }\n    _uiState.update { it.copy(term = term) }\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "Database ဖတ်ခြင်းနှင့် Network ခေါ်ခြင်းများကို Background တွင်လုပ်ဆောင်ပြီး UI မထစ်အောင် ထိန်းသိမ်းရန် သုံးသည်။"
+  },
+  {
+    "term": "Garbage Collection",
+    "category": "Programming",
+    "difficulty": "Intermediate",
+    "meaningMy": "ပရိုဂရမ်က ဆက်လက်မသုံးတော့သော မမ်မိုရီနေရာများကို စနစ်က အလိုအလျောက် ရှင်းလင်းပေးသည့် လုပ်ငန်းစဉ်ဖြစ်သည်။",
+    "meaningEn": "Automatic memory management that reclaims memory occupied by objects no longer in use.",
+    "example": "စားပွဲပေါ်က အသုံးမလိုတော့သော ပန်းကန်ဟောင်းများကို ရှင်းပေးသကဲ့သို့ Kotlin နှင့် Java တွင် မသုံးတော့သည့် Object များကို အလိုအလျောက်ဖျက်ပေးသည်။"
+  },
+  {
+    "term": "Bandwidth",
+    "category": "Networking",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ရက်လိုင်းတစ်ခုမှ တစ်စက္ကန့်အတွင်း အများဆုံး ပေးပို့နိုင်သော အချက်အလက်ပမာဏဖြစ်သည်။",
+    "meaningEn": "The maximum rate of data transfer across a network connection in a given amount of time.",
+    "example": "ရေပိုက်ကြီးလေ ရေများများစီးနိုင်လေဖြစ်သကဲ့သို့ Bandwidth များလေ HD ဗီဒီယိုများကို မထစ်ဘဲ ကြည့်နိုင်လေဖြစ်သည်။"
+  },
+  {
+    "term": "DNS",
+    "category": "Networking",
+    "difficulty": "Beginner",
+    "meaningMy": "လူမှတ်မိလွယ်သော ဝဘ်ဆိုက်အမည်များကို ကွန်ပျူတာသိသော IP လိပ်စာများအဖြစ် ပြောင်းလဲပေးသည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "Domain Name System: translates human-readable domain names into numeric IP addresses.",
+    "example": "ဖုန်းစာအုပ်ထဲက နာမည်ရှာပြီး ဖုန်းနံပါတ်ထုတ်ပေးသကဲ့သို့ google.com ဟု ရိုက်လိုက်လျှင် DNS က သက်ဆိုင်ရာ IP လိပ်စာကို ရှာပေးသည်။",
+    "codeSnippet": "dig +short example.com A\nnslookup example.com",
+    "codeLanguage": "bash",
+    "usageNote": "Domain ချိတ်ဆက်မှု မှန်မမှန် စစ်ဆေးခြင်းနှင့် ဆာဗာပြောင်းရွှေ့ရာတွင် DNS record များကို စစ်ဆေးရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "IP Address",
+    "category": "Networking",
+    "difficulty": "Beginner",
+    "meaningMy": "အင်တာနက် သို့မဟုတ် ကွန်ရက်တစ်ခုအတွင်း ချိတ်ဆက်ထားသော စက်တစ်ခုစီကို ခွဲခြားသတ်မှတ်ပေးသည့် ဂဏန်းလိပ်စာဖြစ်သည်။",
+    "meaningEn": "Internet Protocol Address: a unique numerical identifier assigned to each device on a network.",
+    "example": "စာတိုက်ပို့ရန် အိမ်လိပ်စာလိုအပ်သကဲ့သို့ သင့်ဖုန်းထံ ဒေတာမှန်ကန်စွာရောက်စေရန် IP Address ကို အသုံးပြုသည်။",
+    "codeSnippet": "ip addr show\nping -c 3 8.8.8.8",
+    "codeLanguage": "bash",
+    "usageNote": "ဆာဗာချိတ်ဆက်မှု စစ်ဆေးခြင်း၊ Firewall စည်းမျဉ်းသတ်မှတ်ခြင်းနှင့် ကွန်ရက်ပြဿနာရှာဖွေခြင်းတို့တွင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Router",
+    "category": "Networking",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ရက်တစ်ခုနှင့်တစ်ခုကြား ဒေတာအထုပ်များကို မှန်ကန်သောလမ်းကြောင်းအတိုင်း ပို့ဆောင်ပေးသည့် စက်ပစ္စည်းဖြစ်သည်။",
+    "meaningEn": "A networking device that forwards data packets between computer networks and directs internet traffic.",
+    "example": "လမ်းဆုံတွင် ယာဉ်ထိန်းရဲက ကားများကို လမ်းညွှန်ပေးသကဲ့သို့ အိမ်သုံး Wi-Fi Router က ဖုန်းနှင့် ကွန်ပျူတာများကို အင်တာနက်ခွဲဝေပေးသည်။"
+  },
+  {
+    "term": "VPN",
+    "category": "Networking",
+    "difficulty": "Beginner",
+    "meaningMy": "အများသုံးအင်တာနက်ပေါ်တွင် ဒေတာများကို ကုဒ်ဝှက်ပြီး လုံခြုံသော သီးသန့်လမ်းကြောင်းတစ်ခု ဖန်တီးပေးသည့် နည်းပညာဖြစ်သည်။",
+    "meaningEn": "Virtual Private Network: creates an encrypted tunnel over a public network to protect privacy and data.",
+    "example": "အများသုံးကော်ဖီဆိုင် Wi-Fi သုံးသည့်အခါ အခြားသူများ ခိုးမကြည့်နိုင်အောင် လုံခြုံသော ဥမင်လိုဏ်ခေါင်းထဲမှ သွားသကဲ့သို့ VPN ကို ဖွင့်သုံးကြသည်။"
+  },
+  {
+    "term": "Latency",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဒေတာတောင်းဆိုချက်တစ်ခု ပေးပို့ချိန်မှ ပြန်လည်တုံ့ပြန်ချက် ရရှိချိန်အထိ ကြာမြင့်သော အချိန်ဖြစ်သည်။",
+    "meaningEn": "The time delay between sending a request over a network and receiving the first response.",
+    "example": "အွန်လိုင်းဂိမ်းကစားရာတွင် ခလုတ်နှိပ်ပြီးမှ ဇာတ်ကောင်က နောက်ကျပြီး လှုပ်ရှားခြင်းသည် Latency မြင့်နေခြင်းကြောင့်ဖြစ်သည်။",
+    "codeSnippet": "curl -w \"TTFB: %{time_starttransfer}s\\nTotal: %{time_total}s\\n\" \\\n  -o /dev/null -s https://example.com",
+    "codeLanguage": "bash",
+    "usageNote": "API တုံ့ပြန်ချိန် နှေးနေသော အကြောင်းရင်းကို တိုင်းတာပြီး Cache သို့မဟုတ် CDN ထည့်ရန် ဆုံးဖြတ်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "TCP/IP",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "အင်တာနက်ပေါ်တွင် ဒေတာများကို အပိုင်းငယ်များခွဲ၍ မပျောက်ပျက်ဘဲ မှန်ကန်စွာ ပေးပို့နိုင်ရန် အသုံးပြုသည့် အခြေခံစည်းမျဉ်းစုဖြစ်သည်။",
+    "meaningEn": "A foundational suite of communication protocols governing how data is packetized, addressed, and reliably transmitted across networks.",
+    "example": "စာအုပ်ကြီးတစ်အုပ်ကို စာမျက်နှာနံပါတ်တပ်ပြီး စာအိတ်များခွဲပို့သကဲ့သို့ TCP/IP က ဒေတာများကို ပြန်စုစည်းပေးသည်။",
+    "codeSnippet": "# Check active TCP listening sockets\nss -tulnp | head -n 5",
+    "codeLanguage": "bash",
+    "usageNote": "Backend ဝန်ဆောင်မှုများ မည်သည့် Port တွင် နားထောင်နေကြောင်းနှင့် ချိတ်ဆက်မှုအခြေအနေကို စစ်ဆေးရန် သုံးသည်။"
+  },
+  {
+    "term": "Packet",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ရက်မှတစ်ဆင့် ပေးပို့ရန်အတွက် ဖိုင် သို့မဟုတ် ဒေတာကြီးများကို ပိုင်းခြားထားသော အချက်အလက်အထုပ်ငယ်ဖြစ်သည်။",
+    "meaningEn": "A small formatted unit of data carried across a packet-switched network.",
+    "example": "ဓာတ်ပုံတစ်ပုံကို မက်ဆေ့ချ်ပို့လိုက်သည့်အခါ ကွန်ရက်က Packet ငယ်ပေါင်းများစွာခွဲပို့ပြီး လက်ခံသူဖုန်းတွင် ပြန်ဆက်ပေးသည်။"
+  },
+  {
+    "term": "Proxy Server",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "အသုံးပြုသူနှင့် အင်တာနက်ကြား ကြားခံအဖြစ် ရပ်တည်ပြီး တောင်းဆိုချက်များကို ကိုယ်စားလုပ်ဆောင်ပေးသော ဆာဗာဖြစ်သည်။",
+    "meaningEn": "An intermediary server that forwards requests between clients and external servers for privacy, caching, or filtering.",
+    "example": "ကိုယ်စားလှယ်တစ်ဦးမှတစ်ဆင့် စာပေးပို့သကဲ့သို့ ရုံးကွန်ရက်များတွင် ဝဘ်ဆိုက်အသွားအလာကို ထိန်းချုပ်ရန် Proxy Server ကို သုံးသည်။",
+    "codeSnippet": "export HTTP_PROXY=\"http://proxy.corp:8080\"\ncurl -I https://example.com",
+    "codeLanguage": "bash",
+    "usageNote": "ကုမ္ပဏီကွန်ရက်အတွင်း အင်တာနက်ထွက်ပေါက် ထိန်းချုပ်ခြင်းနှင့် API တောင်းဆိုမှုများကို ကြားဖြတ်စစ်ဆေးခြင်းတွင် သုံးသည်။"
+  },
+  {
+    "term": "MAC Address",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ရက်ချိတ်ဆက်နိုင်သော စက်ပစ္စည်းတိုင်း၏ ဟာ့ဒ်ဝဲတွင် စက်ရုံမှ အမြဲတမ်းထည့်သွင်းပေးထားသော သီးသန့်နံပါတ်ဖြစ်သည်။",
+    "meaningEn": "Media Access Control Address: a permanent hardware identifier assigned to a network interface card.",
+    "example": "IP လိပ်စာက ပြောင်းနိုင်သော အိမ်လိပ်စာနှင့်တူပြီး MAC Address က မပြောင်းလဲသော မှတ်ပုံတင်နံပါတ်နှင့် တူသည်။"
+  },
+  {
+    "term": "Subnet",
+    "category": "Networking",
+    "difficulty": "Advanced",
+    "meaningMy": "ကွန်ရက်ကြီးတစ်ခုကို စီမံခန့်ခွဲရလွယ်ကူပြီး လုံခြုံစေရန် အတွင်းပိုင်းကွန်ရက်ငယ်များအဖြစ် ခွဲခြားထားခြင်းဖြစ်သည်။",
+    "meaningEn": "A logical subdivision of an IP network used to improve routing efficiency and security isolation.",
+    "example": "ကုမ္ပဏီကြီးတစ်ခုတွင် ငွေစာရင်းဌာနနှင့် ဧည့်သည် Wi-Fi ကို သီးခြားကွန်ရက်ငယ်များအဖြစ် Subnet ခွဲထားလေ့ရှိသည်။"
+  },
+  {
+    "term": "Port",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "စက်တစ်လုံးတည်းတွင် အလုပ်လုပ်နေသော ကွန်ရက်ဝန်ဆောင်မှုအမျိုးမျိုးကို ခွဲခြားဆက်သွယ်ပေးသည့် ဂဏန်းတံခါးပေါက်ဖြစ်သည်။",
+    "meaningEn": "A logical numeric endpoint used by operating systems to direct network traffic to specific services or applications.",
+    "example": "တိုက်ခန်းတစ်လုံး၏ လိပ်စာက IP ဖြစ်ပြီး အခန်းနံပါတ်က Port ဖြစ်သကဲ့သို့ HTTPS ဝဘ်ဆိုက်များသည် ပုံမှန်အားဖြင့် Port 443 ကို သုံးသည်။",
+    "codeSnippet": "# Find which process is using port 8080\nlsof -i :8080",
+    "codeLanguage": "bash",
+    "usageNote": "Local ဆာဗာနှစ်ခု Port တိုက်နေသည့်အခါ မည်သည့်ပရိုဆက်စ်က သုံးနေကြောင်း ရှာဖွေရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "DHCP",
+    "category": "Networking",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ရက်ထဲသို့ ဝင်ရောက်လာသော စက်များကို IP လိပ်စာများ အလိုအလျောက် ခွဲဝေပေးသည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "Dynamic Host Configuration Protocol: automatically assigns IP addresses and network settings to devices.",
+    "example": "Wi-Fi ချိတ်လိုက်ရုံဖြင့် IP လိပ်စာကို ကိုယ်တိုင်မရိုက်ရဘဲ Router က DHCP ဖြင့် အလိုအလျောက် ချပေးသည်။"
+  },
+  {
+    "term": "WebSocket",
+    "category": "Networking",
+    "difficulty": "Advanced",
+    "meaningMy": "အသုံးပြုသူနှင့် ဆာဗာကြား တစ်ကြိမ်ချိတ်ဆက်ထားရုံဖြင့် နှစ်ဖက်လုံးမှ ဒေတာကို အချိန်နှင့်တပြေးညီ အပြန်အလှန်ပို့နိုင်သော စနစ်ဖြစ်သည်။",
+    "meaningEn": "A communication protocol providing persistent, full-duplex, real-time data channels over a single TCP connection.",
+    "example": "စာတိုပို့အက်ပ်များတွင် စာမျက်နှာကို Reload မလုပ်ဘဲ မက်ဆေ့ချ်အသစ်ချက်ချင်းပေါ်လာစေရန် WebSocket ကို အသုံးပြုသည်။",
+    "codeSnippet": "const ws = new WebSocket(\"wss://chat.example.com/ws\");\nws.onmessage = (e) => console.log(e.data);\nws.onopen = () => ws.send(JSON.stringify({ type: \"ping\" }));",
+    "codeLanguage": "js",
+    "usageNote": "Chat အက်ပ်၊ Live ဈေးနှုန်းပြသမှုနှင့် အချိန်နှင့်တပြေးညီ Notification စနစ်များ တည်ဆောက်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Machine Learning",
+    "category": "AI",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ပျူတာကို စည်းမျဉ်းအားလုံး တိုက်ရိုက်မရေးဘဲ အချက်အလက်များမှတစ်ဆင့် ကိုယ်တိုင်သင်ယူခန့်မှန်းတတ်အောင် ပြုလုပ်သည့် AI နည်းပညာဖြစ်သည်။",
+    "meaningEn": "A branch of artificial intelligence where systems learn patterns from data to make predictions or decisions.",
+    "example": "အီးမေးလ်ဟောင်းထောင်ပေါင်းများစွာကို လေ့လာပြီး Spam မေးလ်ဟုတ်မဟုတ် အလိုအလျောက် ခွဲခြားပေးခြင်းသည် Machine Learning ဖြစ်သည်။"
+  },
+  {
+    "term": "Neural Network",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "လူ့ဦးနှောက်၏ အာရုံကြောဆဲလ်များ ချိတ်ဆက်ပုံကို အတုယူ၍ အချက်အလက်အဆင့်ဆင့် သင်ယူနိုင်အောင် တည်ဆောက်ထားသော သင်္ချာပုံစံဖြစ်သည်။",
+    "meaningEn": "A computing model composed of interconnected layers of nodes inspired by the human brain to recognize complex patterns.",
+    "example": "ဓာတ်ပုံတစ်ပုံထဲတွင် ကြောင်လား ခွေးလား ခွဲခြားနိုင်ရန် အရောင်နှင့် ပုံသဏ္ဌာန်များကို Neural Network အလွှာများဖြင့် စစ်ဆေးသည်။"
+  },
+  {
+    "term": "Deep Learning",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "အလွှာပေါင်းများစွာပါဝင်သော Neural Network များကို သုံး၍ အသံ၊ ပုံရိပ်နှင့် ဘာသာစကားတို့ကို နက်နက်နဲနဲ သင်ယူသည့် နည်းပညာဖြစ်သည်။",
+    "meaningEn": "A subset of machine learning using multi-layered neural networks to learn complex representations from large datasets.",
+    "example": "အသံဖြင့်စာရိုက်ခြင်းနှင့် အလိုအလျောက် ဘာသာပြန်စနစ်များသည် Deep Learning ကြောင့် ပိုမိုတိကျလာသည်။"
+  },
+  {
+    "term": "Large Language Model",
+    "category": "AI",
+    "difficulty": "Beginner",
+    "meaningMy": "စာသားအမြောက်အမြားကို လေ့လာသင်ယူထားပြီး လူသားဘာသာစကားကို နားလည်ကာ စာပြန်ရေးသားနိုင်သော AI မော်ဒယ်ကြီးဖြစ်သည်။",
+    "meaningEn": "An AI model trained on vast amounts of text to understand, summarize, translate, and generate human language.",
+    "example": "မေးခွန်းများကို ရှင်းပြပေးခြင်း၊ စာအကျဉ်းချုပ်ပေးခြင်းတို့ကို Large Language Model (LLM) များက လုပ်ဆောင်နိုင်သည်။"
+  },
+  {
+    "term": "Natural Language Processing",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ပျူတာများက လူသားပြောဆိုရေးသားသော ဘာသာစကားကို နားလည်ပြီး ပြန်လည်တုံ့ပြန်နိုင်အောင် လေ့လာသည့် AI နယ်ပယ်ဖြစ်သည်။",
+    "meaningEn": "The field of AI focused on enabling computers to interpret, analyze, and generate human language.",
+    "example": "မြန်မာစာကို အင်္ဂလိပ်စာသို့ အလိုအလျောက် ဘာသာပြန်ပေးခြင်းသည် Natural Language Processing (NLP) ၏ အသုံးချမှုဖြစ်သည်။"
+  },
+  {
+    "term": "Computer Vision",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ပျူတာများက ဓာတ်ပုံနှင့် ဗီဒီယိုများထဲမှ အရာဝတ္ထုများကို မြင်သိနားလည်နိုင်အောင် ပြုလုပ်ပေးသော AI နည်းပညာဖြစ်သည်။",
+    "meaningEn": "An AI discipline that enables machines to extract meaningful information from digital images and video.",
+    "example": "ဖုန်းကင်မရာဖြင့် မျက်နှာစကန်ဖတ်ပြီး လော့ခ်ဖွင့်ခြင်း သို့မဟုတ် စာရွက်ပေါ်က စာကို ဖတ်ယူခြင်းသည် Computer Vision ဖြစ်သည်။"
+  },
+  {
+    "term": "Training Data",
+    "category": "AI",
+    "difficulty": "Beginner",
+    "meaningMy": "AI မော်ဒယ်တစ်ခု ပုံစံများကို သင်ယူတတ်မြောက်စေရန် ကျွေးမွေးအသုံးပြုသော နမူနာအချက်အလက်အစုဖြစ်သည်။",
+    "meaningEn": "The dataset used to teach a machine learning model how to recognize patterns and make predictions.",
+    "example": "ကျောင်းသားတစ်ဦး လေ့ကျင့်ခန်းစာအုပ်များစွာ ဖတ်ရသကဲ့သို့ AI မော်ဒယ်တိကျရန် အရည်အသွေးကောင်းသော Training Data လိုအပ်သည်။"
+  },
+  {
+    "term": "Overfitting",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "AI မော်ဒယ်က လေ့ကျင့်ဒေတာကို အလွတ်ကျက်သလို မှတ်မိသွားပြီး ဒေတာအသစ်များတွင် မှန်ကန်စွာ မခန့်မှန်းနိုင်တော့သည့် ပြဿနာဖြစ်သည်။",
+    "meaningEn": "A modeling error where an AI memorizes training examples too closely and performs poorly on unseen data.",
+    "example": "မေးခွန်းဟောင်းကို အလွတ်ကျက်ထားသော်လည်း စာမေးပွဲတွင် မေးခွန်းပုံစံအနည်းငယ်ပြောင်းလိုက်လျှင် မဖြေနိုင်ခြင်းနှင့် တူသည်။"
+  },
+  {
+    "term": "Token",
+    "category": "AI",
+    "difficulty": "Beginner",
+    "meaningMy": "ဘာသာစကား AI မော်ဒယ်များက စာသားများကို ဖတ်ရှုတွက်ချက်ရာတွင် ပိုင်းခြားအသုံးပြုသော စကားလုံး သို့မဟုတ် စာလုံးအပိုင်းအစဖြစ်သည်။",
+    "meaningEn": "A fundamental unit of text, such as a word or subword piece, processed by a language model.",
+    "example": "ဝါကျတစ်ကြောင်းကို AI က တိုက်ရိုက်မဖတ်ဘဲ Token အပိုင်းလေးများအဖြစ် ခွဲထုတ်ပြီးမှ တွက်ချက်သည်။",
+    "codeSnippet": "tokens = [\"Tech\", \"Terms\", \" app\"]\nprint(f\"Token count: {len(tokens)}\")",
+    "codeLanguage": "python",
+    "usageNote": "LLM API များ၏ Context Limit နှင့် ကုန်ကျစရိတ်ကို ခန့်မှန်းထိန်းချုပ်ရန် Token အရေအတွက်ကို တွက်ချက်သုံးသည်။"
+  },
+  {
+    "term": "Prompt",
+    "category": "AI",
+    "difficulty": "Beginner",
+    "meaningMy": "AI မော်ဒယ်ထံမှ လိုချင်သော ရလဒ်ရရှိစေရန် အသုံးပြုသူက ပေးပို့သော ညွှန်ကြားချက် သို့မဟုတ် မေးခွန်းဖြစ်သည်။",
+    "meaningEn": "The text or multimodal input given to an AI model to guide its response or output.",
+    "example": "တိကျရှင်းလင်းသော Prompt ရေးပေးလေ AI က ပိုမိုအသုံးဝင်သော အဖြေကို ထုတ်ပေးနိုင်လေဖြစ်သည်။",
+    "codeSnippet": "Role: Senior Android engineer\nTask: Explain Room Migration in 2 Burmese sentences.\nFormat: Plain text, no bullet points.",
+    "codeLanguage": "text",
+    "usageNote": "AI မော်ဒယ်ထံမှ တိကျပြီး တစ်သမတ်တည်းဖြစ်သော အဖြေရရန် Role၊ Task နှင့် Output ပုံစံကို ရှင်းလင်းစွာ သတ်မှတ်ရေးသားသည်။"
+  },
+  {
+    "term": "Inference",
+    "category": "AI",
+    "difficulty": "Intermediate",
+    "meaningMy": "သင်ယူပြီးသား AI မော်ဒယ်ကို အသုံးပြု၍ အချက်အလက်အသစ်အပေါ် အဖြေထုတ်ခြင်း သို့မဟုတ် ခန့်မှန်းခြင်းဖြစ်သည်။",
+    "meaningEn": "The process of running a trained machine learning model on new input data to generate predictions or outputs.",
+    "example": "သင်တန်းပြီးသွားသော ဆရာဝန်က လူနာအသစ်ကို စမ်းသပ်အဖြေရှာသကဲ့သို့ ဖုန်းထဲက AI က ဓာတ်ပုံအသစ်ကို ခွဲခြားပေးခြင်းသည် Inference ဖြစ်သည်။"
+  },
+  {
+    "term": "Embedding",
+    "category": "AI",
+    "difficulty": "Advanced",
+    "meaningMy": "စကားလုံး၊ ဝါကျ သို့မဟုတ် ပုံရိပ်တို့၏ အဓိပ္ပာယ်ကို ကွန်ပျူတာနှိုင်းယှဉ်နိုင်သော ဂဏန်းစာရင်း (Vector) အဖြစ် ပြောင်းလဲထားခြင်းဖြစ်သည်။",
+    "meaningEn": "A numerical vector representation of text, images, or other data that captures semantic meaning and similarity.",
+    "example": "အဓိပ္ပာယ်တူသော စကားလုံးများသည် Embedding ဂဏန်းတန်ဖိုးချင်း နီးကပ်နေသောကြောင့် ဆင်တူစာသားများကို ရှာဖွေရာတွင် သုံးသည်။",
+    "codeSnippet": "# Cosine similarity between two vector embeddings\nsim = dot(a, b) / (norm(a) * norm(b))",
+    "codeLanguage": "python",
+    "usageNote": "စာလုံးအတိအကျမတူသော်လည်း အဓိပ္ပာယ်ဆင်တူသော စာတမ်းများကို Semantic Search ဖြင့် ရှာဖွေရာတွင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Transformer",
+    "category": "AI",
+    "difficulty": "Advanced",
+    "meaningMy": "ဝါကျတစ်ခုအတွင်းရှိ စကားလုံးအချင်းချင်း ဆက်စပ်မှုကို Attention နည်းလမ်းဖြင့် တစ်ပြိုင်နက် နားလည်နိုင်သော Neural Network တည်ဆောက်ပုံဖြစ်သည်။",
+    "meaningEn": "A deep learning architecture using self-attention mechanisms to model relationships across entire sequences efficiently.",
+    "example": "ယနေ့ခေတ် ဘာသာစကား AI မော်ဒယ်ကြီးအများစုသည် Transformer တည်ဆောက်ပုံကို အခြေခံထားကြသည်။"
+  },
+  {
+    "term": "Fine-Tuning",
+    "category": "AI",
+    "difficulty": "Advanced",
+    "meaningMy": "ကြိုတင်လေ့ကျင့်ပြီးသား AI မော်ဒယ်တစ်ခုကို သီးသန့်နယ်ပယ်တစ်ခုအတွက် ပိုကျွမ်းကျင်စေရန် ဒေတာအသစ်ဖြင့် ထပ်မံလေ့ကျင့်ခြင်းဖြစ်သည်။",
+    "meaningEn": "Further training a pre-trained AI model on a smaller, specialized dataset to adapt it for a specific domain or task.",
+    "example": "အထွေထွေ AI မော်ဒယ်တစ်ခုကို ဆေးပညာစာတမ်းများဖြင့် ထပ်မံလေ့ကျင့်ပြီး ဆေးပညာအထူးပြုမော်ဒယ်အဖြစ် Fine-Tuning လုပ်ကြသည်။"
+  },
+  {
+    "term": "Encryption",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "ခွင့်ပြုချက်မရှိသူများ ဖတ်ရှုမရစေရန် အချက်အလက်များကို လျှို့ဝှက်ကုဒ်ပုံစံအဖြစ် ပြောင်းလဲသိမ်းဆည်းပေးသည့် နည်းပညာဖြစ်သည်။",
+    "meaningEn": "The process of encoding readable data into ciphertext so only authorized parties with the key can read it.",
+    "example": "လျှို့ဝှက်သော့ခတ်ထားသော စာအိတ်ကဲ့သို့ စာတိုပို့အက်ပ်များတွင် မက်ဆေ့ချ်များကို Encryption ဖြင့် ကာကွယ်ထားသည်။",
+    "codeSnippet": "# Encrypt a file with AES-256-CBC\nopenssl enc -aes-256-cbc -pbkdf2 -in secret.txt -out secret.enc",
+    "codeLanguage": "bash",
+    "usageNote": "အရေးကြီးသော အသုံးပြုသူဒေတာနှင့် Backup ဖိုင်များကို သိမ်းဆည်းပေးပို့ရာတွင် ပေါက်ကြားမှုမရှိအောင် ကာကွယ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Firewall",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ရက်အတွင်း ဝင်ထွက်နေသော အချက်အလက်များကို စစ်ဆေးပြီး အန္တရာယ်ရှိသော ချိတ်ဆက်မှုများကို တားဆီးပေးသည့် လုံခြုံရေးစနစ်ဖြစ်သည်။",
+    "meaningEn": "A security system that monitors and filters incoming and outgoing network traffic based on defined rules.",
+    "example": "အဆောက်အဦဝင်ပေါက်က လုံခြုံရေးဝန်ထမ်းက ခွင့်ပြုသူကိုသာ ဝင်ခွင့်ပေးသကဲ့သို့ Firewall က မသင်္ကာဖွယ် ကွန်ရက်ဝင်ရောက်မှုများကို ပိတ်ဆို့သည်။",
+    "codeSnippet": "sudo ufw allow 22/tcp\nsudo ufw allow 443/tcp\nsudo ufw enable",
+    "codeLanguage": "bash",
+    "usageNote": "Production ဆာဗာများတွင် လိုအပ်သော Port များကိုသာ ဖွင့်ထားပြီး မလိုအပ်သော ဝင်ပေါက်အားလုံးကို ပိတ်ထားရန် သုံးသည်။"
+  },
+  {
+    "term": "Malware",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ပျူတာ သို့မဟုတ် ဖုန်းကို ပျက်စီးစေရန်၊ ဒေတာခိုးယူရန် ရည်ရွယ်ချက်ရှိရှိ ဖန်တီးထားသော အန္တရာယ်ရှိဆော့ဖ်ဝဲများကို စုပေါင်းခေါ်ဆိုခြင်းဖြစ်သည်။",
+    "meaningEn": "Malicious software designed to disrupt, damage, or gain unauthorized access to devices and data.",
+    "example": "ဗိုင်းရပ်စ်၊ Spyware နှင့် ဖိုင်များကို လော့ခ်ချငွေတောင်းသော Ransomware တို့သည် Malware အမျိုးအစားများဖြစ်သည်။"
+  },
+  {
+    "term": "Phishing",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "ယုံကြည်ရသော အဖွဲ့အစည်းဟန်ဆောင်၍ အီးမေးလ် သို့မဟုတ် မက်ဆေ့ချ်ပို့ကာ စကားဝှက်နှင့် ဘဏ်အချက်အလက်များကို လှည့်ဖြားခိုးယူခြင်းဖြစ်သည်။",
+    "meaningEn": "A social engineering attack that tricks users into revealing sensitive information through deceptive messages or fake sites.",
+    "example": "ဘဏ်မှပို့သယောင် လင့်ခ်အတုပို့ပြီး OTP ကုဒ်နှင့် စကားဝှက်တောင်းခံခြင်းသည် Phishing တိုက်ခိုက်မှုဖြစ်သည်။"
+  },
+  {
+    "term": "SSL/TLS",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဘရောက်ဇာနှင့် ဝဘ်ဆာဗာကြား ပေးပို့သော ဒေတာများကို ကုဒ်ဝှက်ကာကွယ်ပေးသည့် လုံခြုံရေးပရိုတိုကောဖြစ်သည်။",
+    "meaningEn": "Cryptographic protocols that secure communications over the internet, powering HTTPS connections.",
+    "example": "ဝဘ်ဆိုက်လိပ်စာဘားတွင် https:// နှင့် သော့ခလောက်ပုံ မြင်ရခြင်းသည် SSL/TLS ဖြင့် လုံခြုံစွာ ချိတ်ဆက်ထားကြောင်း ပြသသည်။",
+    "codeSnippet": "# Inspect TLS certificate expiry date\nopenssl s_client -connect example.com:443 </dev/null 2>/dev/null \\\n  | openssl x509 -noout -dates",
+    "codeLanguage": "bash",
+    "usageNote": "HTTPS လက်မှတ် သက်တမ်းကုန်ဆုံးမည့်ရက်ကို စစ်ဆေးပြီး ဝဘ်ဆိုက်နှင့် API ချိတ်ဆက်မှု လုံခြုံစေရန် သုံးသည်။"
+  },
+  {
+    "term": "Two-Factor Authentication",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "အကောင့်ဝင်ရာတွင် စကားဝှက်အပြင် ဖုန်း OTP ကုဒ် သို့မဟုတ် လက်ဗွေကဲ့သို့ ဒုတိယအတည်ပြုချက် ထပ်မံတောင်းခံသည့် လုံခြုံရေးစနစ်ဖြစ်သည်။",
+    "meaningEn": "A security method requiring two independent forms of verification before granting access to an account.",
+    "example": "စကားဝှက်ပေါက်ကြားသွားလျှင်တောင် ဖုန်းထဲက ဂဏန်း ၆ လုံးကုဒ်မရှိဘဲ ဝင်မရအောင် Two-Factor Authentication (2FA) က ကာကွယ်ပေးသည်။"
+  },
+  {
+    "term": "Hashing",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "အချက်အလက်တစ်ခုကို မူရင်းသို့ ပြန်ပြောင်း၍မရသော ပုံသေအရှည်ရှိ ကုဒ်တန်ဖိုးအဖြစ် တစ်ဖက်တည်း ပြောင်းလဲပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "A one-way mathematical function that converts input data into a fixed-length digest for verification or password storage.",
+    "example": "ဝဘ်ဆိုက်များသည် သင့်စကားဝှက်ကို တိုက်ရိုက်မသိမ်းဘဲ Hashing လုပ်ထားသော ကုဒ်တန်ဖိုးကိုသာ ဒေတာဘေ့စ်ထဲ သိမ်းထားသည်။",
+    "codeSnippet": "sha256sum app-release.apk",
+    "codeLanguage": "bash",
+    "usageNote": "ဖိုင်ဒေါင်းလုဒ်ဆွဲပြီးနောက် မူရင်းဖိုင်နှင့် တူမတူ စစ်ဆေးခြင်းနှင့် စကားဝှက်များကို လုံခြုံစွာ သိမ်းဆည်းခြင်းတွင် သုံးသည်။"
+  },
+  {
+    "term": "Ransomware",
+    "category": "Security",
+    "difficulty": "Beginner",
+    "meaningMy": "စက်ထဲရှိ ဖိုင်များကို ကုဒ်ဝှက်ပိတ်ဆို့လိုက်ပြီး ပြန်ဖွင့်ပေးရန် ငွေကြေးတောင်းခံသည့် အန္တရာယ်ရှိဆော့ဖ်ဝဲဖြစ်သည်။",
+    "meaningEn": "A type of malware that encrypts a victim's files and demands a ransom payment to restore access.",
+    "example": "မသိသောဖိုင်များ ဒေါင်းလုဒ်ဆွဲမိရာမှ စက်ထဲက ဓာတ်ပုံနှင့် စာရွက်စာတမ်းအားလုံး ဖွင့်မရတော့ဘဲ ငွေတောင်းခံရခြင်းမျိုးဖြစ်သည်။"
+  },
+  {
+    "term": "SQL Injection",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဝဘ်ဆိုက်၏ စာရိုက်ကွက်များထဲသို့ အန္တရာယ်ရှိ SQL ကုဒ်များ ထည့်သွင်းပြီး ဒေတာဘေ့စ်ကို ခိုးဝင်တိုက်ခိုက်သည့် နည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "A vulnerability where malicious SQL statements are inserted into input fields to manipulate a backend database.",
+    "example": "Login ကွက်ထဲတွင် ပုံမှန်နာမည်အစား SQL အမိန့်ကုဒ်ထည့်ပြီး စကားဝှက်မပါဘဲ ဝင်ရောက်ရန် ကြိုးစားခြင်းမျိုးဖြစ်သည်။",
+    "codeSnippet": "-- Safe parameterized query (never concatenate user input)\nSELECT * FROM users WHERE email = ? AND active = 1;",
+    "codeLanguage": "sql",
+    "usageNote": "အသုံးပြုသူရိုက်ထည့်သော စာသားကို SQL ထဲ တိုက်ရိုက်မပေါင်းဘဲ Parameterized Query သုံးခြင်းဖြင့် တိုက်ခိုက်မှုကို ကာကွယ်သည်။"
+  },
+  {
+    "term": "DDoS",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ပျူတာအများအပြားမှ ဆာဗာတစ်ခုတည်းသို့ တစ်ပြိုင်နက် တောင်းဆိုမှုအလွန်အကျွံပို့၍ ဝန်ဆောင်မှုရပ်တန့်သွားအောင် တိုက်ခိုက်ခြင်းဖြစ်သည်။",
+    "meaningEn": "Distributed Denial of Service: an attack that overwhelms a target server with traffic from many compromised sources.",
+    "example": "ဆိုင်ငယ်တစ်ဆိုင်၏ တံခါးဝတွင် လူထောင်ပေါင်းများစွာ တမင်ပိတ်ရပ်နေသဖြင့် ဖောက်သည်အစစ်များ မဝင်နိုင်တော့ခြင်းနှင့် တူသည်။"
+  },
+  {
+    "term": "Zero-Day Vulnerability",
+    "category": "Security",
+    "difficulty": "Advanced",
+    "meaningMy": "ဆော့ဖ်ဝဲထုတ်လုပ်သူကိုယ်တိုင် မသိရှိသေးဘဲ ပြင်ဆင်ချက်မထွက်သေးမီ တိုက်ခိုက်သူများက တွေ့ရှိအသုံးချနိုင်သော လုံခြုံရေးဟာကွက်ဖြစ်သည်။",
+    "meaningEn": "A previously unknown software flaw that has no official patch available yet when discovered or exploited.",
+    "example": "အိမ်သော့၏ အားနည်းချက်ကို သော့ကုမ္ပဏီမသိသေးခင် သူခိုးက အရင်သိသွားသကဲ့သို့ အမြန်ဆုံး Update ထုတ်ပြင်ရသော ဟာကွက်ဖြစ်သည်။"
+  },
+  {
+    "term": "OAuth",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "စကားဝှက်ကို တိုက်ရိုက်မပေးဘဲ အခြားအက်ပ်တစ်ခုအား မိမိအကောင့်အချက်အလက်ကို ကန့်သတ်ခွင့်ပြုပေးနိုင်သော စံစနစ်ဖြစ်သည်။",
+    "meaningEn": "An open authorization standard allowing apps to access user resources via tokens without sharing passwords.",
+    "example": "ဝဘ်ဆိုက်အသစ်တစ်ခုတွင် Sign in with Google နှိပ်ပြီး Google စကားဝှက်မပေးဘဲ ဝင်ရောက်ခြင်းသည် OAuth ကို အသုံးပြုခြင်းဖြစ်သည်။",
+    "codeSnippet": "GET /api/profile HTTP/1.1\nHost: api.example.com\nAuthorization: Bearer eyJhbGciOiJIUzI1NiJ9...",
+    "codeLanguage": "http",
+    "usageNote": "အသုံးပြုသူ၏ စကားဝှက်ကို မသိမ်းဘဲ Access Token ဖြင့် Google သို့မဟုတ် GitHub အကောင့်ချိတ်ဆက်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "End-to-End Encryption",
+    "category": "Security",
+    "difficulty": "Intermediate",
+    "meaningMy": "ပေးပို့သူနှင့် လက်ခံသူနှစ်ဦးသာ ဖတ်ရှုနိုင်ပြီး ကြားခံဆာဗာကုမ္ပဏီပင် ဖွင့်မဖတ်နိုင်အောင် ကုဒ်ဝှက်ထားသည့် ဆက်သွယ်ရေးစနစ်ဖြစ်သည်။",
+    "meaningEn": "A communication system where only the sender and recipient hold keys to decrypt messages, preventing intermediary access.",
+    "example": "Signal သို့မဟုတ် WhatsApp မက်ဆေ့ချ်များကို ပို့သူဖုန်းတွင် သော့ခတ်ပြီး လက်ခံသူဖုန်းရောက်မှ သော့ဖွင့်ဖတ်ခြင်းဖြစ်သည်။"
+  },
+  {
+    "term": "Public Key Cryptography",
+    "category": "Security",
+    "difficulty": "Advanced",
+    "meaningMy": "အများသိသော Public Key နှင့် ကိုယ်ပိုင်လျှို့ဝှက် Private Key ဟူ၍ သော့နှစ်ချောင်းတွဲသုံးသော ကုဒ်ဝှက်စနစ်ဖြစ်သည်။",
+    "meaningEn": "Asymmetric encryption using a matched pair of public and private keys for secure communication and digital signatures.",
+    "example": "လူတိုင်းစာထည့်နိုင်သော စာတိုက်ပုံးအပေါက်က Public Key ဖြစ်ပြီး ပိုင်ရှင်သာ ဖွင့်ယူနိုင်သော သော့က Private Key ဖြစ်သည်။",
+    "codeSnippet": "ssh-keygen -t ed25519 -C \"dev@example.com\"\ncat ~/.ssh/id_ed25519.pub",
+    "codeLanguage": "bash",
+    "usageNote": "GitHub နှင့် Linux ဆာဗာများသို့ စကားဝှက်မရိုက်ဘဲ လုံခြုံစွာ ချိတ်ဆက်ရန် Public/Private Key စုံတွဲကို ဖန်တီးသုံးသည်။"
+  },
+  {
+    "term": "CPU",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "ပရိုဂရမ်ညွှန်ကြားချက်များကို တွက်ချက်လုပ်ဆောင်ပေးသော ကွန်ပျူတာနှင့် ဖုန်း၏ အဓိကဦးနှောက်ချစ်ပ်ပြားဖြစ်သည်။",
+    "meaningEn": "Central Processing Unit: the primary processor that executes instructions and coordinates system operations.",
+    "example": "အက်ပ်ဖွင့်ခြင်း၊ စာရိုက်ခြင်းနှင့် တွက်ချက်မှုအားလုံးကို CPU က တစ်စက္ကန့်လျှင် အကြိမ်သန်းပေါင်းများစွာ လုပ်ဆောင်ပေးသည်။"
+  },
+  {
+    "term": "GPU",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "ရုပ်ပုံဂရပ်ဖစ်များ ဖန်တီးခြင်းနှင့် တစ်ပြိုင်နက်တွက်ချက်မှုများစွာကို လျင်မြန်စွာလုပ်ဆောင်နိုင်သော အထူးပြုပရိုဆက်ဆာဖြစ်သည်။",
+    "meaningEn": "Graphics Processing Unit: a specialized processor designed for parallel rendering of graphics and AI workloads.",
+    "example": "3D ဂိမ်းများ ချောမွေ့စွာပြသရန်နှင့် AI မော်ဒယ်များ လေ့ကျင့်တွက်ချက်ရန် GPU ကို အဓိကအသုံးပြုသည်။"
+  },
+  {
+    "term": "RAM",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "လက်ရှိဖွင့်ထားသော အက်ပ်များနှင့် ဒေတာများကို အမြန်ဖတ်ယူနိုင်ရန် ယာယီသိမ်းဆည်းပေးသည့် မမ်မိုရီဖြစ်သည်။",
+    "meaningEn": "Random Access Memory: fast, volatile working memory used by active programs and the operating system.",
+    "example": "အလုပ်စားပွဲကျယ်လေ စာအုပ်များများတစ်ပြိုင်နက်ဖွင့်ထားနိုင်လေဖြစ်သကဲ့သို့ RAM များလေ အက်ပ်အများကြီး တစ်ပြိုင်နက်သုံးနိုင်လေဖြစ်သည်။"
+  },
+  {
+    "term": "Cache",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "မကြာခဏပြန်သုံးရသော အချက်အလက်များကို ပိုမိုမြန်ဆန်စွာ ရယူနိုင်ရန် အနီးဆုံးနေရာတွင် ယာယီသိမ်းထားသည့် မမ်မိုရီဖြစ်သည်။",
+    "meaningEn": "A high-speed storage layer that keeps frequently accessed data close at hand to reduce load times.",
+    "example": "စာအုပ်စင်သွားမယူဘဲ အမြဲသုံးသော စာအုပ်ကို စားပွဲပေါ်တင်ထားသကဲ့သို့ CPU နှင့် ဘရောက်ဇာများက Cache ကို သုံးသည်။",
+    "codeSnippet": "Cache-Control: public, max-age=3600\nETag: \"v2-terms-126\"",
+    "codeLanguage": "http",
+    "usageNote": "မပြောင်းလဲသေးသော API တုံ့ပြန်ချက်များကို ယာယီသိမ်းထားခြင်းဖြင့် ဆာဗာဝန်အားလျှော့ချပြီး အက်ပ်ပိုမြန်စေရန် သုံးသည်။"
+  },
+  {
+    "term": "SSD",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "လည်ပတ်နေသော စက်ပိုင်းအစိတ်အပိုင်းမပါဘဲ Flash ချစ်ပ်ပြားဖြင့် ဒေတာကို အလွန်မြန်ဆန်စွာ သိမ်းဆည်းပေးသည့် ဒရိုက်ဖြစ်သည်။",
+    "meaningEn": "Solid State Drive: a fast, durable storage device using flash memory with no moving mechanical parts.",
+    "example": "HDD အဟောင်းထက် SSD တပ်ထားသော ကွန်ပျူတာသည် စက်ဖွင့်ချိန်နှင့် အက်ပ်ဖွင့်ချိန် အဆပေါင်းများစွာ ပိုမြန်သည်။"
+  },
+  {
+    "term": "Motherboard",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "CPU၊ RAM၊ SSD နှင့် အခြားဟာ့ဒ်ဝဲအစိတ်အပိုင်းအားလုံးကို တစ်ခုနှင့်တစ်ခု ချိတ်ဆက်ပေးထားသော အဓိကဆားကစ်ဘုတ်ပြားဖြစ်သည်။",
+    "meaningEn": "The main printed circuit board that connects and allows communication between all computer hardware components.",
+    "example": "မြို့တစ်မြို့ရှိ အဓိကလမ်းမကြီးများက နေရာအားလုံးကို ချိတ်ဆက်ပေးသကဲ့သို့ Motherboard က စက်အစိတ်အပိုင်းအားလုံးကို ချိတ်ပေးသည်။"
+  },
+  {
+    "term": "BIOS / UEFI",
+    "category": "Hardware",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကွန်ပျူတာစဖွင့်ချိန်တွင် ဟာ့ဒ်ဝဲများကို စစ်ဆေးပြီး Operating System ကို စတင်နှိုးပေးသည့် အခြေခံ Firmware ဖြစ်သည်။",
+    "meaningEn": "Low-level firmware that initializes hardware during startup and launches the operating system.",
+    "example": "ကွန်ပျူတာပါဝါခလုတ်နှိပ်လိုက်သည်နှင့် Windows သို့မဟုတ် Linux မတက်မီ UEFI က RAM နှင့် SSD ကို အရင်စစ်ဆေးပေးသည်။"
+  },
+  {
+    "term": "SoC",
+    "category": "Hardware",
+    "difficulty": "Intermediate",
+    "meaningMy": "CPU၊ GPU၊ မမ်မိုရီထိန်းချုပ်စနစ်နှင့် မိုဒမ်တို့ကို ချစ်ပ်ပြားတစ်ခုတည်းအတွင်း ပေါင်းစပ်ထည့်သွင်းထားသော စနစ်ဖြစ်သည်။",
+    "meaningEn": "System on a Chip: an integrated circuit combining CPU, GPU, memory controllers, and radios on a single chip.",
+    "example": "စမတ်ဖုန်းများတွင် နေရာကျဉ်းပြီး ဘက်ထရီချွေတာနိုင်ရန် Snapdragon သို့မဟုတ် Apple Silicon ကဲ့သို့ SoC များကို သုံးကြသည်။"
+  },
+  {
+    "term": "NPU",
+    "category": "Hardware",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဖုန်းနှင့် ကွန်ပျူတာပေါ်တွင် AI တွက်ချက်မှုများကို စွမ်းအင်အနည်းဆုံးဖြင့် အမြန်ဆုံးလုပ်ဆောင်နိုင်ရန် ထုတ်လုပ်ထားသော ချစ်ပ်အစိတ်အပိုင်းဖြစ်သည်။",
+    "meaningEn": "Neural Processing Unit: a dedicated hardware accelerator optimized for running neural network and AI operations.",
+    "example": "အင်တာနက်မပါဘဲ ဖုန်းထဲတွင် ကင်မရာနောက်ခံဝါးခြင်းနှင့် အသံမှစာပြောင်းခြင်းတို့ကို NPU က ဘက်ထရီမစားဘဲ လုပ်ပေးသည်။"
+  },
+  {
+    "term": "Firmware",
+    "category": "Hardware",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဟာ့ဒ်ဝဲစက်ပစ္စည်းတစ်ခု အခြေခံအလုပ်လုပ်နိုင်ရန် ချစ်ပ်ပြားထဲတွင် အမြဲတမ်းထည့်သွင်းထားသော ဆော့ဖ်ဝဲဖြစ်သည်။",
+    "meaningEn": "Specialized low-level software embedded directly into hardware memory to control device operation.",
+    "example": "Wi-Fi Router၊ Bluetooth နားကြပ်နှင့် စမတ်နာရီများ ကောင်းမွန်စွာ အလုပ်လုပ်နိုင်ရန် Firmware Update များ ပေးလေ့ရှိသည်။"
+  },
+  {
+    "term": "Clock Speed",
+    "category": "Hardware",
+    "difficulty": "Intermediate",
+    "meaningMy": "ပရိုဆက်ဆာတစ်ခုက တစ်စက္ကန့်လျှင် အလုပ်လုပ်နိုင်သော စက်ဝန်းအကြိမ်အရေအတွက်ကို GHz ဖြင့် တိုင်းတာသည့်နှုန်းဖြစ်သည်။",
+    "meaningEn": "The operating frequency of a processor, measured in gigahertz (GHz), indicating cycles per second.",
+    "example": "3.5 GHz Clock Speed ရှိသော CPU သည် တစ်စက္ကန့်လျှင် အခြေခံစက်ဝန်း ၃.၅ ဘီလီယံခန့် လည်ပတ်နိုင်သည်။"
+  },
+  {
+    "term": "USB-C",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "အပေါ်အောက်လှည့်စရာမလိုဘဲ တပ်ဆင်နိုင်ပြီး အားသွင်းခြင်း၊ ဒေတာပို့ခြင်းနှင့် ရုပ်ထွက်ပြသခြင်းတို့ကို လုပ်နိုင်သော စံချိတ်ဆက်ပေါက်ဖြစ်သည်။",
+    "meaningEn": "A compact, reversible connector standard supporting fast power delivery, high-speed data transfer, and video output.",
+    "example": "ယနေ့ခေတ် Android ဖုန်းများနှင့် လက်ပ်တော့အများစုကို USB-C ကြိုးတစ်ချောင်းတည်းဖြင့် အားသွင်းပြီး ဖိုင်ကူးနိုင်သည်။"
+  },
+  {
+    "term": "OLED",
+    "category": "Hardware",
+    "difficulty": "Beginner",
+    "meaningMy": "Pixel တစ်ခုစီက ကိုယ်ပိုင်အလင်းထုတ်ပေးနိုင်သောကြောင့် အနက်ရောင်အစစ်နှင့် ကြည်လင်သောအရောင်များ ပြသနိုင်သည့် မျက်နှာပြင်နည်းပညာဖြစ်သည်။",
+    "meaningEn": "Organic Light-Emitting Diode: a display technology where each pixel emits its own light for deep blacks and high contrast.",
+    "example": "OLED ဖုန်းမျက်နှာပြင်တွင် Dark Mode ဖွင့်သုံးသည့်အခါ အနက်ရောင် Pixel များ ပိတ်သွားသဖြင့် ဘက်ထရီသက်သာစေသည်။"
+  },
+  {
+    "term": "Transistor",
+    "category": "Hardware",
+    "difficulty": "Advanced",
+    "meaningMy": "လျှပ်စစ်စီးဆင်းမှုကို အဖွင့်အပိတ်ခလုတ်ကဲ့သို့ ထိန်းချုပ်ပြီး ကွန်ပျူတာ၏ 0 နှင့် 1 တွက်ချက်မှုများကို ဖန်တီးပေးသော အလွန်သေးငယ်သည့် အစိတ်အပိုင်းဖြစ်သည်။",
+    "meaningEn": "A microscopic semiconductor switch that controls electrical signals and forms the building block of modern microchips.",
+    "example": "ခေတ်မီဖုန်းချစ်ပ်ပြားတစ်ခုတည်းထဲတွင် Transistor အရေအတွက် ဘီလီယံပေါင်းများစွာ ထည့်သွင်းတည်ဆောက်ထားသည်။"
+  },
+  {
+    "term": "HTTP",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "ဝဘ်ဘရောက်ဇာနှင့် ဆာဗာကြား ဝဘ်စာမျက်နှာနှင့် အချက်အလက်များ တောင်းယူပေးပို့ရာတွင် သုံးသော အခြေခံဆက်သွယ်ရေးစည်းမျဉ်းဖြစ်သည်။",
+    "meaningEn": "Hypertext Transfer Protocol: the foundation protocol used by browsers and servers to exchange web resources.",
+    "example": "ဝဘ်ဆိုက်တစ်ခုဖွင့်လိုက်တိုင်း သင့်ဘရောက်ဇာက ဆာဗာထံ HTTP Request ပို့ပြီး စာမျက်နှာကို ပြန်ယူပြသသည်။",
+    "codeSnippet": "POST /api/login HTTP/1.1\nHost: example.com\nContent-Type: application/json\n\n{\"email\": \"dev@example.com\"}",
+    "codeLanguage": "http",
+    "usageNote": "Web API များကို စမ်းသပ်ခြင်း၊ Status Code (200, 401, 404, 500) များဖြင့် အမှားရှာခြင်းတို့တွင် အခြေခံအဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "Cookie",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "အသုံးပြုသူ၏ Login အခြေအနေနှင့် ဆက်တင်များကို မှတ်မိစေရန် ဝဘ်ဆိုက်က ဘရောက်ဇာထဲတွင် သိမ်းထားသော ဒေတာဖိုင်ငယ်ဖြစ်သည်။",
+    "meaningEn": "A small piece of data stored in a user's browser by a website to remember sessions, logins, or preferences.",
+    "example": "အွန်လိုင်းဈေးဝယ်ဆိုက်ကို ပြန်ဖွင့်သည့်အခါ ဈေးခြင်းထဲထည့်ထားသော ပစ္စည်းများ မပျောက်ဘဲ ကျန်နေခြင်းသည် Cookie ကြောင့်ဖြစ်သည်။",
+    "codeSnippet": "Set-Cookie: session_id=abc123; HttpOnly; Secure; SameSite=Lax",
+    "codeLanguage": "http",
+    "usageNote": "Login Session ကို လုံခြုံစွာထိန်းသိမ်းရန် HttpOnly နှင့် Secure Flag များထည့်ပြီး XSS ခိုးယူမှုမှ ကာကွယ်သည်။"
+  },
+  {
+    "term": "JSON",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "လူဖတ်ရလွယ်ကူပြီး ဆော့ဖ်ဝဲများကြား ဒေတာပေးပို့သိမ်းဆည်းရာတွင် အသုံးအများဆုံးသော စာသားပုံစံ ဒေတာဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "JavaScript Object Notation: a lightweight, human-readable text format for structuring and exchanging data.",
+    "example": "TechTerms အက်ပ်ထဲက နည်းပညာစကားလုံးများကိုပင် JSON ဖိုင်ဖြင့် သိမ်းဆည်းပြီး ဒေတာဘေ့စ်ထဲ ထည့်သွင်းထားသည်။",
+    "codeSnippet": "{\n  \"id\": 1,\n  \"term\": \"JSON\",\n  \"offline\": true,\n  \"tags\": [\"web\", \"api\"]\n}",
+    "codeLanguage": "json",
+    "usageNote": "REST API များ၊ Configuration ဖိုင်များနှင့် Local Asset ဒေတာများ သိမ်းဆည်းပေးပို့ရာတွင် စံဖော်မတ်အဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "HTML",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "ဝဘ်စာမျက်နှာတစ်ခု၏ ခေါင်းစဉ်၊ စာပိုဒ်၊ ဓာတ်ပုံနှင့် လင့်ခ်များ၏ တည်ဆောက်ပုံကို သတ်မှတ်ရေးသားသော ဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "HyperText Markup Language: the standard markup language used to structure content on the web.",
+    "example": "အဆောက်အဦတစ်ခု၏ အုတ်မြစ်နှင့် နံရံအရိုးအထည်သည် HTML နှင့်တူပြီး ဝဘ်စာမျက်နှာတိုင်း၏ အခြေခံဖြစ်သည်။",
+    "codeSnippet": "<article>\n  <h1>TechTerms</h1>\n  <p>Offline Burmese tech glossary.</p>\n</article>",
+    "codeLanguage": "html",
+    "usageNote": "Semantic Tag များကို မှန်ကန်စွာသုံးခြင်းဖြင့် Accessibility နှင့် Search Engine နားလည်မှု ပိုမိုကောင်းမွန်စေသည်။"
+  },
+  {
+    "term": "CSS",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "HTML ဖြင့် တည်ဆောက်ထားသော ဝဘ်စာမျက်နှာ၏ အရောင်၊ ဖောင့်နှင့် နေရာချထားမှု အလှအပများကို ဒီဇိုင်းဆင်ပေးသော ဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "Cascading Style Sheets: the styling language used to control visual presentation, layout, and colors on web pages.",
+    "example": "အိမ်တစ်လုံးကို ဆေးသုတ်ပြီး အလှဆင်ခြင်းက CSS နှင့်တူကာ မိုဘိုင်းနှင့် ကွန်ပျူတာမျက်နှာပြင်အလိုက် လှပအောင် ညှိပေးသည်။",
+    "codeSnippet": ".card {\n  border-radius: 20px;\n  border: 1px solid #e6e6e9;\n  padding: 20px;\n}",
+    "codeLanguage": "css",
+    "usageNote": "ဝဘ်စာမျက်နှာ၏ Spacing၊ Typography နှင့် Dark Mode အရောင်များကို စနစ်တကျ ထိန်းချုပ်ရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "DOM",
+    "category": "Web",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဝဘ်စာမျက်နှာထဲရှိ HTML အစိတ်အပိုင်းများကို JavaScript က ပြောင်းလဲပြင်ဆင်နိုင်ရန် သစ်ပင်ပုံစံ ကိုယ်စားပြုထားသော စနစ်ဖြစ်သည်။",
+    "meaningEn": "Document Object Model: a tree-like programming interface representing a web page's structure for dynamic updates.",
+    "example": "ခလုတ်တစ်ခုနှိပ်လိုက်ချိန် စာမျက်နှာတစ်ခုလုံး Reload မလုပ်ဘဲ စာသားပြောင်းသွားခြင်းသည် JavaScript က DOM ကို ပြင်လိုက်ခြင်းဖြစ်သည်။",
+    "codeSnippet": "const btn = document.querySelector(\"#save-btn\");\nbtn.addEventListener(\"click\", () => {\n  btn.textContent = \"Saved\";\n});",
+    "codeLanguage": "js",
+    "usageNote": "အသုံးပြုသူ၏ ခလုတ်နှိပ်မှုအလိုက် ဝဘ်စာမျက်နှာပေါ်က အစိတ်အပိုင်းများကို ချက်ချင်းပြောင်းလဲပြသရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "REST API",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "HTTP နည်းလမ်းများ (GET, POST, PUT, DELETE) ကို သုံး၍ ဝဘ်ဆာဗာမှ အချက်အလက်များကို ရိုးရှင်းစွာ ဆက်သွယ်ရယူသည့် API ပုံစံဖြစ်သည်။",
+    "meaningEn": "Representational State Transfer API: an architectural style using standard HTTP methods to access and manipulate web resources.",
+    "example": "စာအုပ်စာရင်းဖတ်ရန် GET၊ စာအုပ်အသစ်ထည့်ရန် POST ဟူ၍ စနစ်တကျ ခွဲခြားအသုံးပြုခြင်းသည် REST API ဖြစ်သည်။",
+    "codeSnippet": "GET /v1/books          # List resources\nPOST /v1/books         # Create resource\nPATCH /v1/books/12     # Partial update\nDELETE /v1/books/12    # Remove resource",
+    "codeLanguage": "http",
+    "usageNote": "Client နှင့် Server ကြား ခန့်မှန်းရလွယ်ကူပြီး စံနှုန်းညီသော CRUD ဝန်ဆောင်မှုများ တည်ဆောက်ရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "CORS",
+    "category": "Web",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဝဘ်ဆိုက်တစ်ခုက အခြားဒိုမိန်းတစ်ခု၏ ဆာဗာမှ အချက်အလက်ကို ခွင့်ပြုချက်ဖြင့်သာ ရယူနိုင်အောင် ထိန်းချုပ်သည့် ဘရောက်ဇာလုံခြုံရေးစနစ်ဖြစ်သည်။",
+    "meaningEn": "Cross-Origin Resource Sharing: a browser security mechanism controlling how web pages request resources from different domains.",
+    "example": "မသက်ဆိုင်သော ဝဘ်ဆိုက်တစ်ခုက သင့်ဘဏ်ဆာဗာထံ ခိုးဝင်တောင်းဆိုခြင်းမပြုနိုင်အောင် CORS စည်းမျဉ်းက ကာကွယ်ထားသည်။",
+    "codeSnippet": "Access-Control-Allow-Origin: https://app.example.com\nAccess-Control-Allow-Methods: GET, POST, OPTIONS",
+    "codeLanguage": "http",
+    "usageNote": "Frontend နှင့် API ဆာဗာ ဒိုမိန်းမတူသည့်အခါ ဘရောက်ဇာက ပိတ်ဆို့မနေစေရန် Backend ဘက်မှ ခွင့်ပြု Header ထည့်ပေးရသည်။"
+  },
+  {
+    "term": "Single Page Application",
+    "category": "Web",
+    "difficulty": "Intermediate",
+    "meaningMy": "စာမျက်နှာအသစ်တစ်ခုလုံးကို အကြိမ်ကြိမ် Reload မလုပ်ဘဲ လိုအပ်သောအပိုင်းကိုသာ ချက်ချင်းပြောင်းလဲပြသပေးသည့် ဝဘ်အက်ပ်ပုံစံဖြစ်သည်။",
+    "meaningEn": "A web app that loads a single HTML page and dynamically updates content as the user interacts with it.",
+    "example": "Gmail သို့မဟုတ် Google Maps ကို သုံးသည့်အခါ စာမျက်နှာတစ်ခုလုံး ပြန်မတက်ဘဲ မိုဘိုင်းအက်ပ်ကဲ့သို့ မြန်ဆန်စွာ အလုပ်လုပ်သည်။"
+  },
+  {
+    "term": "Progressive Web App",
+    "category": "Web",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဝဘ်ဘရောက်ဇာဖြင့် တည်ဆောက်ထားသော်လည်း ဖုန်းပေါ်တွင် အက်ပ်ကဲ့သို့ Install လုပ်ပြီး အော့ဖ်လိုင်းသုံးနိုင်သော ဝဘ်အက်ပ်ဖြစ်သည်။",
+    "meaningEn": "A web application enhanced with service workers and manifests to deliver offline support and app-like installation.",
+    "example": "Play Store မှ မဒေါင်းဘဲ ဝဘ်ဆိုက်ကို ဖုန်း Home Screen ပေါ် တင်ပြီး အက်ပ်တစ်ခုလို သုံးနိုင်ခြင်းသည် PWA ဖြစ်သည်။"
+  },
+  {
+    "term": "Responsive Design",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "ဝဘ်ဆိုက်တစ်ခုကို ဖုန်း၊ တက်ဘလက်နှင့် ကွန်ပျူတာမျက်နှာပြင် အရွယ်အစားအမျိုးမျိုးတွင် အဆင်ပြေလှပစွာ မြင်ရအောင် ဒီဇိုင်းဆွဲခြင်းဖြစ်သည်။",
+    "meaningEn": "A web design approach that automatically adapts layouts and elements to fit any screen size.",
+    "example": "ကွန်ပျူတာတွင် ကော်လံ ၃ ခုပြသော ဝဘ်ဆိုက်က ဖုန်းတွင် ၁ ခုတည်းအဖြစ် အလိုအလျောက် ပြောင်းလဲပြသခြင်းဖြစ်သည်။"
+  },
+  {
+    "term": "GraphQL",
+    "category": "Web",
+    "difficulty": "Advanced",
+    "meaningMy": "အက်ပ်က တကယ်လိုအပ်သော ဒေတာအကွက်များကိုသာ တိတိကျကျ တောင်းယူနိုင်အောင် ဖန်တီးထားသော API Query ဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "A query language for APIs that lets clients request the exact fields they need in a single request.",
+    "example": "စားသောက်ဆိုင်တွင် အစုံမမှာဘဲ ကိုယ်စားမည့်ဟင်းပွဲကိုသာ တိတိကျကျမှာသကဲ့သို့ မလိုအပ်သောဒေတာမပါအောင် GraphQL ဖြင့် တောင်းယူသည်။",
+    "codeSnippet": "query {\n  term(id: 1) {\n    term\n    category\n    meaningMy\n  }\n}",
+    "codeLanguage": "graphql",
+    "usageNote": "မိုဘိုင်းကွန်ရက်နှေးချိန်တွင် မလိုအပ်သော Field များမပါဘဲ လိုချင်သောဒေတာကိုသာ တစ်ကြိမ်တည်း တောင်းယူရန် သုံးသည်။"
+  },
+  {
+    "term": "Webhook",
+    "category": "Web",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဖြစ်ရပ်တစ်ခုဖြစ်ပွားသည်နှင့် ဆာဗာတစ်ခုက အခြားဆာဗာတစ်ခုထံ အလိုအလျောက် အကြောင်းကြားဒေတာပို့ပေးသော စနစ်ဖြစ်သည်။",
+    "meaningEn": "An automated HTTP callback triggered when a specific event occurs in one system to notify another.",
+    "example": "အွန်လိုင်းငွေပေးချေမှု အောင်မြင်သည်နှင့် ငွေပေးချေမှုစနစ်က ဈေးဆိုင်ဆာဗာထံ Webhook ဖြင့် ချက်ချင်းအကြောင်းကြားပေးသည်။",
+    "codeSnippet": "{\n  \"event\": \"payment.succeeded\",\n  \"orderId\": \"ord_9021\",\n  \"amount\": 15000\n}",
+    "codeLanguage": "json",
+    "usageNote": "ဆာဗာကို အကြိမ်ကြိမ်မေးနေစရာမလိုဘဲ ငွေပေးချေမှု သို့မဟုတ် Git Push ဖြစ်သည်နှင့် အလိုအလျောက် လက်ခံလုပ်ဆောင်ရန် သုံးသည်။"
+  },
+  {
+    "term": "SEO",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "Google ကဲ့သို့ ရှာဖွေရေးစနစ်များတွင် မိမိဝဘ်ဆိုက်ကို ရှေ့ဆုံးမှ ရှာတွေ့နိုင်အောင် အကြောင်းအရာနှင့် နည်းပညာပိုင်း ပြင်ဆင်ခြင်းဖြစ်သည်။",
+    "meaningEn": "Search Engine Optimization: the practice of improving a website's structure and content to rank higher in search results.",
+    "example": "ရှင်းလင်းသောခေါင်းစဉ်များနှင့် မြန်ဆန်သော စာမျက်နှာတက်နှုန်းထားရှိခြင်းသည် ဝဘ်ဆိုက်၏ SEO ကို ကောင်းမွန်စေသည်။"
+  },
+  {
+    "term": "APK",
+    "category": "Mobile",
+    "difficulty": "Beginner",
+    "meaningMy": "Android ဖုန်းများပေါ်တွင် အက်ပ်တစ်ခုကို ထည့်သွင်းအသုံးပြုရန် ကုဒ်နှင့် ဖိုင်အားလုံး စုစည်းထားသော ပက်ကေ့ချ်ဖိုင်ဖြစ်သည်။",
+    "meaningEn": "Android Package Kit: the file format used by the Android operating system to distribute and install apps.",
+    "example": "Windows တွင် .exe ဖိုင်ဖြင့် ဆော့ဖ်ဝဲသွင်းသကဲ့သို့ Android တွင် .apk ဖိုင်ဖြင့် အက်ပ်များကို ထည့်သွင်းသည်။"
+  },
+  {
+    "term": "Jetpack Compose",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "Android အက်ပ်များ၏ မျက်နှာပြင်ဒီဇိုင်း (UI) ကို XML မသုံးဘဲ Kotlin ကုဒ်ဖြင့် တိုက်ရိုက်တည်ဆောက်နိုင်သော Google ၏ ခေတ်မီ UI ကိရိယာဖြစ်သည်။",
+    "meaningEn": "Android's modern declarative UI toolkit for building native interfaces directly in Kotlin.",
+    "example": "ဒေတာပြောင်းလဲသည်နှင့် မျက်နှာပြင်ကို အလိုအလျောက် ပြန်ဆွဲပေးနိုင်သဖြင့် TechTerms အက်ပ်ကို Jetpack Compose ဖြင့် တည်ဆောက်ထားသည်။",
+    "codeSnippet": "@Composable\nfun TermRow(term: String, onClick: () -> Unit) {\n    Text(\n        text = term,\n        modifier = Modifier.clickable(onClick = onClick)\n    )\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "XML Layout မလိုဘဲ State ပြောင်းသည်နှင့် UI ကို အလိုအလျောက် Update လုပ်ပေးနိုင်သောကြောင့် ခေတ်မီ Android အက်ပ်များတွင် သုံးသည်။"
+  },
+  {
+    "term": "Push Notification",
+    "category": "Mobile",
+    "difficulty": "Beginner",
+    "meaningMy": "အက်ပ်ကို မဖွင့်ထားသည့်အချိန်၌ပင် ဖုန်းမျက်နှာပြင်ထိပ်တွင် ပေါ်လာပြီး အသုံးပြုသူကို အသိပေးသည့် သတိပေးစာတိုဖြစ်သည်။",
+    "meaningEn": "A clickable alert message delivered to a user's mobile device even when the app is not actively open.",
+    "example": "မနက် ၈ နာရီတိုင်း ယနေ့နည်းပညာစကားလုံးကို သတိပေးခြင်း သို့မဟုတ် မက်ဆေ့ချ်အသစ်ဝင်ကြောင်း ပြသခြင်းဖြစ်သည်။"
+  },
+  {
+    "term": "Activity Lifecycle",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "Android အက်ပ်မျက်နှာပြင်တစ်ခု စတင်ဖွင့်ချိန်မှ နောက်ကွယ်ရောက်သွားချိန်နှင့် ပိတ်သွားချိန်အထိ ဖြတ်သန်းရသော အဆင့်များဖြစ်သည်။",
+    "meaningEn": "The sequence of state callbacks an Android Activity goes through as it is created, paused, resumed, and destroyed.",
+    "example": "ဂိမ်းကစားနေစဉ် ဖုန်းဝင်လာပါက onPause အဆင့်တွင် ဂိမ်းကို ခဏရပ်ထားပြီး ပြန်ဝင်မှ ဆက်ကစားနိုင်အောင် စီမံရသည်။"
+  },
+  {
+    "term": "ViewModel",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဖုန်းမျက်နှာပြင် လှည့်လိုက်သည့်အခါ UI ဒေတာများ မပျောက်သွားအောင် ထိန်းသိမ်းစီမံပေးသော Android Architecture အစိတ်အပိုင်းဖြစ်သည်။",
+    "meaningEn": "A lifecycle-aware component that stores and manages UI-related state across configuration changes like screen rotation.",
+    "example": "ရှာဖွေရေးကွက်ထဲ စာရိုက်ထားစဉ် ဖုန်းကို အလျားလိုက်လှည့်လိုက်သော်လည်း ရလဒ်များမပျောက်စေရန် ViewModel က ထိန်းထားပေးသည်။",
+    "codeSnippet": "class HomeViewModel : ViewModel() {\n    private val _count = MutableStateFlow(0)\n    val count: StateFlow<Int> = _count.asStateFlow()\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "ဖုန်းမျက်နှာပြင်လှည့်ချိန်တွင် UI State မပျောက်စေရန်နှင့် Business Logic ကို Composable မှ ခွဲထုတ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Room Database",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "Android အက်ပ်များထဲတွင် အော့ဖ်လိုင်းဒေတာများကို SQLite ပေါ်၌ ဘေးကင်းလွယ်ကူစွာ သိမ်းဆည်းနိုင်သော Jetpack စာကြည့်တိုက်ဖြစ်သည်။",
+    "meaningEn": "An Android Jetpack persistence library providing a type-safe abstraction layer over SQLite.",
+    "example": "အင်တာနက်မရှိသည့်တိုင် နည်းပညာဝေါဟာရအားလုံးကို အမြန်ရှာဖွေနိုင်ရန် ဖုန်းထဲက Room Database တွင် သိမ်းထားသည်။",
+    "codeSnippet": "@Dao\ninterface TermDao {\n    @Query(\"SELECT * FROM terms WHERE id = :id\")\n    suspend fun getById(id: Int): Term?\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "Compile time မှာကတည်းက SQL အမှားကို စစ်ဆေးပေးနိုင်ပြီး Flow ဖြင့် အော့ဖ်လိုင်းဒေတာကို တိုက်ရိုက်စောင့်ကြည့်ရန် သုံးသည်။"
+  },
+  {
+    "term": "WorkManager",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "အက်ပ်ပိတ်သွားလျှင် သို့မဟုတ် ဖုန်းပြန်ဖွင့်လျှင်ပင် နောက်ကွယ်အလုပ်များကို စိတ်ချစွာ လုပ်ဆောင်ပေးသော Android စနစ်ဖြစ်သည်။",
+    "meaningEn": "An Android Jetpack library for scheduling reliable, deferrable background tasks that persist across app restarts and reboots.",
+    "example": "နေ့စဉ် သတ်မှတ်ထားသောအချိန်တွင် နည်းပညာစကားလုံး Notification ပို့ပေးရန် WorkManager ကို အသုံးပြုသည်။",
+    "codeSnippet": "val request = OneTimeWorkRequestBuilder<DailyTermWorker>()\n    .setInitialDelay(1, TimeUnit.HOURS)\n    .build()\nWorkManager.getInstance(context).enqueue(request)",
+    "codeLanguage": "kotlin",
+    "usageNote": "အက်ပ်ပိတ်သွားလျှင် သို့မဟုတ် ဖုန်း Restart ကျသွားလျှင်ပင် သေချာပေါက်လုပ်ဆောင်ရမည့် Background အလုပ်များအတွက် သုံးသည်။"
+  },
+  {
+    "term": "SDK",
+    "category": "Mobile",
+    "difficulty": "Beginner",
+    "meaningMy": "ပလက်ဖောင်းတစ်ခုအတွက် အက်ပ်များတည်ဆောက်ရန် လိုအပ်သော ကုဒ်စာကြည့်တိုက်၊ ကိရိယာနှင့် လမ်းညွှန်များ စုစည်းထားသော အစုံအလင်ဖြစ်သည်။",
+    "meaningEn": "Software Development Kit: a collection of tools, libraries, and documentation for building apps on a specific platform.",
+    "example": "Android ဖုန်းအတွက် အက်ပ်ရေးရန် Android SDK ကို ထည့်သွင်းအသုံးပြုရသည်။"
+  },
+  {
+    "term": "Deep Link",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "အက်ပ်၏ ပင်မစာမျက်နှာကိုမသွားဘဲ သတ်မှတ်ထားသော အတွင်းစာမျက်နှာတစ်ခုသို့ တိုက်ရိုက်ဖွင့်ပေးသည့် လင့်ခ်ဖြစ်သည်။",
+    "meaningEn": "A URL or intent that navigates directly to a specific screen or content item inside a mobile app.",
+    "example": "နေ့စဉ် Notification ကို နှိပ်လိုက်သည်နှင့် အက်ပ်ထဲက သက်ဆိုင်ရာစကားလုံး၏ အသေးစိတ်ကို တိုက်ရိုက်ဖွင့်ပြခြင်းဖြစ်သည်။",
+    "codeSnippet": "val intent = Intent(context, MainActivity::class.java).apply {\n    putExtra(\"extra_term_id\", term.id)\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "Notification သို့မဟုတ် ပြင်ပလင့်ခ်မှတစ်ဆင့် အသုံးပြုသူကို သက်ဆိုင်ရာအသေးစိတ်မျက်နှာပြင်သို့ တိုက်ရိုက်ပို့ရန် သုံးသည်။"
+  },
+  {
+    "term": "Material Design",
+    "category": "Mobile",
+    "difficulty": "Beginner",
+    "meaningMy": "အရောင်၊ စာလုံးနှင့် လှုပ်ရှားမှုများ တစ်သမတ်တည်း လှပရှင်းလင်းစေရန် Google မှ ဖန်တီးထားသော ဒီဇိုင်းစနစ်ဖြစ်သည်။",
+    "meaningEn": "Google's open-source design system defining visual, motion, and interaction guidelines for Android and web apps.",
+    "example": "ခလုတ်များ၊ Bottom Sheet နှင့် Dark Mode အရောင်တွဲဖက်မှုများ အဆင်ပြေလှပစေရန် Material 3 စနစ်ကို သုံးကြသည်။"
+  },
+  {
+    "term": "Runtime Permission",
+    "category": "Mobile",
+    "difficulty": "Beginner",
+    "meaningMy": "ကင်မရာ၊ တည်နေရာ သို့မဟုတ် Notification ကဲ့သို့ အရေးကြီးလုပ်ဆောင်ချက်များကို အက်ပ်သုံးနေစဉ် အသုံးပြုသူထံ ခွင့်ပြုချက်တောင်းခံခြင်းဖြစ်သည်။",
+    "meaningEn": "A mobile security model requiring apps to ask user consent for sensitive capabilities at the moment they are needed.",
+    "example": "Android 13 နှင့်အထက်တွင် နေ့စဉ်သတိပေးချက်ဖွင့်မှ POST_NOTIFICATIONS ခွင့်ပြုချက်ကို တောင်းခံသည်။",
+    "codeSnippet": "val launcher = rememberLauncherForActivityResult(\n    ActivityResultContracts.RequestPermission()\n) { granted -> if (granted) enableAlerts() }",
+    "codeLanguage": "kotlin",
+    "usageNote": "Android 13+ တွင် Notification သို့မဟုတ် Camera ကဲ့သို့ ခွင့်ပြုချက်များကို အသုံးပြုသူတကယ်လိုအပ်ချိန်မှ တောင်းခံရန် သုံးသည်။"
+  },
+  {
+    "term": "DataStore",
+    "category": "Mobile",
+    "difficulty": "Intermediate",
+    "meaningMy": "အက်ပ်၏ ဆက်တင်အသေးစားများကို Kotlin Coroutines ဖြင့် ဘေးကင်းမြန်ဆန်စွာ သိမ်းဆည်းပေးသော ခေတ်မီ Android သိုလှောင်မှုစနစ်ဖြစ်သည်။",
+    "meaningEn": "A Jetpack data storage solution that stores key-value pairs asynchronously and safely, replacing SharedPreferences.",
+    "example": "Notification ဖွင့်ထားခြင်း ရှိမရှိနှင့် ရွေးထားသောအချိန်ကို DataStore Preferences ထဲတွင် သိမ်းဆည်းထားသည်။",
+    "codeSnippet": "val KEY_DARK = booleanPreferencesKey(\"dark_mode\")\ncontext.dataStore.edit { prefs ->\n    prefs[KEY_DARK] = true\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "SharedPreferences အစား Coroutines နှင့် Flow ဖြင့် Main Thread မပိတ်ဘဲ ဆက်တင်များ သိမ်းဆည်းရန် သုံးသည်။"
+  },
+  {
+    "term": "APK Signing",
+    "category": "Mobile",
+    "difficulty": "Advanced",
+    "meaningMy": "အက်ပ်ကို မည်သည့် developer က ထုတ်လုပ်ကြောင်းနှင့် ကြားထဲတွင် မပြင်ဆင်ထားကြောင်း ဒစ်ဂျစ်တယ်လက်မှတ်ဖြင့် အတည်ပြုခြင်းဖြစ်သည်။",
+    "meaningEn": "Cryptographically signing an Android app package to verify developer authenticity and file integrity.",
+    "example": "Play Store ပေါ် အက်ပ်တင်ရန်နှင့် Update ပေးနိုင်ရန် APK ကို Developer ၏ လျှို့ဝှက်သော့ဖြင့် လက်မှတ်ထိုးရသည်။"
+  },
+  {
+    "term": "ANR",
+    "category": "Mobile",
+    "difficulty": "Advanced",
+    "meaningMy": "Android အက်ပ်၏ အဓိက UI လမ်းကြောင်းက အလုပ်ကြီးတစ်ခုကြောင့် ၅ စက္ကန့်ကျော် တုံ့ပြန်မှုမရှိဘဲ ဟန်းသွားသည့် အခြေအနေဖြစ်သည်။",
+    "meaningEn": "Application Not Responding: an Android error triggered when the main UI thread is blocked for too long.",
+    "example": "ဒေတာဘေ့စ်ထဲ ဖိုင်ကြီးသွင်းခြင်းကို နောက်ကွယ် Thread တွင် မလုပ်ဘဲ Main Thread တွင် လုပ်မိလျှင် ANR ဖြစ်တတ်သည်။"
+  },
+  {
+    "term": "Database",
+    "category": "Database",
+    "difficulty": "Beginner",
+    "meaningMy": "အချက်အလက်များကို အလွယ်တကူ ရှာဖွေ၊ ပြင်ဆင်၊ စီမံနိုင်စေရန် စနစ်တကျ သိမ်းဆည်းထားသော ဒစ်ဂျစ်တယ်သိုလှောင်ရုံဖြစ်သည်။",
+    "meaningEn": "An organized collection of structured data stored electronically for efficient retrieval and management.",
+    "example": "စာကြည့်တိုက်ထဲတွင် စာအုပ်များကို အမျိုးအစားခွဲစီထားသကဲ့သို့ အက်ပ်များသည် အသုံးပြုသူနှင့် စကားလုံးဒေတာများကို Database ထဲ သိမ်းထားသည်။"
+  },
+  {
+    "term": "SQL",
+    "category": "Database",
+    "difficulty": "Beginner",
+    "meaningMy": "ဇယားပုံစံ ဒေတာဘေ့စ်များထဲမှ အချက်အလက်များကို ရှာဖွေခြင်း၊ ထည့်သွင်းခြင်းနှင့် ပြင်ဆင်ခြင်းအတွက် အသုံးပြုသော စံဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "Structured Query Language: the standard language used to query, insert, update, and manage relational databases.",
+    "example": "SELECT * FROM terms ဟူသော SQL အမိန့်ဖြင့် ဇယားထဲရှိ စကားလုံးအားလုံးကို ခေါ်ယူကြည့်ရှုနိုင်သည်။",
+    "codeSnippet": "SELECT t.term, c.name\nFROM terms t\nINNER JOIN categories c ON t.category_id = c.id\nORDER BY t.term ASC;",
+    "codeLanguage": "sql",
+    "usageNote": "ဇယားများစွာကို JOIN ဖြင့် ချိတ်ဆက်ရှာဖွေခြင်းနှင့် ဒေတာအစီရင်ခံစာများ ထုတ်ယူခြင်းအတွက် အဓိကအသုံးပြုသည်။"
+  },
+  {
+    "term": "Primary Key",
+    "category": "Database",
+    "difficulty": "Beginner",
+    "meaningMy": "ဒေတာဘေ့စ်ဇယားတစ်ခုအတွင်း စာကြောင်းတစ်ကြောင်းချင်းစီကို မထပ်စေဘဲ တိတိကျကျ ခွဲခြားပေးသော သီးသန့်တန်ဖိုးဖြစ်သည်။",
+    "meaningEn": "A unique identifier column (or set of columns) that distinguishes every row in a database table.",
+    "example": "ကျောင်းသားတစ်ဦးချင်းစီအတွက် မထပ်သော ကျောင်းသားကတ်နံပါတ်ကဲ့သို့ ဝေါဟာရတစ်ခုစီတွင် သီးသန့် id Primary Key ရှိသည်။",
+    "codeSnippet": "CREATE TABLE terms (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  term TEXT NOT NULL\n);",
+    "codeLanguage": "sql",
+    "usageNote": "ဇယားထဲရှိ စာကြောင်းတိုင်းကို မထပ်စေဘဲ အမြန်ရှာဖွေနိုင်ရန်နှင့် အခြားဇယားများမှ ညွှန်းဆိုနိုင်ရန် သတ်မှတ်သည်။"
+  },
+  {
+    "term": "Foreign Key",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဇယားတစ်ခုမှ အချက်အလက်ကို အခြားဇယားတစ်ခု၏ Primary Key နှင့် ချိတ်ဆက်ညွှန်းဆိုပေးသော ကော်လံဖြစ်သည်။",
+    "meaningEn": "A column in one table that references the primary key of another table to establish a relationship.",
+    "example": "အမှာစာဇယားတွင် ဝယ်ယူသူ၏ customer_id ကို Foreign Key အဖြစ် ထည့်ထားခြင်းဖြင့် မည်သူမှာယူကြောင်း ချိတ်ဆက်သိနိုင်သည်။",
+    "codeSnippet": "CREATE TABLE orders (\n  id INTEGER PRIMARY KEY,\n  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE\n);",
+    "codeLanguage": "sql",
+    "usageNote": "ဇယားနှစ်ခုကြား ဒေတာဆက်စပ်မှု မပျက်စီးစေရန် (Referential Integrity) ဒေတာဘေ့စ်အဆင့်မှ ကာကွယ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Index",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဇယားတစ်ခုလုံးကို အစမှအဆုံး မဖတ်ရဘဲ လိုချင်သောအချက်အလက်ကို အလွန်မြန်ဆန်စွာ ရှာတွေ့စေရန် ဖန်တီးထားသော အညွှန်းတည်ဆောက်ပုံဖြစ်သည်။",
+    "meaningEn": "A data structure that dramatically speeds up database lookup queries at the cost of extra storage and write overhead.",
+    "example": "စာအုပ်နောက်ကျောက အညွှန်းစာရင်းကြည့်ပြီး စာမျက်နှာတန်းလှန်သကဲ့သို့ Database Index က ရှာဖွေမှုကို ပိုမြန်စေသည်။",
+    "codeSnippet": "CREATE INDEX idx_terms_category ON terms(category);\nEXPLAIN QUERY PLAN\nSELECT * FROM terms WHERE category = 'AI';",
+    "codeLanguage": "sql",
+    "usageNote": "စာကြောင်းသန်းပေါင်းများစွာရှိသော ဇယားတွင် WHERE နှင့် ORDER BY ရှာဖွေမှုများ သိသိသာသာ မြန်ဆန်စေရန် ထည့်သွင်းသည်။"
+  },
+  {
+    "term": "NoSQL",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "ပုံသေဇယားပုံစံမဟုတ်ဘဲ Document၊ Key-Value သို့မဟုတ် Graph ပုံစံများဖြင့် ဒေတာကို ပြောင်းလွယ်ပြင်လွယ် သိမ်းဆည်းနိုင်သော ဒေတာဘေ့စ်အမျိုးအစားဖြစ်သည်။",
+    "meaningEn": "Non-relational databases designed for flexible schemas and horizontal scaling, such as document or key-value stores.",
+    "example": "MongoDB နှင့် Firestore တို့သည် JSON ပုံစံ Document များဖြင့် ဒေတာသိမ်းဆည်းသော NoSQL ဒေတာဘေ့စ်များဖြစ်သည်။",
+    "codeSnippet": "// Document stored in MongoDB / Firestore\n{\n  \"_id\": \"user_42\",\n  \"name\": \"Aung\",\n  \"roles\": [\"developer\", \"reviewer\"]\n}",
+    "codeLanguage": "json",
+    "usageNote": "Schema မကြာခဏပြောင်းလဲတတ်သော အက်ပ်များနှင့် အလျားလိုက်ချဲ့ထွင်ရန် (Horizontal Scaling) လိုအပ်ချိန်တွင် ရွေးချယ်သုံးသည်။"
+  },
+  {
+    "term": "Transaction",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဒေတာဘေ့စ်လုပ်ဆောင်ချက်အစုတစ်ခုကို အားလုံးအောင်မြင်မှ အတည်ပြုပြီး တစ်ခုမှားလျှင် အားလုံးပြန်ဖျက်ပေးသည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "A sequence of database operations executed as a single atomic unit that either fully succeeds or fully rolls back.",
+    "example": "ဘဏ်ငွေလွှဲရာတွင် ပို့သူအကောင့်မှ ငွေနုတ်ပြီး လက်ခံသူအကောင့်ထဲ ငွေမဝင်ပါက Transaction က ငွေနုတ်ထားခြင်းကို အလိုအလျောက် ပြန်ဖျက်ပေးသည်။",
+    "codeSnippet": "BEGIN TRANSACTION;\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;",
+    "codeLanguage": "sql",
+    "usageNote": "အဆင့်များစွာပါသော ဒေတာပြင်ဆင်မှုတွင် တစ်ဆင့်မှားလျှင် အားလုံး Rollback ပြန်လုပ်ပြီး ဒေတာမပျက်စီးအောင် ကာကွယ်သည်။"
+  },
+  {
+    "term": "SQLite",
+    "category": "Database",
+    "difficulty": "Beginner",
+    "meaningMy": "သီးခြားဆာဗာမလိုဘဲ ဖိုင်တစ်ဖိုင်တည်းဖြင့် စက်ထဲတွင် တိုက်ရိုက်အလုပ်လုပ်နိုင်သော ပေါ့ပါးသည့် SQL ဒေတာဘေ့စ်ဖြစ်သည်။",
+    "meaningEn": "A lightweight, self-contained, serverless relational database engine stored in a single local file.",
+    "example": "Android နှင့် iOS ဖုန်းအက်ပ်အများစုသည် အော့ဖ်လိုင်းဒေတာသိမ်းရန် SQLite ကို အသုံးပြုကြသည်။",
+    "codeSnippet": "sqlite3 techterms.db \\\n  \"SELECT category, COUNT(*) FROM terms GROUP BY category;\"",
+    "codeLanguage": "bash",
+    "usageNote": "မိုဘိုင်းအက်ပ်နှင့် CLI ကိရိယာများတွင် ဆာဗာမလိုဘဲ အော့ဖ်လိုင်း SQL ဒေတာသိမ်းဆည်းစစ်ဆေးရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Schema",
+    "category": "Database",
+    "difficulty": "Beginner",
+    "meaningMy": "ဒေတာဘေ့စ်ထဲရှိ ဇယားအမည်များ၊ ကော်လံများနှင့် ဒေတာအမျိုးအစားများကို သတ်မှတ်ရေးဆွဲထားသော ပုံကြမ်းတည်ဆောက်ပုံဖြစ်သည်။",
+    "meaningEn": "The formal blueprint defining a database's tables, columns, data types, and relationships.",
+    "example": "အိမ်မဆောက်ခင် ရေးဆွဲသော အဆောက်အဦပုံစံကဲ့သို့ ဒေတာမထည့်မီ ဇယားဖွဲ့စည်းပုံကို Schema ဖြင့် သတ်မှတ်ရသည်။",
+    "codeSnippet": "ALTER TABLE terms ADD COLUMN codeSnippet TEXT;\nALTER TABLE terms ADD COLUMN codeLanguage TEXT;",
+    "codeLanguage": "sql",
+    "usageNote": "ဒေတာဘေ့စ်ဖွဲ့စည်းပုံကို Version အလိုက် စနစ်တကျ မှတ်တမ်းတင်ပြီး အဖွဲ့သားအားလုံး တူညီသောဇယားပုံစံရအောင် ထိန်းသိမ်းသည်။"
+  },
+  {
+    "term": "Normalization",
+    "category": "Database",
+    "difficulty": "Advanced",
+    "meaningMy": "ဒေတာများ ထပ်တလဲလဲ မသိမ်းမိစေရန်နှင့် ပြင်ဆင်ရာတွင် အမှားမဖြစ်စေရန် ဇယားများကို စနစ်တကျ ခွဲခြားစီစဉ်ခြင်းဖြစ်သည်။",
+    "meaningEn": "The process of structuring relational tables to minimize data redundancy and prevent update anomalies.",
+    "example": "အမှာစာတိုင်းတွင် ဖောက်သည်လိပ်စာကို ထပ်ခါတလဲလဲ မရေးဘဲ ဖောက်သည်ဇယားသီးခြားခွဲသိမ်းခြင်းသည် Normalization ဖြစ်သည်။"
+  },
+  {
+    "term": "ORM",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "SQL ကုဒ်အရှည်ကြီးများ မရေးရဘဲ ပရိုဂရမ်းမင်းဘာသာစကား၏ Object များဖြင့် ဒေတာဘေ့စ်ကို တိုက်ရိုက်ကိုင်တွယ်နိုင်အောင် ချိတ်ဆက်ပေးသည့် ကိရိယာဖြစ်သည်။",
+    "meaningEn": "Object-Relational Mapping: a layer that maps database tables to programming language objects.",
+    "example": "Android ရှိ Room Library သည် Term Kotlin class ကို SQLite ဇယားအဖြစ် အလိုအလျောက် ချိတ်ဆက်ပေးသော ORM ပုံစံဖြစ်သည်။",
+    "codeSnippet": "@Entity(tableName = \"terms\")\ndata class Term(\n    @PrimaryKey val id: Int,\n    val term: String\n)",
+    "codeLanguage": "kotlin",
+    "usageNote": "SQL ဇယားစာကြောင်းများကို Kotlin သို့မဟုတ် Python Object များအဖြစ် အလိုအလျောက်ပြောင်းပြီး ကုဒ်အမှားလျှော့ချရန် သုံးသည်။"
+  },
+  {
+    "term": "Migration",
+    "category": "Database",
+    "difficulty": "Intermediate",
+    "meaningMy": "အက်ပ်ဗားရှင်းအသစ်တွင် ဒေတာဘေ့စ်ဇယားပုံစံပြောင်းလဲသည့်အခါ ရှိပြီးသားဒေတာများ မပျောက်ပျက်ဘဲ အဆင့်မြှင့်တင်ပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "A controlled, versioned change that updates a database schema while preserving existing data.",
+    "example": "စကားလုံးဇယားတွင် ကော်လံအသစ်တစ်ခု ထပ်ထည့်သည့်အခါ အသုံးပြုသူ၏ ဒေတာဟောင်းများ မပျက်စေရန် Migration ရေးသားရသည်။",
+    "codeSnippet": "val MIGRATION_1_2 = object : Migration(1, 2) {\n    override fun migrate(db: SupportSQLiteDatabase) {\n        db.execSQL(\"ALTER TABLE terms ADD COLUMN usageNote TEXT\")\n    }\n}",
+    "codeLanguage": "kotlin",
+    "usageNote": "အက်ပ် Update ထုတ်သည့်အခါ အသုံးပြုသူ၏ ရှိပြီးသားဒေတာများ မပျက်စီးဘဲ ဇယားကော်လံအသစ်များ ထည့်သွင်းရန် သုံးသည်။"
+  },
+  {
+    "term": "ACID",
+    "category": "Database",
+    "difficulty": "Advanced",
+    "meaningMy": "ဒေတာဘေ့စ် Transaction များ မှန်ကန်စိတ်ချရမှုရှိစေရန် အာမခံပေးသည့် Atomicity, Consistency, Isolation နှင့် Durability ဂုဏ်သတ္တိ ၄ မျိုးဖြစ်သည်။",
+    "meaningEn": "Four guarantees (Atomicity, Consistency, Isolation, Durability) ensuring reliable database transactions even during failures.",
+    "example": "လျှပ်စစ်မီးရုတ်တရက်ပျက်သွားလျှင်ပင် ဘဏ်ငွေစာရင်းဒေတာများ မှားယွင်းမသွားစေရန် ACID စံနှုန်းက ကာကွယ်ပေးသည်။"
+  },
+  {
+    "term": "Replication",
+    "category": "Database",
+    "difficulty": "Advanced",
+    "meaningMy": "ဒေတာမပျောက်ပျက်စေရန်နှင့် ဖတ်ရှုမှုမြန်ဆန်စေရန် ဒေတာဘေ့စ်ကို အခြားဆာဗာများပေါ်သို့ အလိုအလျောက် မိတ္တူကူးထားခြင်းဖြစ်သည်။",
+    "meaningEn": "Automatically copying and synchronizing database data across multiple servers for fault tolerance and read scalability.",
+    "example": "အဓိကဆာဗာတစ်လုံး ချို့ယွင်းသွားပါက မိတ္တူကူးထားသော Replication ဆာဗာက ချက်ချင်းအစားထိုး အလုပ်လုပ်ပေးသည်။"
+  },
+  {
+    "term": "Cloud Computing",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "ကိုယ်ပိုင်ဆာဗာစက်များ ဝယ်မထားဘဲ အင်တာနက်မှတစ်ဆင့် သိုလှောင်မှု၊ တွက်ချက်မှုနှင့် ဆော့ဖ်ဝဲဝန်ဆောင်မှုများကို ငှားရမ်းအသုံးပြုခြင်းဖြစ်သည်။",
+    "meaningEn": "On-demand delivery of computing resources—servers, storage, databases, and software—over the internet.",
+    "example": "ကိုယ်ပိုင်လျှပ်စစ်ဓာတ်အားပေးစက်ရုံ မဆောက်ဘဲ မီတာခပေးပြီး မီးသုံးသကဲ့သို့ AWS သို့မဟုတ် Google Cloud ကို သုံးကြသည်။"
+  },
+  {
+    "term": "Container",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "အက်ပ်တစ်ခုနှင့် ၎င်းလိုအပ်သော စာကြည့်တိုက်အားလုံးကို အထုပ်တစ်ထုပ်တည်းထည့်ထားသဖြင့် မည်သည့်စက်တွင်မဆို တစ်ပုံစံတည်း အလုပ်လုပ်နိုင်သော စနစ်ဖြစ်သည်။",
+    "meaningEn": "A lightweight, standalone package bundling an application with its dependencies so it runs consistently anywhere.",
+    "example": "ကုန်သေတ္တာတစ်လုံးကို သင်္ဘော၊ ရထား၊ ကားအားလုံးပေါ် အလွယ်တကူတင်နိုင်သကဲ့သို့ Container က ဆာဗာတိုင်းတွင် ချောမွေ့စွာ အလုပ်လုပ်သည်။",
+    "codeSnippet": "docker run -d --name api -p 8080:8080 my-api:1.0\ndocker ps\ndocker logs -f api",
+    "codeLanguage": "bash",
+    "usageNote": "ဝန်ဆောင်မှုတစ်ခုချင်းစီကို သီးခြားပတ်ဝန်းကျင်အဖြစ် ပေါ့ပါးမြန်ဆန်စွာ စတင်မောင်းနှင်ရန်နှင့် စောင့်ကြည့်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Docker",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဆော့ဖ်ဝဲများကို Container များအဖြစ် အလွယ်တကူ ဖန်တီး၊ ဖြန့်ဝေပြီး စက်တိုင်းတွင် တူညီစွာ မောင်းနှင်နိုင်စေသည့် ပလက်ဖောင်းဖြစ်သည်။",
+    "meaningEn": "A widely used platform for building, packaging, and running applications inside isolated containers.",
+    "example": "ငါ့စက်မှာတော့ အလုပ်လုပ်တယ်ဟူသော ပြဿနာမဖြစ်စေရန် အဖွဲ့သားအားလုံး တူညီသောပတ်ဝန်းကျင်ရအောင် Docker ကို သုံးကြသည်။",
+    "codeSnippet": "FROM node:22-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --omit=dev\nCOPY . .\nCMD [\"node\", \"server.js\"]",
+    "codeLanguage": "dockerfile",
+    "usageNote": "Developer စက်နှင့် Production ဆာဗာကြား Runtime ကွဲလွဲမှုမရှိစေရန် အက်ပ်ကို Image တစ်ခုအဖြစ် ထုပ်ပိုးရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Kubernetes",
+    "category": "DevOps",
+    "difficulty": "Advanced",
+    "meaningMy": "Container ပေါင်းများစွာကို အလိုအလျောက် စီမံခန့်ခွဲခြင်း၊ အရေအတွက်တိုးချဲ့ခြင်းနှင့် ပျက်သွားလျှင် ပြန်နှိုးပေးခြင်းတို့ လုပ်ဆောင်သည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "An open-source container orchestration system that automates deployment, scaling, and recovery of containerized apps.",
+    "example": "ဆိပ်ကမ်းတစ်ခုလုံးရှိ ကုန်သေတ္တာထောင်ပေါင်းများစွာကို စနစ်တကျ စီမံပေးသော ထိန်းချုပ်ရေးမှူးကဲ့သို့ Kubernetes က Container များကို ထိန်းကျောင်းသည်။",
+    "codeSnippet": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: techterms-api\nspec:\n  replicas: 3",
+    "codeLanguage": "yaml",
+    "usageNote": "Production တွင် Container များစွာကို အလိုအလျောက် ပြန်နှိုးခြင်း၊ Scaling လုပ်ခြင်းနှင့် Zero-downtime Update တင်ခြင်းတို့အတွက် သုံးသည်။"
+  },
+  {
+    "term": "Serverless",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဆာဗာစက်များကို ကိုယ်တိုင်စီမံခန့်ခွဲစရာမလိုဘဲ ကုဒ်တင်ထားရုံဖြင့် အသုံးပြုသလောက်သာ ကုန်ကျစေသော Cloud ပုံစံဖြစ်သည်။",
+    "meaningEn": "A cloud execution model where the provider manages server infrastructure and runs code on demand per request.",
+    "example": "ကားအမြဲငှားမထားဘဲ သွားစရာရှိမှ Taxi ခေါ်စီးသကဲ့သို့ Cloud Functions သည် တောင်းဆိုမှုဝင်လာမှသာ အလုပ်လုပ်သည်။",
+    "codeSnippet": "export const handler = async (event) => ({\n  statusCode: 200,\n  body: JSON.stringify({ ok: true }),\n});",
+    "codeLanguage": "js",
+    "usageNote": "ဆာဗာထိန်းသိမ်းရန် မလိုဘဲ Webhook လက်ခံခြင်း သို့မဟုတ် အချိန်ဇယားအလိုက် အလုပ်ငယ်များ လုပ်ဆောင်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Load Balancer",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဝင်ရောက်လာသော အသုံးပြုသူအသွားအလာများကို ဆာဗာတစ်လုံးတည်းပေါ် မပုံစေဘဲ ဆာဗာများစွာထံ မျှဝေခွဲပေးသည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "A component that distributes incoming network traffic evenly across multiple servers to improve reliability and speed.",
+    "example": "စူပါမားကတ်တွင် ငွေရှင်းကောင်တာများစွာထံ ဖောက်သည်များကို မျှတစွာ လမ်းညွှန်ပေးခြင်းနှင့် တူသည်။",
+    "codeSnippet": "upstream backend {\n  server 10.0.0.11:8080;\n  server 10.0.0.12:8080;\n}\nserver {\n  location / { proxy_pass http://backend; }\n}",
+    "codeLanguage": "nginx",
+    "usageNote": "Traffic များလာချိန်တွင် ဆာဗာများစွာထံ ဝန်အားမျှဝေပေးပြီး ဆာဗာတစ်လုံးကျသွားလျှင်ပင် ဝန်ဆောင်မှုမပြတ်စေရန် သုံးသည်။"
+  },
+  {
+    "term": "CDN",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "ဓာတ်ပုံ၊ ဗီဒီယိုနှင့် ဝဘ်ဖိုင်များကို အသုံးပြုသူနှင့် အနီးဆုံးနိုင်ငံရှိ ဆာဗာမှ အမြန်ဆုံးပို့ပေးနိုင်ရန် ဖြန့်ကြက်ထားသော ကွန်ရက်ဖြစ်သည်။",
+    "meaningEn": "Content Delivery Network: a geographically distributed network of servers that delivers web assets quickly to nearby users.",
+    "example": "အမေရိကန်ဆာဗာမှ တိုက်ရိုက်မယူဘဲ စင်ကာပူရှိ CDN ဆာဗာမှ ဗီဒီယိုဖိုင်ယူပြသဖြင့် မြန်မာနိုင်ငံတွင် ပိုမိုမြန်ဆန်စွာ ကြည့်နိုင်သည်။"
+  },
+  {
+    "term": "Virtual Machine",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "ကွန်ပျူတာစက်တစ်လုံးတည်းအတွင်း ဆော့ဖ်ဝဲဖြင့် သီးခြားကွန်ပျူတာအတုတစ်လုံး ဖန်တီးပြီး အခြား Operating System တင်သုံးနိုင်သော နည်းပညာဖြစ်သည်။",
+    "meaningEn": "A software-emulated computer system that runs its own operating system and apps on shared physical hardware.",
+    "example": "Windows ကွန်ပျူတာထဲတွင် Virtual Machine ဖွင့်ပြီး Linux စနစ်ကို တစ်ပြိုင်နက် စမ်းသပ်အသုံးပြုနိုင်သည်။"
+  },
+  {
+    "term": "SaaS",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "စက်ထဲတွင် ဆော့ဖ်ဝဲကြီးများ မသွင်းရဘဲ အင်တာနက်ဘရောက်ဇာမှတစ်ဆင့် လစဉ် သို့မဟုတ် အခမဲ့ တိုက်ရိုက်သုံးနိုင်သော ဝန်ဆောင်မှုဖြစ်သည်။",
+    "meaningEn": "Software as a Service: cloud-hosted applications accessed over the internet, typically via a subscription.",
+    "example": "Google Docs၊ Notion နှင့် Zoom တို့သည် အင်တာနက်မှတစ်ဆင့် တိုက်ရိုက်အသုံးပြုနိုင်သော SaaS ဝန်ဆောင်မှုများဖြစ်သည်။"
+  },
+  {
+    "term": "Microservices",
+    "category": "Cloud",
+    "difficulty": "Advanced",
+    "meaningMy": "ဆော့ဖ်ဝဲစနစ်ကြီးတစ်ခုလုံးကို တစ်ခုတည်းမရေးဘဲ သီးခြားအလုပ်လုပ်နိုင်သော ဝန်ဆောင်မှုအငယ်လေးများအဖြစ် ခွဲထုတ်တည်ဆောက်သည့် ပုံစံဖြစ်သည်။",
+    "meaningEn": "An architectural style structuring an application as a collection of small, independently deployable services.",
+    "example": "အွန်လိုင်းဈေးဝယ်စနစ်တွင် ငွေပေးချေမှု၊ ပစ္စည်းရှာဖွေမှုနှင့် ပို့ဆောင်ရေးတို့ကို သီးခြား Microservices များအဖြစ် ခွဲထားသည်။"
+  },
+  {
+    "term": "CI/CD",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "ကုဒ်အသစ်တင်လိုက်သည်နှင့် အလိုအလျောက် စမ်းသပ်စစ်ဆေးပြီး အသုံးပြုသူထံ လျင်မြန်စွာ ဖြန့်ချိပေးသည့် အလိုအလျောက်လုပ်ငန်းစဉ်ဖြစ်သည်။",
+    "meaningEn": "Continuous Integration and Continuous Delivery: automated pipelines for testing, building, and deploying code changes.",
+    "example": "GitHub ထဲ ကုဒ်အသစ်ပို့လိုက်သည်နှင့် စက်က အလိုအလျောက် Build စစ်ပြီး ဝဘ်ဆိုက်ကို Update တင်ပေးခြင်းဖြစ်သည်။",
+    "codeSnippet": "on: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: ./gradlew test assembleDebug",
+    "codeLanguage": "yaml",
+    "usageNote": "GitHub ထဲ ကုဒ်တင်လိုက်တိုင်း Test နှင့် Build ကို အလိုအလျောက်စစ်ဆေးပြီး အမှားပါသောကုဒ် Production မရောက်အောင် တားဆီးသည်။"
+  },
+  {
+    "term": "Auto-Scaling",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "အသုံးပြုသူအရေအတွက် များလာလျှင် ဆာဗာအလိုအလျောက်တိုးပေးပြီး နည်းသွားလျှင် ပြန်လျှော့ချပေးသော Cloud စွမ်းရည်ဖြစ်သည်။",
+    "meaningEn": "Automatically increasing or decreasing cloud computing capacity in response to real-time traffic demand.",
+    "example": "အထူးလျှော့ဈေးနေ့တွင် လူဝင်များလာပါက ဝဘ်ဆိုက်မပြုတ်ကျစေရန် Auto-Scaling က ဆာဗာအသစ်များ အလိုအလျောက် ထပ်ဖွင့်ပေးသည်။"
+  },
+  {
+    "term": "Object Storage",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဓာတ်ပုံ၊ ဗီဒီယိုနှင့် Backup ဖိုင်အမြောက်အမြားကို ဖိုလ်ဒါအဆင့်ဆင့်မလိုဘဲ Object များအဖြစ် ကြီးမားစွာ သိမ်းဆည်းနိုင်သော Cloud သိုလှောင်မှုဖြစ်သည်။",
+    "meaningEn": "A scalable cloud storage architecture that manages unstructured files as discrete objects with metadata and unique IDs.",
+    "example": "Amazon S3 နှင့် Google Cloud Storage တို့သည် ဝဘ်ဆိုက်ဓာတ်ပုံနှင့် ဗီဒီယိုဖိုင်များ သိမ်းဆည်းရန် သုံးသော Object Storage များဖြစ်သည်။",
+    "codeSnippet": "# Upload build artifact to cloud bucket\naws s3 cp app-release.apk s3://my-bucket/releases/",
+    "codeLanguage": "bash",
+    "usageNote": "အသုံးပြုသူတင်သော ပုံများ၊ Backup ဖိုင်များနှင့် Build Artifact များကို စျေးသက်သာပြီး စိတ်ချရစွာ သိမ်းဆည်းရန် သုံးသည်။"
+  },
+  {
+    "term": "DevOps",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဆော့ဖ်ဝဲရေးသားသူများနှင့် စနစ်ထိန်းသိမ်းသူများ ပူးပေါင်း၍ အရည်အသွေးကောင်းသော ဆော့ဖ်ဝဲများကို မြန်မြန်ဆန်ဆန် ဖြန့်ချိနိုင်အောင် လုပ်ဆောင်သည့် နည်းစနစ်ဖြစ်သည်။",
+    "meaningEn": "A set of cultural practices and tools combining software development and IT operations to shorten release cycles reliably.",
+    "example": "အလိုအလျောက်စမ်းသပ်မှု၊ စောင့်ကြည့်စစ်ဆေးမှုနှင့် Cloud ဖြန့်ချိမှုများကို တစ်ဆက်တည်းချိတ်ဆက်လုပ်ဆောင်ခြင်းသည် DevOps ဖြစ်သည်။",
+    "codeSnippet": "# Build, test, and deploy via one repeatable command\n./gradlew check && docker build -t app:latest .",
+    "codeLanguage": "bash",
+    "usageNote": "ကုဒ်ရေးသားချိန်မှ Production တင်ချိန်အထိ လက်ဖြင့်လုပ်ရသောအဆင့်များကို အလိုအလျောက်ဖြစ်အောင် ပေါင်းစည်းရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Async/Await",
+    "category": "Programming",
+    "difficulty": "Intermediate",
+    "meaningMy": "အချိန်ကြာမြင့်နိုင်သော အလုပ်များကို ပင်မလမ်းကြောင်းမပိတ်စေဘဲ ရိုးရှင်းဖတ်ရလွယ်သော ပုံစံဖြင့် ရေးသားနိုင်သည့် ပရိုဂရမ်းမင်းနည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "Language syntax for writing asynchronous, non-blocking code in a clean sequential style.",
+    "example": "ကော်ဖီမှာပြီး ဆိုင်ထဲရပ်စောင့်မနေဘဲ ဘေဇာမြည်မှ သွားယူသကဲ့သို့ ဒေတာရောက်လာချိန်မှ ဆက်လုပ်ဆောင်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "suspend fun loadData() = coroutineScope {\n    val terms = async { repo.getAll() }\n    val count = async { repo.count() }\n    Pair(terms.await(), count.await())\n}",
+    "usageNote": "Callback အဆင့်ဆင့်ရှုပ်ထွေးမှုမဖြစ်ဘဲ အလုပ်များစွာကို တစ်ပြိုင်နက်တောင်းယူပြီး ရလဒ်စုစည်းရာတွင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Fetch API",
+    "category": "Web",
+    "difficulty": "Beginner",
+    "meaningMy": "ဝဘ်ဘရောက်ဇာနှင့် JavaScript ထဲမှ HTTP တောင်းဆိုမှုများ ပေးပို့ပြီး ဆာဗာဒေတာရယူရန် အသုံးပြုသော ခေတ်မီစံ Interface ဖြစ်သည်။",
+    "meaningEn": "A modern browser and JavaScript interface for making asynchronous HTTP requests.",
+    "example": "စာမျက်နှာ Reload မလုပ်ဘဲ ဝဘ်ဆိုက်က နောက်ကွယ်မှ ဆာဗာထံ ဒေတာလှမ်းယူရာတွင် Fetch API ကို သုံးသည်။",
+    "codeLanguage": "js",
+    "codeSnippet": "const res = await fetch(\"/api/terms\");\nif (!res.ok) throw new Error(res.statusText);\nconst terms = await res.json();",
+    "usageNote": "ပြင်ပ Library မလိုဘဲ Frontend JavaScript မှ REST API များကို တိုက်ရိုက်ခေါ်ယူရန် နေ့စဉ်အသုံးပြုသည်။"
+  },
+  {
+    "term": "WebAssembly",
+    "category": "Web",
+    "difficulty": "Advanced",
+    "meaningMy": "C++၊ Rust ကဲ့သို့ ဘာသာစကားများဖြင့် ရေးထားသောကုဒ်ကို ဘရောက်ဇာအတွင်း အလွန်မြန်ဆန်စွာ မောင်းနှင်နိုင်စေသည့် Binary ဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "A portable binary instruction format enabling near-native performance for compiled code inside web browsers.",
+    "example": "Figma ကဲ့သို့ ဂရပ်ဖစ်အလေးစားဝဘ်အက်ပ်များ ဘရောက်ဇာထဲတွင် မထစ်ဘဲ အလုပ်လုပ်နိုင်ရန် WebAssembly ကို သုံးသည်။",
+    "codeLanguage": "js",
+    "codeSnippet": "const { instance } = await WebAssembly.instantiateStreaming(\n  fetch(\"/math.wasm\")\n);\nconsole.log(instance.exports.add(2, 3));",
+    "usageNote": "ဗီဒီယိုတည်းဖြတ်ခြင်း၊ 3D တွက်ချက်ခြင်းကဲ့သို့ JavaScript ထက် ပိုမြန်ဖို့လိုသော ဘရောက်ဇာအလုပ်များအတွက် သုံးသည်။"
+  },
+  {
+    "term": "IaaS",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "Virtual Server၊ ကွန်ရက်နှင့် သိုလှောင်မှု အခြေခံအဆောက်အဦများကို အင်တာနက်မှ ငှားရမ်းပြီး Operating System မှစ၍ ကိုယ်တိုင်စီမံသုံးစွဲရသော Cloud ဝန်ဆောင်မှုဖြစ်သည်။",
+    "meaningEn": "Infrastructure as a Service: cloud model providing virtualized servers, storage, and networking on demand.",
+    "example": "မြေကွက်နှင့် ရေမီးအသင့်ငှားပြီး အိမ်ကိုယ်တိုင်ဆောက်သကဲ့သို့ AWS EC2 နှင့် Compute Engine တို့သည် IaaS ဖြစ်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "gcloud compute instances create web-1 \\\n  --zone=asia-southeast1-a \\\n  --machine-type=e2-micro",
+    "usageNote": "OS အဆင့်နှင့် ကွန်ရက်ဆက်တင်များကို အပြည့်အဝ ထိန်းချုပ်လိုသော Backend စနစ်များအတွက် IaaS ကို ရွေးချယ်သုံးသည်။"
+  },
+  {
+    "term": "PaaS",
+    "category": "Cloud",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆာဗာနှင့် OS ထိန်းသိမ်းစရာမလိုဘဲ Developer က အက်ပ်ကုဒ်တင်လိုက်ရုံဖြင့် အလိုအလျောက်မောင်းနှင်ပေးသော Cloud ပလက်ဖောင်းဖြစ်သည်။",
+    "meaningEn": "Platform as a Service: managed cloud runtime where developers deploy application code without managing servers.",
+    "example": "မီးဖိုချောင်အသင့်ပါသော ဆိုင်ခန်းငှားပြီး ဟင်းချက်ရောင်းရုံသာလုပ်သကဲ့သို့ Cloud Run နှင့် Render တို့သည် PaaS ဖြစ်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "gcloud run deploy techterms-api \\\n  --source . \\\n  --region asia-southeast1",
+    "usageNote": "ဆာဗာစီမံခန့်ခွဲမှုထက် ထုတ်ကုန်ကုဒ်ရေးသားခြင်းကိုသာ အာရုံစိုက်လိုသော အဖွဲ့ငယ်များအတွက် အလွန်သင့်တော်သည်။"
+  },
+  {
+    "term": "VPC",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "Public Cloud အတွင်း၌ မိမိအဖွဲ့အစည်းအတွက်သာ သီးသန့်ခွဲထုတ်ကာကွယ်ထားသော Virtual ကိုယ်ပိုင်ကွန်ရက်ဖြစ်သည်။",
+    "meaningEn": "Virtual Private Cloud: an isolated private network slice inside a public cloud provider.",
+    "example": "အများသုံးကွန်ဒိုကြီးထဲတွင် သီးသန့်သော့ခတ်ထားသော ကိုယ်ပိုင်အထပ်ကဲ့သို့ ဒေတာဘေ့စ်ဆာဗာများကို VPC အတွင်း လုံခြုံစွာထားသည်။",
+    "codeLanguage": "hcl",
+    "codeSnippet": "resource \"google_compute_network\" \"vpc\" {\n  name                    = \"prod-vpc\"\n  auto_create_subnetworks = false\n}",
+    "usageNote": "ဒေတာဘေ့စ်များကို အင်တာနက်မှ တိုက်ရိုက်မဝင်နိုင်စေဘဲ Internal ဆာဗာများသာ ဆက်သွယ်နိုင်အောင် ခွဲထုတ်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Edge Computing",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဒေတာတွက်ချက်မှုကို ဗဟို Cloud ဆာဗာကြီးထံမပို့ဘဲ အသုံးပြုသူနှင့် အနီးဆုံး Edge ဆာဗာ သို့မဟုတ် စက်ပေါ်တွင် လုပ်ဆောင်ခြင်းဖြစ်သည်။",
+    "meaningEn": "Processing data close to the user or device location rather than in a distant central data center.",
+    "example": "မြို့လယ်ရုံးချုပ်မသွားဘဲ ရပ်ကွက်ရုံးခွဲတွင် ချက်ချင်းဆောင်ရွက်သကဲ့သို့ Latency လျှော့ချရန် Edge Function များ သုံးသည်။",
+    "codeLanguage": "js",
+    "codeSnippet": "export default {\n  fetch(request) {\n    return new Response(\"Served from nearest edge\");\n  }\n};",
+    "usageNote": "နိုင်ငံအနှံ့ရှိ အသုံးပြုသူများအတွက် Redirect၊ Auth စစ်ဆေးခြင်းနှင့် API တုံ့ပြန်ချိန် အမြန်ဆုံးဖြစ်စေရန် သုံးသည်။"
+  },
+  {
+    "term": "Cold Start",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "အသုံးမပြုဘဲ ရပ်နားထားသော Serverless Function သို့မဟုတ် Container ကို ပထမဆုံးတောင်းဆိုမှုဝင်ချိန် ပြန်နှိုးရသောကြောင့် ဖြစ်ပေါ်သည့် နှောင့်နှေးမှုဖြစ်သည်။",
+    "meaningEn": "The initial latency delay when a scaled-to-zero serverless function or container boots up for a new request.",
+    "example": "မနက်ခင်း ကားစက်အေးနေချိန် စက်နှိုးပြီး ခဏနွေးအောင်စောင့်ရသကဲ့သို့ ပထမဆုံး Request က ပိုကြာတတ်သည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "# Keep 1 warm instance to eliminate cold starts\nautoscaling:\n  minInstances: 1\n  maxInstances: 10",
+    "usageNote": "အချိန်တိကျဖို့လိုသော Production API များတွင် minInstances သတ်မှတ်ခြင်း သို့မဟုတ် Image အရွယ်အစားလျှော့ချခြင်းဖြင့် ဖြေရှင်းသည်။"
+  },
+  {
+    "term": "IAM",
+    "category": "Cloud",
+    "difficulty": "Intermediate",
+    "meaningMy": "Cloud စနစ်အတွင်း မည်သည့်အသုံးပြုသူ သို့မဟုတ် ဝန်ဆောင်မှုက မည်သည့်အရင်းအမြစ်ကို လုပ်ပိုင်ခွင့်ရှိကြောင်း ထိန်းချုပ်သည့် စနစ်ဖြစ်သည်။",
+    "meaningEn": "Identity and Access Management: framework for managing identities, roles, and least-privilege permissions in the cloud.",
+    "example": "ရုံးတွင် ဝန်ထမ်းကတ်အလိုက် ဝင်ခွင့်ရသောအခန်းများ ကန့်သတ်ထားသကဲ့သို့ IAM ဖြင့် အနည်းဆုံးလိုအပ်သော ခွင့်ပြုချက်ကိုသာ ပေးသည်။",
+    "codeLanguage": "json",
+    "codeSnippet": "{\n  \"role\": \"roles/storage.objectViewer\",\n  \"members\": [\"serviceAccount:ci@proj.iam.gserviceaccount.com\"]\n}",
+    "usageNote": "Admin ခွင့်ပြုချက်အပြည့်မပေးဘဲ ဝန်ဆောင်မှုတစ်ခုချင်းစီအတွက် လိုအပ်သလောက်သာ (Least Privilege) ကန့်သတ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Commit",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "ကုဒ်ပြောင်းလဲမှုများကို ရှင်းလင်းချက်မက်ဆေ့ချ်နှင့်အတူ Git မှတ်တမ်းထဲသို့ အမြဲတမ်းသိမ်းဆည်းမှတ်တမ်းတင်လိုက်သည့် Snapshot တစ်ခုဖြစ်သည်။",
+    "meaningEn": "A saved snapshot of staged code changes in a Git repository with a unique hash and message.",
+    "example": "ဂိမ်းကစားရင်း Save Point မှတ်ထားသကဲ့သို့ အလုပ်လုပ်နိုင်သော ကုဒ်အဆင့်တိုင်းကို Commit လုပ်သိမ်းထားသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git add app/src/main/java\ngit commit -m \"Add Room migration 1 to 2\"",
+    "usageNote": "ပြောင်းလဲမှုတစ်ခုချင်းစီကို သေးငယ်ရှင်းလင်းစွာ မှတ်တမ်းတင်ထားခြင်းဖြင့် Bug ရှာရန်နှင့် Rollback ပြန်လုပ်ရန် လွယ်ကူစေသည်။"
+  },
+  {
+    "term": "Branch",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "ပင်မကုဒ် (main) ကို မထိခိုက်စေဘဲ Feature အသစ် သို့မဟုတ် Bug ပြင်ဆင်မှုကို သီးခြားခွဲရေးနိုင်သော ဖွံ့ဖြိုးရေးလမ်းကြောင်းဖြစ်သည်။",
+    "meaningEn": "An independent line of development in Git allowing isolated work without affecting the main codebase.",
+    "example": "စာအုပ်မူရင်းကို မဖျက်ဘဲ မိတ္တူတစ်စောင်ထုတ်ပြီး အခန်းအသစ်စမ်းရေးသကဲ့သို့ Branch ခွဲပြီး ကုဒ်ရေးကြသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git switch -c feat/code-snippets\ngit branch --list",
+    "usageNote": "Feature တစ်ခုချင်းစီကို သီးခြား Branch ဖြင့် ရေးသားခြင်းဖြင့် main branch ကို အမြဲတမ်း Build အောင်မြင်နေအောင် ထိန်းနိုင်သည်။"
+  },
+  {
+    "term": "Merge",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "သီးခြား Branch တစ်ခုတွင် ရေးသားပြီးစီးသွားသော Commit များကို ပင်မ Branch ထဲသို့ ပြန်လည်ပေါင်းစည်းထည့်သွင်းခြင်းဖြစ်သည်။",
+    "meaningEn": "Combining commit histories from one Git branch into another target branch.",
+    "example": "အဖွဲ့သားနှစ်ဦး ခွဲရေးထားသော စာတမ်းအပိုင်းနှစ်ခုကို တစ်စောင်တည်းအဖြစ် ပြန်ပေါင်းခြင်းနှင့် တူသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git switch main\ngit merge feat/code-snippets",
+    "usageNote": "Review ပြီးစီးသွားသော Feature Branch များကို History မပျောက်စေဘဲ main ထဲသို့ စနစ်တကျ ပေါင်းထည့်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Rebase",
+    "category": "Git & Version Control",
+    "difficulty": "Intermediate",
+    "meaningMy": "မိမိ Branch ၏ Commit များကို အခြား Branch ၏ နောက်ဆုံးအခြေအနေအပေါ်သို့ တစ်တန်းတည်းဖြစ်အောင် ပြန်လည်စီတန်းရွှေ့ပြောင်းခြင်းဖြစ်သည်။",
+    "meaningEn": "Replaying commits from one branch onto the tip of another branch to create a clean linear history.",
+    "example": "Merge commit ရှုပ်ထွေးမှုမပါဘဲ မိမိကုဒ်အသစ်များကို main ၏ နောက်ဆုံး Commit နောက်တွင် သပ်သပ်ရပ်ရပ် ဆက်တင်ခြင်းဖြစ်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git fetch origin\ngit rebase origin/main",
+    "usageNote": "Pull Request မတင်မီ Branch ကို main နှင့် အမီလိုက်စေရန်နှင့် Commit History ရှင်းလင်းစေရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Stash",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "Commit မလုပ်ရသေးသော လက်ရှိကုဒ်ပြောင်းလဲမှုများကို ခဏသိမ်းထားပြီး အလုပ်ခွင်ကို သန့်ရှင်းစေသော Git လုပ်ဆောင်ချက်ဖြစ်သည်။",
+    "meaningEn": "Temporarily shelving uncommitted changes in Git so you can switch tasks and reapply them later.",
+    "example": "စားပွဲပေါ်က မပြီးသေးတဲ့စာရွက်တွေကို အံဆွဲထဲခဏထည့်ပြီး အရေးကြီးအလုပ်အရင်လုပ်သကဲ့သို့ ဖြစ်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git stash push -m \"wip search filter\"\ngit switch main\n# Later, restore saved changes\ngit stash pop",
+    "usageNote": "Branch အမြန်ပြောင်းရန်လိုအပ်သော်လည်း မပြီးသေးသောကုဒ်ကို Commit မလုပ်ချင်သည့်အခါ အလွန်အသုံးဝင်သည်။"
+  },
+  {
+    "term": "Pull Request",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "မိမိ Branch မှ ကုဒ်ပြောင်းလဲမှုများကို ပင်မ Branch ထဲသို့ မပေါင်းမီ အဖွဲ့သားများ ဝိုင်းဝန်းစစ်ဆေးအတည်ပြုပေးရန် တောင်းဆိုခြင်းဖြစ်သည်။",
+    "meaningEn": "A formal request to review, discuss, and merge changes from one branch into another on platforms like GitHub.",
+    "example": "စာတမ်းမထုတ်ဝေမီ အယ်ဒီတာထံ စစ်ဆေးအကြံပြုချက်တောင်းသကဲ့သို့ ကုဒ်အရည်အသွေးထိန်းရန် Pull Request (PR) ဖွင့်ကြသည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "git push -u origin feat/dev-filters\ngh pr create --title \"Add dev filter\" --fill",
+    "usageNote": "Code Review လုပ်ခြင်း၊ CI စမ်းသပ်ချက်များ အောင်မအောင်စစ်ခြင်းနှင့် အဖွဲ့တွင်း ဗဟုသုတမျှဝေခြင်းတို့အတွက် သုံးသည်။"
+  },
+  {
+    "term": "Cherry-Pick",
+    "category": "Git & Version Control",
+    "difficulty": "Intermediate",
+    "meaningMy": "အခြား Branch တစ်ခုထဲမှ Branch တစ်ခုလုံးမယူဘဲ လိုအပ်သော Commit တစ်ခုတည်းကိုသာ ရွေးထုတ်ကူးယူခြင်းဖြစ်သည်။",
+    "meaningEn": "Applying a specific single commit from another branch onto the current branch.",
+    "example": "စာအုပ်တစ်အုပ်လုံးမကူးဘဲ လိုချင်သောစာမျက်နှာတစ်ရွက်တည်းကို ကူးယူသကဲ့သို့ အရေးပေါ် Bug Fix Commit တစ်ခုကို Release Branch ထဲ ထည့်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git switch release/1.2\ngit cherry-pick a1b2c3d",
+    "usageNote": "Production Release Branch ထဲသို့ Feature အသစ်များမပါဘဲ အရေးပေါ် Bug Fix တစ်ခုတည်းကိုသာ အမြန်ထည့်လိုချိန်တွင် သုံးသည်။"
+  },
+  {
+    "term": ".gitignore",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "Build ဖိုင်များ၊ Log များနှင့် လျှို့ဝှက် Key ဖိုင်များကို Git က မှတ်တမ်းမတင်ဘဲ ချန်လှပ်ထားရန် စာရင်းပြုစုထားသော ဖိုင်ဖြစ်သည်။",
+    "meaningEn": "A configuration file specifying file patterns that Git should intentionally leave untracked.",
+    "example": "local.properties နှင့် build/ ဖိုလ်ဒါများ GitHub ပေါ် မတက်သွားစေရန် .gitignore ထဲတွင် ရေးထားရသည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "# Android build outputs & local secrets\nbuild/\n.gradle/\nlocal.properties\n*.keystore",
+    "usageNote": "API Key များ မတော်တဆ GitHub ပေါ် မပေါက်ကြားစေရန်နှင့် Repository အရွယ်အစား မကြီးစေရန် ပရောဂျက်တိုင်းတွင် ထားရသည်။"
+  },
+  {
+    "term": "Fork",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "အခြားသူ၏ Git Repository တစ်ခုကို မိမိအကောင့်အောက်တွင် ကိုယ်ပိုင်မိတ္တူတစ်ခုအဖြစ် ကူးယူဖန်တီးခြင်းဖြစ်သည်။",
+    "meaningEn": "Creating a personal server-side copy of another user or organization repository to experiment or contribute.",
+    "example": "Open Source ပရောဂျက်တစ်ခုကို ပြင်ဆင်ကူညီလိုသည့်အခါ အရင် Fork လုပ်ပြီးမှ Pull Request ပြန်ပို့ကြသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git remote add upstream https://github.com/org/repo.git\ngit fetch upstream\ngit merge upstream/main",
+    "usageNote": "တိုက်ရိုက် Push ခွင့်မရှိသော Open Source ပရောဂျက်များသို့ ကုဒ်ပြင်ဆင်ပေးပို့ရာတွင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "HEAD",
+    "category": "Git & Version Control",
+    "difficulty": "Intermediate",
+    "meaningMy": "လက်ရှိသင်အလုပ်လုပ်နေသော Branch သို့မဟုတ် Commit နေရာကို ညွှန်ပြပေးနေသည့် Git အညွှန်း (Pointer) ဖြစ်သည်။",
+    "meaningEn": "A symbolic Git reference pointing to the currently checked-out branch or commit.",
+    "example": "စာအုပ်ဖတ်ရင်း လက်ရှိရောက်နေသောစာမျက်နှာတွင် ညှပ်ထားသည့် Bookmark နှင့် တူသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "# Show latest commit pointed to by HEAD\ngit show --stat HEAD\n# Undo last commit but keep file edits\ngit reset --soft HEAD~1",
+    "usageNote": "နောက်ဆုံး Commit ကို ပြန်ပြင်ခြင်း သို့မဟုတ် ယခင် Commit များနှင့် Diff နှိုင်းယှဉ်ခြင်းတို့တွင် HEAD~1 ကဲ့သို့ ညွှန်းဆိုသုံးသည်။"
+  },
+  {
+    "term": "Tag",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆော့ဖ်ဝဲဗားရှင်းထုတ်ဝေချိန်ကဲ့သို့ အရေးကြီးသော Commit တစ်ခုကို မှတ်မိလွယ်စေရန် အမည်တပ်မှတ်သားထားခြင်းဖြစ်သည်။",
+    "meaningEn": "A named, permanent reference to a specific commit in Git history, commonly used to mark release versions.",
+    "example": "v1.0.0 ဟု Tag တပ်ထားခြင်းဖြင့် ထိုဗားရှင်းထုတ်ခဲ့စဉ်က ကုဒ်အတိအကျကို အချိန်မရွေး ပြန်ကြည့်နိုင်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git tag -a v1.2.0 -m \"Release v1.2.0\"\ngit push origin v1.2.0",
+    "usageNote": "Play Store သို့မဟုတ် Production ဗားရှင်းထုတ်တိုင်း Tag တပ်ခြင်းဖြင့် Release Pipeline ကို အလိုအလျောက် စတင်နိုင်သည်။"
+  },
+  {
+    "term": "Merge Conflict",
+    "category": "Git & Version Control",
+    "difficulty": "Intermediate",
+    "meaningMy": "Branch နှစ်ခုက ဖိုင်တစ်ဖိုင်တည်း၏ စာကြောင်းတူတစ်နေရာကို မတူညီစွာ ပြင်ထားသဖြင့် Git က အလိုအလျောက် မပေါင်းနိုင်တော့သည့် အခြေအနေဖြစ်သည်။",
+    "meaningEn": "A Git state occurring when competing changes touch the same lines of a file and require manual resolution.",
+    "example": "လူနှစ်ယောက် စာကြောင်းတစ်ကြောင်းတည်းကို မတူအောင်ပြင်မိချိန် မည်သည့်စာသားထားမလဲ လူကိုယ်တိုင်ရွေးချယ်ပေးရခြင်းဖြစ်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "<<<<<<< HEAD\nval version = 2\n=======\nval version = 3\n>>>>>>> feat/upgrade",
+    "usageNote": "Conflict Marker များကို ဖျက်ပြီး မှန်ကန်သောကုဒ်ကို ရွေးချယ်ကာ git add နှင့် git commit လုပ်ပြီး ဖြေရှင်းရသည်။"
+  },
+  {
+    "term": "Diff",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "ဖိုင်ဗားရှင်းနှစ်ခု သို့မဟုတ် Commit နှစ်ခုကြား ထပ်ထည့်ထားသောစာကြောင်း (+) နှင့် ဖျက်ထားသောစာကြောင်း (-) များကို နှိုင်းယှဉ်ပြသခြင်းဖြစ်သည်။",
+    "meaningEn": "A line-by-line comparison showing additions and deletions between two versions of code.",
+    "example": "Commit မလုပ်မီ ကိုယ်ပြင်ထားသော ကုဒ်စာကြောင်းအားလုံးကို ပြန်စစ်ဆေးရန် git diff ကို အမြဲသုံးကြသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git diff --staged\ngit diff main..HEAD --stat",
+    "usageNote": "Debug Print များ မေ့ကျန်မနေစေရန် Commit မတင်မီ မိမိပြောင်းလဲချက်အားလုံးကို စစ်ဆေးရာတွင် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Remote",
+    "category": "Git & Version Control",
+    "difficulty": "Beginner",
+    "meaningMy": "GitHub သို့မဟုတ် GitLab ကဲ့သို့ ဆာဗာပေါ်တွင် သိမ်းဆည်းထားပြီး အဖွဲ့သားများ ပူးပေါင်းချိတ်ဆက်သည့် Repository လိပ်စာဖြစ်သည်။",
+    "meaningEn": "A hosted version of a Git repository on a server (such as origin) used to push and pull code.",
+    "example": "ကိုယ့်စက်ထဲက ကုဒ်ကို အဖွဲ့သားများရရှိအောင် origin ဟူသော Remote ဆာဗာပေါ်သို့ Push တင်ပေးရသည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "git remote -v\ngit push -u origin main",
+    "usageNote": "Local Repository ကို GitHub/GitLab ဆာဗာများနှင့် ချိတ်ဆက်ပြီး ကုဒ် Backup နှင့် အဖွဲ့လိုက် Sync လုပ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Git Revert",
+    "category": "Git & Version Control",
+    "difficulty": "Intermediate",
+    "meaningMy": "ယခင် Commit တစ်ခု၏ ပြောင်းလဲမှုကို ပြန်ဖျက်ပေးသော Commit အသစ်တစ်ခု ဖန်တီးခြင်းဖြင့် History မပျက်ဘဲ နောက်ပြန်ဆုတ်သည့် နည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "Safely undoing an earlier commit by creating a new inverse commit without rewriting shared history.",
+    "example": "မှားရေးမိသော စာရင်းကို ဖျက်ဆေးမသုတ်ဘဲ ပြန်နုတ်ကြောင်း စာကြောင်းအသစ်ထည့်မှတ်သကဲ့သို့ ဖြစ်သည်။",
+    "codeLanguage": "git",
+    "codeSnippet": "# Safely undo a pushed commit on main\ngit revert 9f8e7d6\ngit push origin main",
+    "usageNote": "အများသုံး main branch ပေါ် Push တင်ပြီးသား Bug Commit ကို အခြားအဖွဲ့သားများမထိခိုက်စေဘဲ ပြန်ဖျက်ရန် reset အစား သုံးသည်။"
+  },
+  {
+    "term": "grep",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "ဖိုင်များ သို့မဟုတ် Command ရလဒ်များထဲမှ သတ်မှတ်ထားသော စာသားပုံစံပါသည့် စာကြောင်းများကို အမြန်ရှာဖွေပေးသော Linux Command ဖြစ်သည်။",
+    "meaningEn": "Global Regular Expression Print: a command-line tool that searches text and files for lines matching a pattern.",
+    "example": "Log ဖိုင်ရှည်ကြီးထဲမှ ERROR ပါသော စာကြောင်းများကိုသာ စက္ကန့်ပိုင်းအတွင်း စစ်ထုတ်ကြည့်ရှုနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "grep -rn \"Migration\" app/src/main/java/\ngrep -i \"error\" server.log | tail -n 20",
+    "usageNote": "ကုဒ်ထဲတွင် Function အမည်ရှာခြင်းနှင့် ဆာဗာ Log ဖိုင်ထဲမှ Error စာကြောင်းများ အမြန်စစ်ထုတ်ခြင်းတွင် နေ့စဉ်သုံးသည်။"
+  },
+  {
+    "term": "chmod",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "Linux ရှိ ဖိုင်နှင့် ဖိုလ်ဒါများ၏ ဖတ်ခွင့် (r)၊ ရေးခွင့် (w) နှင့် Run ခွင့် (x) ခွင့်ပြုချက်များကို ပြောင်းလဲသတ်မှတ်သော Command ဖြစ်သည်။",
+    "meaningEn": "Change Mode: a Unix command used to modify read, write, and execute permissions on files and directories.",
+    "example": "Shell Script ဖိုင်တစ်ခုကို တိုက်ရိုက် Run နိုင်အောင် chmod +x ဖြင့် Execute ခွင့်ပြုချက် ပေးရသည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "chmod +x gradlew\nchmod 600 ~/.ssh/id_ed25519",
+    "usageNote": "Script ဖိုင်များ Run ခွင့်ပေးရန်နှင့် SSH Private Key ကို အခြားသူမဖတ်နိုင်အောင် 600 ဖြင့် ကာကွယ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "sudo",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "ပုံမှန်အသုံးပြုသူအကောင့်မှ စနစ်အုပ်ချုပ်သူ (root) ခွင့်ပြုချက်ဖြင့် Command တစ်ခုကို ယာယီလုပ်ဆောင်စေသော Command ဖြစ်သည်။",
+    "meaningEn": "Superuser Do: executes a single command with elevated root administrator privileges on Unix/Linux.",
+    "example": "ဆာဗာပေါ်တွင် ဆော့ဖ်ဝဲအသစ် Install လုပ်ခြင်း သို့မဟုတ် Firewall ပြင်ခြင်းတို့အတွက် sudo ခံပြီး Run ရသည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "sudo apt update && sudo apt install -y nginx\nsudo systemctl restart nginx",
+    "usageNote": "အမြဲတမ်း root ဖြင့်မဝင်ဘဲ လိုအပ်သော စနစ်ပြင်ဆင်မှုတစ်ခုချင်းစီကိုသာ ဘေးကင်းစွာ လုပ်ဆောင်ရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Pipe",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "Command တစ်ခု၏ ထွက်လာသောရလဒ် (stdout) ကို နောက် Command တစ်ခု၏ အဝင် (stdin) အဖြစ် `|` သင်္ကေတဖြင့် တိုက်ရိုက်ချိတ်ဆက်ပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "A shell operator (|) that passes the standard output of one command directly as input into the next.",
+    "example": "စက်ရုံထဲက ပစ္စည်းကို စက်တစ်လုံးမှ နောက်တစ်လုံးသို့ ပိုက်လိုင်းဖြင့် တန်းပို့သကဲ့သို့ Command များကို တွဲသုံးနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "cat access.log | grep \"500\" | wc -l",
+    "usageNote": "ယာယီဖိုင်များ မဖန်တီးဘဲ Linux Command အငယ်လေးများကို တွဲစပ်၍ Log နှင့် ဒေတာများကို အမြန်စစ်ထုတ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "SSH",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "အဝေးရှိ Linux ဆာဗာတစ်လုံး၏ Terminal သို့ အင်တာနက်မှတစ်ဆင့် ကုဒ်ဝှက်လုံခြုံစွာ ဝင်ရောက်ထိန်းချုပ်နိုင်သော ပရိုတိုကောဖြစ်သည်။",
+    "meaningEn": "Secure Shell: a cryptographic protocol for encrypted remote terminal login and command execution.",
+    "example": "Cloud ဆာဗာထဲဝင်ပြီး Log စစ်ခြင်း သို့မဟုတ် Deployment လုပ်ခြင်းတို့ကို SSH ဖြင့် ချိတ်ဆက်လုပ်ဆောင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "ssh -i ~/.ssh/id_ed25519 ubuntu@203.0.113.10\nscp app.jar ubuntu@203.0.113.10:/srv/app/",
+    "usageNote": "Production ဆာဗာများကို အဝေးမှ လုံခြုံစွာ စီမံခန့်ခွဲခြင်းနှင့် ဖိုင်ကူးပြောင်းခြင်းတို့အတွက် မရှိမဖြစ်သုံးသည်။"
+  },
+  {
+    "term": "cron",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "Linux စနစ်တွင် Script သို့မဟုတ် Command များကို သတ်မှတ်ထားသော အချိန်ဇယားအတိုင်း အလိုအလျောက် ပုံမှန်မောင်းနှင်ပေးသော စနစ်ဖြစ်သည်။",
+    "meaningEn": "A time-based job scheduler in Unix-like operating systems that runs scripts on recurring schedules.",
+    "example": "ညသန်းခေါင်တိုင်း ဒေတာဘေ့စ် Backup ယူရန် cron အချိန်ဇယား သတ်မှတ်ထားနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "# Run backup every day at 02:30 AM\n30 2 * * * /usr/local/bin/backup-db.sh >> /var/log/backup.log 2>&1",
+    "usageNote": "နေ့စဉ် Backup ဆွဲခြင်း၊ ယာယီဖိုင်ရှင်းခြင်းနှင့် အလိုအလျောက် အစီရင်ခံစာထုတ်ခြင်းတို့အတွက် ဆာဗာများတွင် သုံးသည်။"
+  },
+  {
+    "term": "curl",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "Terminal ထဲမှတစ်ဆင့် HTTP/HTTPS တောင်းဆိုမှုများ ပေးပို့ပြီး API စမ်းသပ်ခြင်းနှင့် ဖိုင်ဒေါင်းလုဒ်ဆွဲခြင်း လုပ်နိုင်သော ကိရိယာဖြစ်သည်။",
+    "meaningEn": "Client URL: a command-line utility for transferring data with URLs and testing HTTP APIs.",
+    "example": "Postman မဖွင့်ဘဲ Terminal ထဲမှနေ၍ API Endpoint အလုပ်လုပ်မလုပ် ချက်ချင်းစမ်းသပ်နိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "curl -s -X POST https://api.example.com/terms \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"term\":\"curl\"}'",
+    "usageNote": "Backend API စမ်းသပ်ခြင်း၊ Header စစ်ဆေးခြင်းနှင့် CI Script များတွင် ဖိုင်ဒေါင်းလုဒ်ဆွဲခြင်းတို့အတွက် နေ့စဉ်သုံးသည်။"
+  },
+  {
+    "term": "PATH",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "Terminal တွင် Command အမည်ရိုက်လိုက်သည့်အခါ စနစ်က မည်သည့်ဖိုလ်ဒါများထဲတွင် ပရိုဂရမ်ဖိုင်ကို ရှာရမည်ဟု သတ်မှတ်ထားသော Environment Variable ဖြစ်သည်။",
+    "meaningEn": "An environment variable listing directories the shell searches to locate executable commands.",
+    "example": "Android SDK platform-tools ကို PATH ထဲ ထည့်ထားမှ ဘယ်ဖိုလ်ဒါကမဆို adb ဟု တိုက်ရိုက်ရိုက်သုံးနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "export PATH=\"$HOME/Android/Sdk/platform-tools:$PATH\"\nwhich adb",
+    "usageNote": "command not found အမှားတက်သည့်အခါ ကိရိယာ၏ bin ဖိုလ်ဒါကို PATH ထဲ ထည့်သွင်းပြီး ဖြေရှင်းလေ့ရှိသည်။"
+  },
+  {
+    "term": "Symlink",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဖိုင်ကို မိတ္တူမကူးဘဲ အခြားဖိုင် သို့မဟုတ် ဖိုလ်ဒါတစ်ခု၏ လမ်းကြောင်းကိုသာ ညွှန်ပြပေးထားသော ဖြတ်လမ်းဖိုင် (Symbolic Link) ဖြစ်သည်။",
+    "meaningEn": "A special file that acts as a pointer referencing another file or directory path.",
+    "example": "current ဟူသော Symlink ကို ဗားရှင်းအသစ်ဖိုလ်ဒါသို့ ပြောင်းညွှန်လိုက်ရုံဖြင့် အက်ပ်ဗားရှင်းကို ချက်ချင်းပြောင်းနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "ln -sfn /srv/releases/v2 /srv/current\nls -l /srv/current",
+    "usageNote": "Nginx site ဖွင့်/ပိတ်ခြင်းနှင့် Zero-downtime Deployment များတွင် ဗားရှင်းအမြန်ပြောင်းလဲရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Process",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "Operating System အတွင်း ကိုယ်ပိုင် PID နံပါတ်နှင့် မမ်မိုရီနေရာရရှိကာ လက်ရှိမောင်းနှင်နေသော ပရိုဂရမ်တစ်ခုဖြစ်သည်။",
+    "meaningEn": "An active running instance of a program with its own process ID (PID) and isolated memory space.",
+    "example": "ဟန်းနေသော ဆာဗာပရိုဂရမ်တစ်ခုကို PID ရှာပြီး kill command ဖြင့် ရပ်တန့်ပစ်နိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "ps aux | grep java\nkill -15 4821",
+    "usageNote": "CPU/RAM အလွန်စားနေသော ပရိုဂရမ်များကို ရှာဖွေခြင်းနှင့် မလိုအပ်သော Background Process များ ပိတ်ခြင်းတွင် သုံးသည်။"
+  },
+  {
+    "term": "stdout / stderr",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "Command တစ်ခုမှ ပုံမှန်ရလဒ်ထုတ်ပေးသော လမ်းကြောင်း (stdout, fd 1) နှင့် အမှားမက်ဆေ့ချ်ထုတ်ပေးသော လမ်းကြောင်း (stderr, fd 2) ဖြစ်သည်။",
+    "meaningEn": "Standard output (fd 1) for normal program results and standard error (fd 2) for diagnostic error messages.",
+    "example": "ပုံမှန် Log နှင့် Error Log ကို ဖိုင်သီးခြားခွဲသိမ်းခြင်း သို့မဟုတ် 2>&1 ဖြင့် တစ်ဖိုင်တည်းပေါင်းသိမ်းနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "./run-job.sh > output.log 2> error.log\n# Combine both streams\n./run-job.sh > all.log 2>&1",
+    "usageNote": "Automation Script များတွင် ပုံမှန်ဒေတာနှင့် Error မက်ဆေ့ချ် မရောထွေးစေရန် ခွဲခြားထိန်းချုပ်ရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Environment Variable",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "ကုဒ်ထဲတွင် တိုက်ရိုက်မရေးဘဲ ပတ်ဝန်းကျင်အလိုက် ပြောင်းလဲပေးနိုင်ရန် စနစ်မှ အက်ပ်ထံ ပို့ပေးသော Key-Value ဆက်တင်တန်ဖိုးဖြစ်သည်။",
+    "meaningEn": "A dynamic key-value pair provided by the OS environment to configure apps without hardcoding secrets.",
+    "example": "Dev နှင့် Production ဒေတာဘေ့စ်လိပ်စာကို ကုဒ်ထဲမရေးဘဲ DATABASE_URL Environment Variable ဖြင့် ခွဲထည့်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "export PORT=8080\nexport NODE_ENV=production\nprintenv PORT",
+    "usageNote": "API Key နှင့် ဆာဗာဆက်တင်များကို Git ထဲမထည့်ဘဲ ပတ်ဝန်းကျင်အလိုက် လုံခြုံစွာ ခွဲခြားသတ်မှတ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "sed",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဖိုင်ကို Editor ဖြင့် ဖွင့်စရာမလိုဘဲ Terminal မှတစ်ဆင့် စာသားများကို အစားထိုးခြင်းနှင့် စစ်ထုတ်ပြင်ဆင်ခြင်း လုပ်နိုင်သော Command ဖြစ်သည်။",
+    "meaningEn": "Stream Editor: a command-line utility for automated text substitution and line transformations.",
+    "example": "Config ဖိုင်များစွာထဲမှ ဆာဗာလိပ်စာဟောင်းကို အသစ်သို့ Command တစ်ကြောင်းတည်းဖြင့် အစားထိုးနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "# Replace http with https across a file\nsed -i 's/http:\\/\\//https:\\/\\//g' config.env",
+    "usageNote": "CI/CD Script များတွင် ဗားရှင်းနံပါတ်ပြောင်းခြင်းနှင့် ဖိုင်ကြီးများကို အလိုအလျောက် စာသားပြင်ခြင်းတို့အတွက် သုံးသည်။"
+  },
+  {
+    "term": "tar",
+    "category": "Linux & Terminal",
+    "difficulty": "Beginner",
+    "meaningMy": "ဖိုင်နှင့် ဖိုလ်ဒါများစွာကို Backup သို့မဟုတ် ပေးပို့ရန်အတွက် ဖိုင်တစ်ဖိုင်တည်းအဖြစ် စုစည်းချုံ့ပေးသော Linux Command ဖြစ်သည်။",
+    "meaningEn": "Tape Archive: a utility to bundle multiple files and directories into a single compressed archive.",
+    "example": "ဆာဗာပေါ်က ဝဘ်ဖိုလ်ဒါတစ်ခုလုံးကို .tar.gz အဖြစ် ချုံ့ပြီး အခြားဆာဗာသို့ ကူးပြောင်းနိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "# Create compressed archive\ntar -czf backup.tar.gz ./data\n# Extract archive\ntar -xzf backup.tar.gz",
+    "usageNote": "Linux ဆာဗာ Backup ဖိုင်များ ဖန်တီးခြင်းနှင့် Release Package များ ဖြည်ထုတ်ခြင်းတို့တွင် ပုံမှန်အသုံးပြုသည်။"
+  },
+  {
+    "term": "Exit Code",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "Command သို့မဟုတ် ပရိုဂရမ်တစ်ခု ပြီးဆုံးချိန်တွင် အောင်မြင်ကြောင်း (0) သို့မဟုတ် အမှားဖြစ်ကြောင်း (1–255) ပြန်ပို့သော ဂဏန်းဖြစ်သည်။",
+    "meaningEn": "A numeric status returned by a finished process where 0 indicates success and non-zero indicates an error.",
+    "example": "CI Pipeline တွင် Test Command က 0 မဟုတ်သော Exit Code ပြန်လျှင် Build ကို အလိုအလျောက် ရပ်တန့်ပေးသည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "./gradlew test\necho \"Exit status: $?\"\n# Fail script immediately on any non-zero exit\nset -euo pipefail",
+    "usageNote": "Shell Script နှင့် CI/CD များတွင် အမှားဖြစ်ပါက ဆက်မလုပ်ဘဲ ချက်ချင်းရပ်တန့်စေရန် Exit Code ကို စစ်ဆေးသုံးသည်။"
+  },
+  {
+    "term": "jq",
+    "category": "Linux & Terminal",
+    "difficulty": "Intermediate",
+    "meaningMy": "Terminal ထဲတွင် JSON ဒေတာများကို လှပစွာပြသခြင်း၊ စစ်ထုတ်ခြင်းနှင့် လိုချင်သော Field များကို ထုတ်ယူခြင်း လုပ်နိုင်သော Command ကိရိယာဖြစ်သည်။",
+    "meaningEn": "A lightweight command-line JSON processor for filtering, formatting, and transforming JSON data.",
+    "example": "curl ဖြင့် API ခေါ်ပြီး ထွက်လာသော JSON ထဲမှ အမည်စာရင်းကိုသာ jq ဖြင့် တန်းထုတ်ကြည့်နိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "cat app/src/main/assets/terms.json \\\n  | jq 'length'\ncurl -s https://api.example.com/user | jq -r '.name'",
+    "usageNote": "REST API ရလဒ်များကို Terminal ထဲမှာပင် အမြန်စစ်ဆေးခြင်းနှင့် Shell Script များတွင် JSON ဖတ်ယူခြင်းတို့အတွက် သုံးသည်။"
+  },
+  {
+    "term": "Pipeline",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "meaningMy": "ကုဒ် Lint စစ်ခြင်း၊ Test လုပ်ခြင်း၊ Build ထုတ်ခြင်းနှင့် Deploy တင်ခြင်းတို့ကို အဆင့်ဆင့် အလိုအလျောက် ချိတ်ဆက်လုပ်ဆောင်သော လမ်းကြောင်းဖြစ်သည်။",
+    "meaningEn": "An automated sequence of stages (lint, test, build, deploy) that code changes pass through before release.",
+    "example": "ကားစက်ရုံထဲက တပ်ဆင်ရေးလိုင်းကဲ့သို့ အဆင့်တစ်ခုအောင်မြင်မှ နောက်တစ်ဆင့်သို့ အလိုအလျောက် ကူးပြောင်းသည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "stages:\n  - lint\n  - test\n  - build\n  - deploy",
+    "usageNote": "Release တိုင်းကို တူညီသောအရည်အသွေးစံနှုန်းဖြင့် အလိုအလျောက်စစ်ဆေးပြီး လူအမှားလျှော့ချရန် တည်ဆောက်သည်။"
+  },
+  {
+    "term": "Deployment",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "meaningMy": "တည်ဆောက်စမ်းသပ်ပြီးစီးသော ဆော့ဖ်ဝဲဗားရှင်းအသစ်ကို အသုံးပြုသူများ တကယ်သုံးနိုင်မည့် Production ဆာဗာပေါ်သို့ လွှင့်တင်ခြင်းဖြစ်သည်။",
+    "meaningEn": "The process of releasing and activating a built software version in a target environment such as staging or production.",
+    "example": "ဝဘ်အက်ပ်ဗားရှင်းအသစ်ကို Docker Image တည်ဆောက်ပြီး Cloud Run ပေါ်သို့ တင်လွှင့်ခြင်းသည် Deployment ဖြစ်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "kubectl set image deployment/api \\\n  api=registry.example.com/api:v2.1.0\nkubectl rollout status deployment/api",
+    "usageNote": "အသုံးပြုသူဝန်ဆောင်မှုမပြတ်တောက်စေဘဲ ဗားရှင်းအသစ်များကို မြန်ဆန်စိတ်ချစွာ ဖြန့်ချိရန် စနစ်တကျစီမံသည်။"
+  },
+  {
+    "term": "Rollback",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "meaningMy": "အသစ်တင်လိုက်သော ဆော့ဖ်ဝဲဗားရှင်းတွင် ပြဿနာပေါ်ပေါက်ပါက ယခင်ကောင်းမွန်စွာ အလုပ်လုပ်ခဲ့သော ဗားရှင်းဟောင်းသို့ အမြန်ပြန်ပြောင်းခြင်းဖြစ်သည်။",
+    "meaningEn": "Reverting a deployment or database change back to the previous stable version after a failure.",
+    "example": "Update အသစ်တင်ပြီး Error တက်လာချိန် အသုံးပြုသူများမထိခိုက်အောင် စက္ကန့်ပိုင်းအတွင်း ဗားရှင်းဟောင်းသို့ ပြန်ဆုတ်ခြင်းဖြစ်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "# Revert Kubernetes deployment to previous revision\nkubectl rollout undo deployment/api",
+    "usageNote": "Production ပြဿနာဖြစ်ချိန်တွင် Bug ပြင်နေစဉ်အတွင်း ဝန်ဆောင်မှုချက်ချင်းပြန်ကောင်းစေရန် Rollback အသင့်ပြင်ထားရသည်။"
+  },
+  {
+    "term": "Infrastructure as Code",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "Cloud ဆာဗာ၊ ကွန်ရက်နှင့် ဒေတာဘေ့စ်များကို ဝဘ်ခလုတ်များလိုက်နှိပ်မဆောက်ဘဲ Code ဖိုင်များဖြင့် ရေးသားဖန်တီးစီမံသည့် နည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "Managing and provisioning cloud servers, networks, and databases through version-controlled configuration files.",
+    "example": "Terraform ဖိုင်တစ်ခုတည်းဖြင့် Staging နှင့် Production ဆာဗာပတ်ဝန်းကျင်နှစ်ခုကို တစ်ပုံစံတည်း ဖန်တီးနိုင်သည်။",
+    "codeLanguage": "hcl",
+    "codeSnippet": "resource \"aws_s3_bucket\" \"assets\" {\n  bucket = \"techterms-static-assets\"\n}",
+    "usageNote": "ဆာဗာဆက်တင်များကို Git တွင် မှတ်တမ်းတင်ထားနိုင်ပြီး ပတ်ဝန်းကျင်အသစ်များကို အမှားမရှိ ပြန်တည်ဆောက်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Blue-Green Deployment",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "လက်ရှိအလုပ်လုပ်နေသော ပတ်ဝန်းကျင် (Blue) နှင့် ဗားရှင်းအသစ်တင်ထားသော ပတ်ဝန်းကျင် (Green) နှစ်ခုထားပြီး Traffic ကို တစ်ချက်တည်းပြောင်းလွှဲသည့် နည်းလမ်းဖြစ်သည်။",
+    "meaningEn": "A release strategy running two identical environments and switching live traffic from old (Blue) to new (Green).",
+    "example": "လမ်းဟောင်းမပိတ်မီ လမ်းသစ်အဆင်သင့်ဖောက်ထားပြီးမှ ကားများကို လမ်းသစ်သို့ ပြောင်းလွှဲသကဲ့သို့ Downtime မရှိအောင် လုပ်သည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "service:\n  selector:\n    app: api\n    slot: green   # Flip back to \"blue\" for instant rollback",
+    "usageNote": "Zero-downtime Release လိုအပ်ပြီး ပြဿနာတက်လျှင် စက္ကန့်ပိုင်းအတွင်း ပြန်လှည့်နိုင်ရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Canary Release",
+    "category": "DevOps",
+    "difficulty": "Advanced",
+    "meaningMy": "ဗားရှင်းအသစ်ကို အသုံးပြုသူအားလုံးထံ တစ်ခါတည်းမပေးဘဲ ၅% ခန့်ထံ အရင်စမ်းသပ်ဖြန့်ဝေပြီး စိတ်ချရမှ တဖြည်းဖြည်းတိုးချဲ့ခြင်းဖြစ်သည်။",
+    "meaningEn": "Gradually rolling out a new release to a small subset of users first to detect issues before full rollout.",
+    "example": "အက်ပ် Update အသစ်ကို အသုံးပြုသူ ၅% ထံ အရင်ပေးပြီး Crash မရှိမှ ၁၀၀% အပြည့်ဖြန့်ဝေခြင်းဖြစ်သည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "traffic:\n  - revisionName: api-v1\n    percent: 95\n  - revisionName: api-v2\n    percent: 5",
+    "usageNote": "အရေးကြီးသော ပြောင်းလဲမှုကြီးများ တင်သည့်အခါ ဖြစ်လာနိုင်သောထိခိုက်မှုကို အသုံးပြုသူအနည်းစုအတွင်းသာ ကန့်သတ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Reverse Proxy",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "အသုံးပြုသူများထံမှ ဝင်လာသော တောင်းဆိုမှုများကို ရှေ့ဆုံးမှလက်ခံပြီး အတွင်းရှိ Backend ဆာဗာများထံ လမ်းကြောင်းပို့ပေးသော ဆာဗာဖြစ်သည်။",
+    "meaningEn": "A server sitting in front of backend services to handle TLS termination, routing, caching, and security.",
+    "example": "ရုံးဧည့်ကြိုကောင်တာက ဧည့်သည်များကို သက်ဆိုင်ရာဌာနသို့ လမ်းညွှန်ပေးသကဲ့သို့ Nginx က Reverse Proxy အဖြစ် အလုပ်လုပ်သည်။",
+    "codeLanguage": "nginx",
+    "codeSnippet": "server {\n  listen 443 ssl;\n  location /api/ {\n    proxy_pass http://127.0.0.1:3000;\n  }\n}",
+    "usageNote": "HTTPS လက်မှတ်ကို တစ်နေရာတည်းတွင် စီမံပြီး အတွင်းရှိ Backend Port များကို ပြင်ပမှ မမြင်အောင် ကာကွယ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Health Check",
+    "category": "DevOps",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆာဗာ သို့မဟုတ် Container တစ်ခု ပုံမှန်အလုပ်လုပ်နေဆဲ ဟုတ်မဟုတ် အလိုအလျောက် စစ်ဆေးပေးသော Endpoint ဖြစ်သည်။",
+    "meaningEn": "An automated probe endpoint verifying whether a service instance is alive and ready to accept traffic.",
+    "example": "/healthz မှ 200 OK မပြန်တော့လျှင် Load Balancer က ထိုဆာဗာထံ Traffic မပို့တော့ဘဲ ပြန်နှိုးပေးသည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "readinessProbe:\n  httpGet:\n    path: /healthz\n    port: 8080\n  periodSeconds: 10",
+    "usageNote": "ချို့ယွင်းနေသော Container များထံ အသုံးပြုသူ Request မရောက်စေရန်နှင့် အလိုအလျောက် Restart လုပ်စေရန် ထည့်သွင်းသည်။"
+  },
+  {
+    "term": "Observability",
+    "category": "DevOps",
+    "difficulty": "Intermediate",
+    "meaningMy": "Logs၊ Metrics နှင့် Traces များမှတစ်ဆင့် Production စနစ်အတွင်း ဘာဖြစ်နေကြောင်း အတိအကျ သိရှိနားလည်နိုင်စွမ်းဖြစ်သည်။",
+    "meaningEn": "The ability to understand a system internal state from its external outputs: logs, metrics, and distributed traces.",
+    "example": "ကားဒက်ရှ်ဘုတ်က အပူချိန်နှင့် ဆီပမာဏပြသကဲ့သို့ ဆာဗာနှေးနေသည့်အကြောင်းရင်းကို ချက်ချင်းမြင်နိုင်စေသည်။",
+    "codeLanguage": "json",
+    "codeSnippet": "{\n  \"level\": \"error\",\n  \"service\": \"billing\",\n  \"traceId\": \"4bf92f3577b34da6\",\n  \"latencyMs\": 1420\n}",
+    "usageNote": "Microservices စနစ်များတွင် Production Error များကို ခန့်မှန်းမနေဘဲ Trace ID နှင့် Structured Log ဖြင့် အမြန်ရှာဖွေရန် သုံးသည်။"
+  },
+  {
+    "term": "MVC",
+    "category": "Software Design",
+    "difficulty": "Beginner",
+    "meaningMy": "အက်ပ်တစ်ခုကို ဒေတာ (Model)၊ မျက်နှာပြင် (View) နှင့် ထိန်းချုပ်မှု (Controller) ဟူ၍ အပိုင်း ၃ ပိုင်းခွဲ တည်ဆောက်သည့် Architecture ပုံစံဖြစ်သည်။",
+    "meaningEn": "Model-View-Controller: a pattern separating data logic, user interface, and input handling into three components.",
+    "example": "Backend Web Framework များတွင် Route ကို Controller၊ HTML ကို View နှင့် Database ကို Model အဖြစ် ခွဲရေးကြသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class TermController(private val model: TermModel) {\n    fun showTerm(id: Int) = renderView(model.findById(id))\n}",
+    "usageNote": "UI ပြောင်းလဲမှုနှင့် Business Logic မရောထွေးစေဘဲ အဖွဲ့လိုက်ခွဲရေးရန် အခြေခံ Architecture အဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "MVVM",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "UI (View) က ViewModel မှ ထုတ်ပေးသော StateFlow/LiveData ကို စောင့်ကြည့်ပြသပြီး ဒေတာကို Model မှ စီမံသည့် Android စံ Architecture ဖြစ်သည်။",
+    "meaningEn": "Model-View-ViewModel: an architectural pattern decoupling UI views from business logic through observable state.",
+    "example": "TechTerms အက်ပ်တွင် HomeScreen (View) က HomeViewModel ၏ uiState ကို ဖတ်ပြီး TermRepository (Model) မှ ဒေတာယူသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class BrowseViewModel(repo: TermRepository) : ViewModel() {\n    val uiState: StateFlow<BrowseUiState> = ...\n}\n// In Composable:\nval state by viewModel.uiState.collectAsStateWithLifecycle()",
+    "usageNote": "Jetpack Compose နှင့် Android အက်ပ်များတွင် Screen Rotation ခံနိုင်ပြီး Test ရေးရလွယ်ကူစေရန် စံပုံစံအဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "Dependency Injection",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "Class တစ်ခုက လိုအပ်သော Object များကို ကိုယ်တိုင်မဖန်တီးဘဲ ပြင်ပမှ Constructor ဖြင့် ထည့်သွင်းပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "Supplying an object required dependencies from the outside rather than constructing them internally.",
+    "example": "ViewModel ထဲတွင် Database ကို တိုက်ရိုက်မဖွင့်ဘဲ TermRepository ကို Constructor မှ ထည့်ပေးခြင်းဖြစ်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class HomeViewModel(\n    private val repository: TermRepository\n) : ViewModel()",
+    "usageNote": "Unit Test ရေးသည့်အခါ တကယ့် Database အစား Fake Repository ကို အလွယ်တကူ အစားထိုးစမ်းသပ်နိုင်ရန် သုံးသည်။"
+  },
+  {
+    "term": "Singleton",
+    "category": "Software Design",
+    "difficulty": "Beginner",
+    "meaningMy": "အက်ပ်တစ်ခုလုံး မောင်းနှင်နေစဉ်အတွင်း Class တစ်ခုအတွက် Instance တစ်ခုတည်းသာ ဖန်တီးပြီး မျှဝေအသုံးပြုစေသည့် Design Pattern ဖြစ်သည်။",
+    "meaningEn": "A creational pattern ensuring only one instance of a class exists across the application lifecycle.",
+    "example": "Room Database ကို အကြိမ်ကြိမ်ဖွင့်လျှင် မမ်မိုရီကုန်သဖြင့် တစ်ခုတည်းသာဖွင့်ပြီး အက်ပ်တစ်ခုလုံး မျှသုံးသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "object NotificationHelper {\n    const val CHANNEL_ID = \"daily_term\"\n    fun createChannel(context: Context) { ... }\n}",
+    "usageNote": "Database Connection၊ Logger သို့မဟုတ် Shared Cache ကဲ့သို့ တစ်ခုတည်းသာရှိသင့်သော အရင်းအမြစ်များအတွက် သုံးသည်။"
+  },
+  {
+    "term": "SOLID",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "ပြင်ဆင်ထိန်းသိမ်းရလွယ်ပြီး တိုးချဲ့နိုင်သော Object-Oriented ကုဒ်ရေးသားရန် အခြေခံမူ ၅ ချက် (SRP, OCP, LSP, ISP, DIP) ဖြစ်သည်။",
+    "meaningEn": "Five object-oriented design principles promoting modular, maintainable, and loosely coupled software.",
+    "example": "Class တစ်ခုက အလုပ်တစ်မျိုးတည်းသာ တာဝန်ယူခြင်း (Single Responsibility) သည် SOLID ၏ ပထမဆုံးမူဖြစ်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "// Dependency Inversion: depend on abstraction\ninterface TermSource { suspend fun load(): List<Term> }\nclass AssetTermSource : TermSource { ... }",
+    "usageNote": "ပရောဂျက်ကြီးလာချိန်တွင် တစ်နေရာပြင်လိုက်ရုံဖြင့် အခြားနေရာများ မပျက်စီးစေရန် ကုဒ်တည်ဆောက်ပုံလမ်းညွှန်အဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "Refactoring",
+    "category": "Software Design",
+    "difficulty": "Beginner",
+    "meaningMy": "ဆော့ဖ်ဝဲ၏ ပြင်ပအလုပ်လုပ်ပုံ မပြောင်းလဲစေဘဲ အတွင်းကုဒ်ကို ပိုမိုရှင်းလင်းဖတ်ရလွယ်အောင် ပြန်လည်ပြုပြင်တည်ဆောက်ခြင်းဖြစ်သည်။",
+    "meaningEn": "Restructuring existing code to improve clarity and maintainability without changing its external behavior.",
+    "example": "စာကြောင်း ၂၀၀ ရှည်နေသော Function ကြီးကို အလုပ်တစ်ခုချင်းစီအလိုက် Function အငယ်လေးများ ခွဲထုတ်ခြင်းဖြစ်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "// Before: nested ifs -> After: clear guard clauses\nfun discount(price: Int): Int {\n    if (price < 10_000) return 0\n    return (price * 0.1).toInt()\n}",
+    "usageNote": "Feature အသစ်မထည့်မီ ရှုပ်ထွေးနေသောကုဒ်ကို ရှင်းလင်းထားခြင်းဖြင့် Bug နည်းပြီး ဖွံ့ဖြိုးမှုမြန်ဆန်စေသည်။"
+  },
+  {
+    "term": "Unit Test",
+    "category": "Software Design",
+    "difficulty": "Beginner",
+    "meaningMy": "Function သို့မဟုတ် Class အစိတ်အပိုင်းငယ်တစ်ခုချင်းစီ မှန်ကန်စွာ အလုပ်လုပ်မလုပ် အလိုအလျောက် စမ်းသပ်စစ်ဆေးသည့် ကုဒ်ဖြစ်သည်။",
+    "meaningEn": "An automated test verifying the behavior of a single isolated function or class.",
+    "example": "Term of the Day တွက်ချက်သည့် Formula သည် နေ့ရက်အလိုက် မှန်မမှန် Unit Test ရေးပြီး စက္ကန့်ပိုင်းအတွင်း စစ်နိုင်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "@Test\nfun delayIsAlwaysPositive() {\n    val delay = NotificationScheduler.computeInitialDelayMillis(8, 0)\n    assertTrue(delay >= 1_000L)\n}",
+    "usageNote": "ကုဒ်ပြင်ဆင်မှုအသစ်များကြောင့် ယခင်အလုပ်လုပ်နေသော Logic များ မပျက်စီးကြောင်း (Regression) စိတ်ချရန် ရေးသားသည်။"
+  },
+  {
+    "term": "Technical Debt",
+    "category": "Software Design",
+    "difficulty": "Beginner",
+    "meaningMy": "အမြန်ပြီးစေရန် ဖြတ်လမ်းနည်းဖြင့် ရေးထားခဲ့သော ကုဒ်များကြောင့် နောက်ပိုင်းတွင် ပြင်ဆင်ထိန်းသိမ်းရန် အချိန်ပိုကုန်ကျလာသည့် ဝန်ထုပ်ဝန်ပိုးဖြစ်သည်။",
+    "meaningEn": "The future maintenance cost incurred by choosing a quick, suboptimal implementation over a cleaner design.",
+    "example": "အကြွေးယူသုံးပြီး အတိုးပြန်ဆပ်ရသကဲ့သို့ ခဏတာဖြတ်လမ်းရေးထားသော ကုဒ်များကို နောက်ပိုင်းပြန်ရှင်းရန် အချိန်ပိုပေးရသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "// TODO(tech-debt): Replace manual JSON parsing with streaming\n// Tracked in issue #48 before dataset exceeds 5,000 rows",
+    "usageNote": "Sprint တိုင်းတွင် Technical Debt အနည်းငယ်စီ ပြန်ရှင်းပေးခြင်းဖြင့် ပရောဂျက် နှေးကွေးမသွားအောင် ထိန်းသိမ်းရသည်။"
+  },
+  {
+    "term": "Race Condition",
+    "category": "Software Design",
+    "difficulty": "Advanced",
+    "meaningMy": "Thread သို့မဟုတ် Coroutine နှစ်ခုက ဒေတာတစ်ခုတည်းကို တစ်ပြိုင်နက် ပြင်ဆင်မိရာမှ အချိန်အနည်းငယ်ကွာခြားမှုအလိုက် ရလဒ်မှားယွင်းသွားသည့် Bug ဖြစ်သည်။",
+    "meaningEn": "A concurrency bug where program outcome depends unpredictably on the timing of competing threads or tasks.",
+    "example": "ပထမအကြိမ်ဖွင့်ချိန် Screen နှစ်ခုက Database ကို တစ်ပြိုင်နက် Seed လုပ်မိလျှင် စကားလုံးနှစ်ထပ်ဖြစ်နိုင်သဖြင့် Mutex ဖြင့် ကာကွယ်ရသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "private val seedMutex = Mutex()\nsuspend fun ensurePopulated() = seedMutex.withLock {\n    if (dao.count() == 0) dao.insertAll(loadJson())\n}",
+    "usageNote": "Shared State ကို ပြိုင်တူဝင်ရောက်ချိန်တွင် Mutex၊ AtomicInteger သို့မဟုတ် Database Transaction ဖြင့် ကာကွယ်ရန် သတိပြုရသည်။"
+  },
+  {
+    "term": "Repository Pattern",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "ViewModel နှင့် ဒေတာရင်းမြစ် (Room, API, Assets) ကြား ကြားခံအလွှာတစ်ခုထားပြီး ဒေတာရယူပုံအသေးစိတ်ကို ဖုံးကွယ်ပေးသည့် ပုံစံဖြစ်သည်။",
+    "meaningEn": "An abstraction layer mediating between domain/UI logic and data sources like databases or APIs.",
+    "example": "ViewModel က SQLite လား JSON လား သိစရာမလိုဘဲ TermRepository.searchTerms() ကိုသာ ခေါ်သုံးနိုင်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class TermRepository(private val dao: TermDao) {\n    fun search(q: String, cat: String?, devOnly: Boolean) =\n        dao.search(q.trim(), cat, devOnly)\n}",
+    "usageNote": "ဒေတာသိမ်းဆည်းပုံ ပြောင်းလဲသည့်တိုင် UI နှင့် ViewModel များကို ပြန်ပြင်စရာမလိုစေရန် Android တွင် စံအဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "Idempotency",
+    "category": "Software Design",
+    "difficulty": "Advanced",
+    "meaningMy": "လုပ်ဆောင်ချက် သို့မဟုတ် API တောင်းဆိုမှုတစ်ခုကို တစ်ကြိမ်လုပ်သည်ဖြစ်စေ အကြိမ်ကြိမ်ထပ်လုပ်သည်ဖြစ်စေ ရလဒ်တစ်ခုတည်းသာ ထွက်စေသည့် ဂုဏ်သတ္တိဖြစ်သည်။",
+    "meaningEn": "A property where executing an operation multiple times produces the exact same state as executing it once.",
+    "example": "အင်တာနက်ပြတ်ပြီး ငွေပေးချေမှုခလုတ် နှစ်ခါနှိပ်မိသော်လည်း ပိုက်ဆံနှစ်ခါမဖြတ်စေရန် Idempotency Key ဖြင့် ကာကွယ်သည်။",
+    "codeLanguage": "http",
+    "codeSnippet": "POST /v1/payments HTTP/1.1\nIdempotency-Key: pay_7f3c91a2\nContent-Type: application/json",
+    "usageNote": "ကွန်ရက်မတည်ငြိမ်၍ Retry ပြန်ပို့ရသည့်အခါ ငွေနှစ်ခါဖြတ်ခြင်း သို့မဟုတ် ဒေတာနှစ်ထပ်ဝင်ခြင်းမဖြစ်အောင် ဒီဇိုင်းဆွဲရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Clean Architecture",
+    "category": "Software Design",
+    "difficulty": "Advanced",
+    "meaningMy": "Business Logic ကို အလယ်ဗဟိုတွင်ထားပြီး UI၊ Database နှင့် Framework များကို အပြင်အလွှာများအဖြစ် မှီခိုမှုတစ်ဖက်တည်းခွဲထားသော တည်ဆောက်ပုံဖြစ်သည်။",
+    "meaningEn": "A layered software architecture keeping core business rules independent of UI frameworks and databases.",
+    "example": "အတွင်းပိုင်း UseCase များက Android SDK ကို မမှီခိုသဖြင့် JVM ပေါ်တွင် အလွန်မြန်ဆန်စွာ Test လုပ်နိုင်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class GetDailyTermUseCase(private val repo: TermRepository) {\n    suspend operator fun invoke(devOnly: Boolean): Term? =\n        repo.getTermOfTheDay(devOnly)\n}",
+    "usageNote": "နှစ်ရှည်ထိန်းသိမ်းရမည့် အဖွဲ့ကြီးပရောဂျက်များတွင် UI သို့မဟုတ် Database ပြောင်းလဲရန် လွယ်ကူစေရန် အသုံးပြုသည်။"
+  },
+  {
+    "term": "Observer Pattern",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "ဒေတာတစ်ခု ပြောင်းလဲသွားသည်နှင့် စာရင်းသွင်းစောင့်ကြည့်နေသော အစိတ်အပိုင်းအားလုံးထံ အလိုအလျောက် အကြောင်းကြားပေးသည့် ပုံစံဖြစ်သည်။",
+    "meaningEn": "A behavioral pattern where subscribers automatically receive updates whenever a subject state changes.",
+    "example": "Room DAO မှ Flow ပြန်ပေးခြင်းဖြင့် ဒေတာဘေ့စ်ပြောင်းသည်နှင့် BrowseScreen စာရင်းက အလိုအလျောက် Update ဖြစ်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "val flow: Flow<List<Term>> = termDao.getAll()\n// Any collector updates automatically on DB change\nflow.collect { terms -> render(terms) }",
+    "usageNote": "StateFlow နှင့် Reactive UI များတွင် ဒေတာပြောင်းလဲမှုကို မျက်နှာပြင်ပေါ် အချိန်နှင့်တပြေးညီ ထင်ဟပ်စေရန် သုံးသည်။"
+  },
+  {
+    "term": "Mocking",
+    "category": "Software Design",
+    "difficulty": "Intermediate",
+    "meaningMy": "Unit Test ရေးရာတွင် တကယ့် Network သို့မဟုတ် Database ကို မခေါ်ဘဲ ကြိုတင်သတ်မှတ်ထားသော တုံ့ပြန်ချက်ပြန်ပေးသည့် အတု Object ဖန်တီးခြင်းဖြစ်သည်။",
+    "meaningEn": "Replacing real external dependencies with controlled fake or mock objects during automated testing.",
+    "example": "အင်တာနက်မလိုဘဲ Payment API ကျသွားသည့် အခြေအနေကို စမ်းသပ်ရန် Fake Payment Client ဖြင့် Mock လုပ်စမ်းသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "class FakeTermDao(private val items: List<Term>) : TermDao {\n    override suspend fun count() = items.size\n    override suspend fun getByIndex(offset: Int) = items.getOrNull(offset)\n}",
+    "usageNote": "Test များကို အော့ဖ်လိုင်းဖြင့် မြန်မြန်ဆန်ဆန် Run နိုင်စေရန်နှင့် Error အခြေအနေများကို တမင်ဖန်တီးစမ်းသပ်ရန် သုံးသည်။"
+  },
+  {
+    "term": "YAML",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "Space အကွာအဝေး (Indentation) ဖြင့် အဆင့်ခွဲရေးသားပြီး လူဖတ်ရအလွန်လွယ်ကူသော Configuration ဖိုင်ဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "YAML Ain't Markup Language: a human-friendly, indentation-based serialization format used widely in configs.",
+    "example": "GitHub Actions၊ Docker Compose နှင့် Kubernetes ဆက်တင်ဖိုင်အများစုကို YAML ဖြင့် ရေးသားကြသည်။",
+    "codeLanguage": "yaml",
+    "codeSnippet": "app:\n  name: TechTerms\n  offline: true\n  categories:\n    - DevOps\n    - Linux & Terminal",
+    "usageNote": "CI/CD နှင့် Cloud Configuration များတွင် Comment ရေးနိုင်ပြီး JSON ထက် ဖတ်ရရှင်းလင်းသဖြင့် ကျယ်ပြန့်စွာ သုံးသည်။"
+  },
+  {
+    "term": "XML",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "အဖွင့်အပိတ် Tag များဖြင့် ဒေတာဖွဲ့စည်းပုံကို တိကျစွာ သတ်မှတ်သိမ်းဆည်းပေးသော Markup ဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "Extensible Markup Language: a structured, tag-based text format for encoding documents and configurations.",
+    "example": "Android ရှိ AndroidManifest.xml၊ strings.xml နှင့် Vector Drawable ပုံများကို XML ဖြင့် ရေးသားထားသည်။",
+    "codeLanguage": "xml",
+    "codeSnippet": "<resources>\n  <string name=\"app_name\">TechTerms</string>\n</resources>",
+    "usageNote": "Android Resource ဖိုင်များ၊ RSS Feed များနှင့် တင်းကျပ်သော Schema စစ်ဆေးမှုလိုအပ်သော Enterprise စနစ်များတွင် သုံးသည်။"
+  },
+  {
+    "term": "CSV",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "ဇယားဒေတာများကို တစ်ကြောင်းလျှင် တစ်ခုစီ ကော်မာ (,) ဖြင့် ခြားပြီး ရိုးရှင်းစွာ သိမ်းဆည်းထားသော စာသားဖိုင်ဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "Comma-Separated Values: a plain-text tabular format where each row is a line and columns are comma-delimited.",
+    "example": "Excel သို့မဟုတ် Google Sheets မှ စာရင်းများကို ဒေတာဘေ့စ်ထဲ ထည့်သွင်းရာတွင် CSV ဖိုင်ဖြင့် Export/Import လုပ်ကြသည်။",
+    "codeLanguage": "csv",
+    "codeSnippet": "term,category,difficulty\nAPI,Programming,Beginner\ngrep,Linux & Terminal,Beginner",
+    "usageNote": "ဒေတာအစုလိုက် Import/Export လုပ်ခြင်းနှင့် Data Science ခွဲခြမ်းစိတ်ဖြာမှုများတွင် အလွယ်ကူဆုံး ဇယားဖော်မတ်အဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "UUID",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "ဗဟိုဆာဗာမလိုဘဲ စက်တိုင်းတွင် တစ်ခုနှင့်တစ်ခု မထပ်နိုင်သလောက် သီးသန့်ဖြစ်အောင် ထုတ်ပေးနိုင်သော 128-bit ID နံပါတ်ဖြစ်သည်။",
+    "meaningEn": "Universally Unique Identifier: a 128-bit identifier guaranteed to be practically unique across distributed systems.",
+    "example": "အော့ဖ်လိုင်းအက်ပ်ထဲတွင် မှတ်စုအသစ်ဖန်တီးချိန် ဆာဗာနှင့် ID မတိုက်စေရန် UUID ကို သုံးကြသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "import java.util.UUID\n\nval id = UUID.randomUUID().toString()\n// e.g. \"550e8400-e29b-41d4-a716-446655440000\"",
+    "usageNote": "Distributed စနစ်များနှင့် Offline-first အက်ပ်များတွင် စက်အသီးသီးမှ မထပ်သော Primary Key များ ထုတ်ပေးရန် သုံးသည်။"
+  },
+  {
+    "term": "Base64",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "ဓာတ်ပုံ သို့မဟုတ် Binary ဒေတာများကို JSON၊ Email နှင့် URL ကဲ့သို့ စာသားသီးသန့်နေရာများတွင် ပေးပို့နိုင်အောင် ASCII စာလုံးများအဖြစ် ပြောင်းလဲပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "An encoding scheme that represents binary bytes as safe printable ASCII text characters.",
+    "example": "ပုံဖိုင်အသေးလေးတစ်ပုံကို JSON ထဲထည့်ပို့ရန် Base64 စာသားအဖြစ် ပြောင်းလဲပေးပို့နိုင်သည်။",
+    "codeLanguage": "bash",
+    "codeSnippet": "echo -n \"TechTerms\" | base64\n# Output: VGVjaFRlcm1z\necho \"VGVjaFRlcm1z\" | base64 --decode",
+    "usageNote": "Base64 သည် Encryption (လုံခြုံရေးကုဒ်ဝှက်ခြင်း) မဟုတ်ဘဲ Binary ကို စာသားပုံစံဖြင့် ဘေးကင်းစွာသယ်ပို့ရန်သာ သုံးသည်။"
+  },
+  {
+    "term": "Regex",
+    "category": "Data & Formats",
+    "difficulty": "Intermediate",
+    "meaningMy": "စာသားများထဲမှ တိကျသောပုံစံ (ဥပမာ အီးမေးလ်၊ ဖုန်းနံပါတ်) ကို ရှာဖွေစစ်ဆေးရန်နှင့် အစားထိုးရန် သုံးသော ပုံစံဖော်ပြချက်ဘာသာစကားဖြစ်သည်။",
+    "meaningEn": "Regular Expression: a concise pattern syntax used to match, validate, extract, or replace text.",
+    "example": "အသုံးပြုသူရိုက်ထည့်သော အီးမေးလ်ပုံစံ မှန်မမှန် စစ်ဆေးရာတွင် Regex Pattern ဖြင့် တိုက်ဆိုင်စစ်ဆေးသည်။",
+    "codeLanguage": "regex",
+    "codeSnippet": "// Simple email-like pattern: local@domain.tld\n^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+    "usageNote": "Form Input စစ်ဆေးခြင်း၊ Log ဖိုင်ထဲမှ ID ထုတ်ယူခြင်းနှင့် grep/sed ရှာဖွေမှုများတွင် မြန်ဆန်စွာ အသုံးချသည်။"
+  },
+  {
+    "term": "UTF-8",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "မြန်မာစာအပါအဝင် ကမ္ဘာ့ဘာသာစကားအားလုံးနှင့် Emoji များကို ဝဘ်နှင့် ဆော့ဖ်ဝဲတိုင်းတွင် မှန်ကန်စွာ ပြသသိမ်းဆည်းနိုင်သော Unicode စာလုံးကုဒ်စနစ်ဖြစ်သည်။",
+    "meaningEn": "A variable-width Unicode character encoding capable of representing every script worldwide, including Myanmar.",
+    "example": "terms.json ဖိုင်ကို UTF-8 ဖြင့် သိမ်းထားမှ မြန်မာယူနီကုဒ်စာလုံးများ မပျက်စီးဘဲ မှန်ကန်စွာပေါ်သည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "val json = assets.open(\"terms.json\")\n    .bufferedReader(Charsets.UTF_8)\n    .use { it.readText() }",
+    "usageNote": "မြန်မာစာပါသော ဖိုင်များ၊ Database နှင့် HTTP Response တိုင်းတွင် စာလုံးမပျက်စေရန် UTF-8 ကို အမြဲသတ်မှတ်သုံးရသည်။"
+  },
+  {
+    "term": "Timestamp",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "ဖြစ်ရပ်တစ်ခုဖြစ်ပွားခဲ့သည့် တိကျသော နေ့ရက်နှင့်အချိန်ကို UTC စံနှုန်း (ISO 8601 သို့မဟုတ် Unix Epoch စက္ကန့်) ဖြင့် မှတ်တမ်းတင်ထားခြင်းဖြစ်သည်။",
+    "meaningEn": "A standardized representation of a specific instant in time, such as ISO-8601 UTC or Unix epoch milliseconds.",
+    "example": "နိုင်ငံအလိုက် Timezone မလွဲစေရန် ဆာဗာတွင် UTC Timestamp ဖြင့်သိမ်းပြီး ဖုန်းပေါ်ရောက်မှ ဒေသစံတော်ချိန်ပြောင်းပြသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "val nowUtc: String = java.time.Instant.now().toString()\nval epochSec: Long = java.time.Instant.now().epochSecond\n// \"2026-11-24T15:00:00Z\"",
+    "usageNote": "Database နှင့် API များတွင် Timezone ရှုပ်ထွေးမှုမဖြစ်စေရန် အချိန်အားလုံးကို UTC Timestamp ဖြင့် သိမ်းဆည်းသည်။"
+  },
+  {
+    "term": "Hash",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "မည်သည့်အရွယ်အစားရှိ ဒေတာကိုမဆို ပုံသေအရှည်ရှိ လက်ဗွေကုဒ်တန်ဖိုးတစ်ခုအဖြစ် ပြောင်းလဲထုတ်ပေးထားသော တန်ဖိုးဖြစ်သည်။",
+    "meaningEn": "A fixed-size fingerprint value generated from input data for integrity checks, indexing, or lookups.",
+    "example": "ဖိုင်ထဲမှ စာလုံးတစ်လုံးတည်း ပြောင်းသွားလျှင်ပင် SHA-256 Hash တန်ဖိုးတစ်ခုလုံး လုံးဝပြောင်းလဲသွားသည်။",
+    "codeLanguage": "python",
+    "codeSnippet": "import hashlib\ndigest = hashlib.sha256(b\"TechTerms\").hexdigest()\nprint(digest[:16])",
+    "usageNote": "Cache Key ဖန်တီးခြင်း၊ ဖိုင်မပျက်စီးကြောင်းစစ်ခြင်းနှင့် HashMap တွင် O(1) အမြန်ရှာဖွေခြင်းတို့အတွက် အသုံးပြုသည်။"
+  },
+  {
+    "term": "TOML",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "ကဏ္ဍခေါင်းစဉ် [section] များနှင့် key = value ပုံစံဖြင့် ရှင်းလင်းစွာ ရေးသားနိုင်သော Configuration ဖိုင်ဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "Tom's Obvious Minimal Language: a clean, strongly typed configuration file format using tables and key-value pairs.",
+    "example": "Android Gradle ၏ libs.versions.toml နှင့် Rust ၏ Cargo.toml တို့တွင် Library ဗားရှင်းများကို TOML ဖြင့် စီမံသည်။",
+    "codeLanguage": "toml",
+    "codeSnippet": "[versions]\nroom = \"2.6.1\"\n\n[libraries]\nandroidx-room-ktx = { group = \"androidx.room\", name = \"room-ktx\", version.ref = \"room\" }",
+    "usageNote": "YAML လို Space အကွာအဝေးမှားမည်မစိုးရိမ်ရဘဲ Android Version Catalog နှင့် Tool ဆက်တင်များ ရေးသားရာတွင် သုံးသည်။"
+  },
+  {
+    "term": "Protocol Buffers",
+    "category": "Data & Formats",
+    "difficulty": "Advanced",
+    "meaningMy": "JSON ထက် အရွယ်အစားပိုသေးပြီး ဖတ်ရှုမှုပိုမြန်စေရန် Google မှ ဖန်တီးထားသော Binary ဒေတာဖော်မတ် (Protobuf) ဖြစ်သည်။",
+    "meaningEn": "A compact, strongly typed binary serialization format developed by Google for fast service-to-service data exchange.",
+    "example": "gRPC ဝန်ဆောင်မှုများကြား ဒေတာအမြောက်အမြားကို Bandwidth အနည်းဆုံးဖြင့် ပေးပို့ရာတွင် Protobuf ကို သုံးသည်။",
+    "codeLanguage": "protobuf",
+    "codeSnippet": "syntax = \"proto3\";\nmessage Term {\n  int32 id = 1;\n  string term = 2;\n  string category = 3;\n}",
+    "usageNote": "Microservices များကြား မြန်နှုန်းမြင့်ဆက်သွယ်ရန်နှင့် Proto DataStore တွင် Type-safe ဒေတာသိမ်းဆည်းရန် သုံးသည်။"
+  },
+  {
+    "term": "JWT",
+    "category": "Data & Formats",
+    "difficulty": "Intermediate",
+    "meaningMy": "Header၊ Payload နှင့် ဒစ်ဂျစ်တယ်လက်မှတ် (Signature) ၃ ပိုင်းပါဝင်ပြီး Login အထောက်အထားကို လုံခြုံစွာ သယ်ဆောင်ပေးသော Token ဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "JSON Web Token: a compact, signed URL-safe token used for stateless authentication and authorization.",
+    "example": "အက်ပ်က Login ဝင်ပြီးနောက် ရလာသော JWT ကို API Request တိုင်း၏ Header တွင် ထည့်ပို့ပြီး အတည်ပြုသည်။",
+    "codeLanguage": "json",
+    "codeSnippet": "// Decoded JWT payload (never store secrets inside payload)\n{\n  \"sub\": \"user_104\",\n  \"role\": \"developer\",\n  \"exp\": 1795500000\n}",
+    "usageNote": "ဆာဗာတွင် Session မသိမ်းဘဲ Stateless Authentication လုပ်ရန် သုံးပြီး Payload သည် Base64 သာဖြစ်သဖြင့် လျှို့ဝှက်ချက်မထည့်ရပါ။"
+  },
+  {
+    "term": "Markdown",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "`#`၊ `**` နှင့် `` ` `` ကဲ့သို့ ရိုးရှင်းသော သင်္ကေတများဖြင့် ခေါင်းစဉ်၊ စာလုံးမည်းနှင့် Code Block များကို အမြန်ရေးသားနိုင်သော စာသားဖော်မတ်ဖြစ်သည်။",
+    "meaningEn": "A lightweight plain-text markup syntax for formatting documentation, READMEs, and technical notes.",
+    "example": "GitHub Repository တိုင်း၏ README.md နှင့် Pull Request ရှင်းလင်းချက်များကို Markdown ဖြင့် ရေးသားကြသည်။",
+    "codeLanguage": "markdown",
+    "codeSnippet": "## Build\nRun `./gradlew assembleDebug` to build the **debug APK**.",
+    "usageNote": "ကုဒ်နှင့်အတူ Git ထဲတွင် သိမ်းထားနိုင်ပြီး Diff ကြည့်ရလွယ်သော Documentation များ ရေးသားရာတွင် စံအဖြစ် သုံးသည်။"
+  },
+  {
+    "term": "URL Encoding",
+    "category": "Data & Formats",
+    "difficulty": "Beginner",
+    "meaningMy": "URL လိပ်စာထဲတွင် Space၊ `?` နှင့် မြန်မာစာကဲ့သို့ စာလုံးများ မပျက်စီးစေရန် `%20` ကဲ့သို့ Hex ကုဒ်များအဖြစ် ပြောင်းလဲပေးခြင်းဖြစ်သည်။",
+    "meaningEn": "Percent-encoding unsafe or non-ASCII characters so they can be transmitted safely inside a URL.",
+    "example": "Query Parameter ထဲတွင် \"Git & Version Control\" ဟု ထည့်ပို့ပါက & သင်္ကေတကို %26 အဖြစ် Encode လုပ်ပေးရသည်။",
+    "codeLanguage": "kotlin",
+    "codeSnippet": "val encoded = java.net.URLEncoder.encode(\"Git & CLI\", \"UTF-8\")\n// \"Git+%26+CLI\"",
+    "usageNote": "API Query Parameter များတည်ဆောက်ရာတွင် အထူးသင်္ကေတများကြောင့် URL မပျက်စီးစေရန် အမြဲ Encode လုပ်သုံးရသည်။"
+  }
+]

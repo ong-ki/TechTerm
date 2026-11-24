@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">TechTerms</string>
+
+    <!-- Notification channel -->
+    <string name="notification_channel_name">Daily term</string>
+    <string name="notification_channel_description">Daily tech term reminders</string>
+
+    <!-- Bottom navigation & top bars -->
+    <string name="nav_home">Home</string>
+    <string name="nav_browse">Search</string>
+    <string name="screen_title_browse">Search</string>
+
+    <!-- Home screen -->
+    <string name="home_term_of_the_day">Term of the Day</string>
+    <string name="home_section_developer_snippet">Developer snippet</string>
+    <string name="home_section_notification">Notification</string>
+    <string name="home_empty_terms">No terms available yet</string>
+    <string name="home_daily_notification">Daily notification</string>
+    <string name="home_notification_time_off">%1$s · Off</string>
+    <string name="home_dev_terms_only">Developer terms only</string>
+    <string name="home_dev_terms_only_subtitle">Only pick terms with code examples</string>
+    <string name="home_permission_denied">Notification permission was denied</string>
+    <string name="dialog_time_picker_title">Notification time</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+
+    <!-- Browse / Search screen -->
+    <string name="browse_search_placeholder">Search terms, meanings, or code…</string>
+    <string name="browse_clear_search_cd">Clear search</string>
+    <string name="browse_category_all">All</string>
+    <string name="browse_filter_has_code">Has code</string>
+    <string name="browse_empty_state">No results found</string>
+    <plurals name="browse_term_count">
+        <item quantity="one">%d term</item>
+        <item quantity="other">%d terms</item>
+    </plurals>
+
+    <!-- Term detail bottom sheet -->
+    <string name="detail_section_meaning_my">Meaning (Burmese)</string>
+    <string name="detail_section_meaning_en">English meaning</string>
+    <string name="detail_section_example">Example</string>
+    <string name="detail_section_usage_note">How developers use it</string>
+    <string name="detail_copy_term_cd">Copy term</string>
+    <string name="detail_copied_cd">Copied</string>
+    <string name="detail_copy_code_cd">Copy code</string>
+    <string name="detail_copy_code_button">COPY</string>
+    <string name="detail_copied_code_button">COPIED</string>
+    <string name="detail_copied_toast">Copied</string>
+    <string name="detail_default_code_lang">code</string>
+</resources>

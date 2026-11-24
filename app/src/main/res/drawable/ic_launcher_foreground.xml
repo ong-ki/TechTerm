@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Minimalist terminal prompt ">_" glyph centered inside 72dp adaptive safe zone -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M34,40L49,54L34,68"
+        android:strokeWidth="6.5"
+        android:strokeColor="#3F51B5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M56,68L74,68"
+        android:strokeWidth="6.5"
+        android:strokeColor="#3F51B5"
+        android:strokeLineCap="round" />
+</vector>
