@@ -75,7 +75,7 @@ app/src/main/
 ## Download & Installation
 
 1. Open the [**Latest GitHub Release**](https://github.com/ong-ki/TechTerm/releases/latest) page.
-2. Download the attached `.apk` file (`app-release-unsigned.apk` or signed release APK) on your Android device (Android 8.0 / API 26+).
+2. Download the attached signed [`app-release.apk`](https://github.com/ong-ki/TechTerm/releases/latest) file on your Android device (Android 8.0 / API 26+).
 3. Allow installation from your browser/file manager if prompted, then install and open **TechTerms**.
 
 ---
