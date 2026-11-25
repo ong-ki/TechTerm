@@ -9,6 +9,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -19,6 +20,8 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.techterms.app.notification.helper.NotificationHelper
 import com.techterms.app.ui.navigation.TechTermsNavGraph
+import com.techterms.app.data.datastore.ThemeMode
+import com.techterms.app.ui.theme.PaperGrain
 import com.techterms.app.ui.theme.TechTermsTheme
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -39,7 +42,14 @@ class MainActivity : ComponentActivity() {
             ?: AppContainer(application)
 
         setContent {
-            val darkTheme = isSystemInDarkTheme()
+            val themeMode by container.settingsDataStore.themeModeFlow
+                .collectAsStateWithLifecycle(initialValue = ThemeMode.SYSTEM)
+            val systemDark = isSystemInDarkTheme()
+            val darkTheme = when (themeMode) {
+                ThemeMode.DARK -> true
+                ThemeMode.LIGHT, ThemeMode.PAPER -> false
+                ThemeMode.SYSTEM -> systemDark
+            }
             val pendingTermId by deepLinkTermId.collectAsStateWithLifecycle()
 
             DisposableEffect(darkTheme) {
@@ -58,16 +68,21 @@ class MainActivity : ComponentActivity() {
                 onDispose {}
             }
 
-            TechTermsTheme(darkTheme = darkTheme) {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    TechTermsNavGraph(
-                        container = container,
-                        deepLinkTermId = pendingTermId,
-                        onDeepLinkConsumed = { deepLinkTermId.value = null }
-                    )
+            TechTermsTheme(darkTheme = darkTheme, paper = themeMode == ThemeMode.PAPER) {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.background
+                    ) {
+                        TechTermsNavGraph(
+                            container = container,
+                            deepLinkTermId = pendingTermId,
+                            onDeepLinkConsumed = { deepLinkTermId.value = null }
+                        )
+                    }
+                    if (themeMode == ThemeMode.PAPER) {
+                        PaperGrain()
+                    }
                 }
             }
         }

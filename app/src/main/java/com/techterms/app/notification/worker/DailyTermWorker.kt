@@ -20,21 +20,23 @@ class DailyTermWorker(
             return Result.success()
         }
 
-        val termOfTheDay = app.container.termRepository.getTermOfTheDay(
-            devTermsOnly = settings.devTermsOnly
-        )
-        if (termOfTheDay != null) {
-            NotificationHelper.showDailyTermNotification(applicationContext, termOfTheDay)
+        try {
+            val termOfTheDay = app.container.termRepository.getTermOfTheDay(
+                devTermsOnly = settings.devTermsOnly
+            )
+            if (termOfTheDay != null) {
+                NotificationHelper.showDailyTermNotification(applicationContext, termOfTheDay)
+            }
+        } finally {
+            // Always reschedule so a failure above can't break the daily chain.
+            NotificationScheduler.schedule(
+                context = applicationContext,
+                hour = settings.hour,
+                minute = settings.minute,
+                policy = ExistingWorkPolicy.REPLACE,
+                forceNextDay = true
+            )
         }
-
-        // Reschedule for the next day at the user's chosen time.
-        NotificationScheduler.schedule(
-            context = applicationContext,
-            hour = settings.hour,
-            minute = settings.minute,
-            policy = ExistingWorkPolicy.REPLACE,
-            forceNextDay = true
-        )
 
         return Result.success()
     }

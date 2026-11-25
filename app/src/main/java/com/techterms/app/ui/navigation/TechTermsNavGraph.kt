@@ -11,9 +11,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -49,9 +49,11 @@ import com.techterms.app.ui.browse.BrowseViewModel
 import com.techterms.app.ui.detail.TermDetailBottomSheet
 import com.techterms.app.ui.home.HomeScreen
 import com.techterms.app.ui.home.HomeViewModel
+import com.techterms.app.ui.settings.SettingsScreen
 import kotlinx.coroutines.CancellationException
 
 private const val TAG = "TechTerms"
+private const val ROUTE_BROWSE = "browse"
 
 private enum class TopLevelDestination(
     val route: String,
@@ -60,7 +62,7 @@ private enum class TopLevelDestination(
     val selectedIcon: ImageVector
 ) {
     HOME("home", R.string.nav_home, Icons.Outlined.Home, Icons.Filled.Home),
-    BROWSE("browse", R.string.nav_browse, Icons.Outlined.Search, Icons.Filled.Search)
+    SETTINGS("settings", R.string.nav_settings, Icons.Outlined.Settings, Icons.Filled.Settings)
 }
 
 @Composable
@@ -117,61 +119,64 @@ fun TechTermsNavGraph(
 
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
+    val showBottomBar = currentRoute != ROUTE_BROWSE
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
-            Column {
-                HorizontalDivider(
-                    thickness = 0.5.dp,
-                    color = MaterialTheme.colorScheme.outlineVariant
-                )
-                NavigationBar(
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    tonalElevation = 0.dp
-                ) {
-                    TopLevelDestination.entries.forEach { destination ->
-                        val selected = currentRoute == destination.route
-                        val label = stringResource(destination.labelRes)
-                        NavigationBarItem(
-                            selected = selected,
-                            onClick = {
-                                if (!selected) {
-                                    navController.navigate(destination.route) {
-                                        popUpTo(navController.graph.findStartDestination().id) {
-                                            saveState = true
+            if (showBottomBar) {
+                Column {
+                    HorizontalDivider(
+                        thickness = 0.5.dp,
+                        color = MaterialTheme.colorScheme.outlineVariant
+                    )
+                    NavigationBar(
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        tonalElevation = 0.dp
+                    ) {
+                        TopLevelDestination.entries.forEach { destination ->
+                            val selected = currentRoute == destination.route
+                            val label = stringResource(destination.labelRes)
+                            NavigationBarItem(
+                                selected = selected,
+                                onClick = {
+                                    if (!selected) {
+                                        navController.navigate(destination.route) {
+                                            popUpTo(navController.graph.findStartDestination().id) {
+                                                saveState = true
+                                            }
+                                            launchSingleTop = true
+                                            restoreState = true
                                         }
-                                        launchSingleTop = true
-                                        restoreState = true
                                     }
-                                }
-                            },
-                            icon = {
-                                Icon(
-                                    imageVector = if (selected) {
-                                        destination.selectedIcon
-                                    } else {
-                                        destination.unselectedIcon
-                                    },
-                                    contentDescription = label
+                                },
+                                icon = {
+                                    Icon(
+                                        imageVector = if (selected) {
+                                            destination.selectedIcon
+                                        } else {
+                                            destination.unselectedIcon
+                                        },
+                                        contentDescription = label
+                                    )
+                                },
+                                label = {
+                                    Text(
+                                        text = label,
+                                        style = MaterialTheme.typography.labelMedium
+                                    )
+                                },
+                                colors = NavigationBarItemDefaults.colors(
+                                    selectedIconColor = MaterialTheme.colorScheme.primary,
+                                    selectedTextColor = MaterialTheme.colorScheme.primary,
+                                    unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    indicatorColor = Color.Transparent
                                 )
-                            },
-                            label = {
-                                Text(
-                                    text = label,
-                                    style = MaterialTheme.typography.labelMedium
-                                )
-                            },
-                            colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = MaterialTheme.colorScheme.primary,
-                                selectedTextColor = MaterialTheme.colorScheme.primary,
-                                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                                indicatorColor = Color.Transparent
                             )
-                        )
+                        }
                     }
                 }
             }
@@ -191,13 +196,27 @@ fun TechTermsNavGraph(
             composable(TopLevelDestination.HOME.route) {
                 HomeScreen(
                     viewModel = homeViewModel,
-                    onTermClick = { term -> selectedTermId = term.id }
+                    onTermClick = { term -> selectedTermId = term.id },
+                    onBrowse = { request ->
+                        browseViewModel.applyFilter(
+                            category = request.category,
+                            difficulty = request.difficulty,
+                            devOnly = request.devOnly
+                        )
+                        navController.navigate(ROUTE_BROWSE) {
+                            launchSingleTop = true
+                        }
+                    }
                 )
             }
-            composable(TopLevelDestination.BROWSE.route) {
+            composable(TopLevelDestination.SETTINGS.route) {
+                SettingsScreen(viewModel = homeViewModel)
+            }
+            composable(ROUTE_BROWSE) {
                 BrowseScreen(
                     viewModel = browseViewModel,
-                    onTermClick = { term -> selectedTermId = term.id }
+                    onTermClick = { term -> selectedTermId = term.id },
+                    onBack = { navController.popBackStack() }
                 )
             }
         }

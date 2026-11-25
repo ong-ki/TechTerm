@@ -9,6 +9,8 @@ import com.techterms.app.data.db.TermSeedDto
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -30,10 +32,14 @@ class TermRepository(
     @Volatile
     private var isSeedChecked = false
 
+    private val _seedFailed = MutableStateFlow(false)
+    /** True when seeding from assets failed this launch; retried on next launch. */
+    val seedFailed: StateFlow<Boolean> = _seedFailed
+
     suspend fun ensurePopulated() {
-        if (isSeedChecked) return
+        if (isSeedChecked || _seedFailed.value) return
         seedMutex.withLock {
-            if (isSeedChecked) return
+            if (isSeedChecked || _seedFailed.value) return
             withContext(Dispatchers.IO) {
                 try {
                     val existingCount = termDao.count()
@@ -57,13 +63,14 @@ class TermRepository(
                         }
                     }
                     isSeedChecked = true
+                    _seedFailed.value = false
                 } catch (e: CancellationException) {
                     throw e
                 } catch (e: Exception) {
                     Log.e(TAG, "Failed to populate database from $TERMS_ASSET_FILE", e)
-                    // Mark checked to prevent infinite retry loops during this launch;
-                    // callers fall back to an empty state safely.
-                    isSeedChecked = true
+                    // Don't mark as checked: seeding is retried on the next launch.
+                    // Avoid retry loops within this launch via the failure flag.
+                    _seedFailed.value = true
                 }
             }
         }
@@ -71,11 +78,17 @@ class TermRepository(
 
     fun getAllTerms(): Flow<List<Term>> = termDao.getAll()
 
-    fun searchTerms(query: String, category: String?, devOnly: Boolean = false): Flow<List<Term>> {
+    fun searchTerms(
+        query: String,
+        category: String?,
+        devOnly: Boolean = false,
+        difficulty: String? = null
+    ): Flow<List<Term>> {
         return termDao.search(
             query = query.trim(),
             category = category,
-            devOnly = devOnly
+            devOnly = devOnly,
+            difficulty = difficulty
         )
     }
 
@@ -125,22 +138,20 @@ class TermRepository(
     }
 
     private fun loadTermsFromAssets(): List<Term> {
-        return try {
+        return run {
             val rawJson = context.assets.open(TERMS_ASSET_FILE)
                 .bufferedReader(Charsets.UTF_8)
                 .use { it.readText() }
             json.decodeFromString<List<TermSeedDto>>(rawJson)
                 .map { it.toEntity() }
                 .filter { it.term.isNotBlank() }
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to parse $TERMS_ASSET_FILE", e)
-            emptyList()
+                .also { if (it.isEmpty()) error("$TERMS_ASSET_FILE contained no valid terms") }
         }
     }
 
     companion object {
         private const val TAG = "TechTerms"
         private const val TERMS_ASSET_FILE = "terms.json"
-        const val CURRENT_DATA_VERSION = 2
+        const val CURRENT_DATA_VERSION = 3
     }
 }

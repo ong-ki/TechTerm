@@ -26,6 +26,7 @@ data class BrowseUiState(
     val query: String = "",
     val selectedCategory: String? = null,
     val devOnly: Boolean = false,
+    val selectedDifficulty: String? = null,
     val terms: List<Term> = emptyList(),
     val isLoading: Boolean = true
 )
@@ -33,7 +34,8 @@ data class BrowseUiState(
 private data class BrowseFilter(
     val query: String,
     val category: String?,
-    val devOnly: Boolean
+    val devOnly: Boolean,
+    val difficulty: String?
 )
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
@@ -51,19 +53,30 @@ class BrowseViewModel(
     private val devOnlyFlow: StateFlow<Boolean> =
         savedStateHandle.getStateFlow(KEY_DEV_ONLY, false)
 
+    private val selectedDifficultyFlow: StateFlow<String?> =
+        savedStateHandle.getStateFlow(KEY_DIFFICULTY, null)
+
     private val isSeedReadyFlow = MutableStateFlow(false)
 
     private val filteredTermsFlow = combine(
         queryFlow.debounce { if (it.isBlank()) 0L else 250L },
         selectedCategoryFlow,
-        devOnlyFlow
-    ) { debouncedQuery, category, devOnly ->
-        BrowseFilter(debouncedQuery, category, devOnly)
+        devOnlyFlow,
+        selectedDifficultyFlow
+    ) { debouncedQuery, category, devOnly, difficulty ->
+        BrowseFilter(debouncedQuery, category, devOnly, difficulty)
     }.flatMapLatest { filter ->
-        if (filter.query.isBlank() && filter.category == null && !filter.devOnly) {
+        if (filter.query.isBlank() && filter.category == null && !filter.devOnly &&
+            filter.difficulty == null
+        ) {
             termRepository.getAllTerms()
         } else {
-            termRepository.searchTerms(filter.query, filter.category, filter.devOnly)
+            termRepository.searchTerms(
+                filter.query,
+                filter.category,
+                filter.devOnly,
+                filter.difficulty
+            )
         }
     }.catch { e ->
         Log.e(TAG, "Failed to query terms in BrowseViewModel", e)
@@ -73,14 +86,16 @@ class BrowseViewModel(
     val uiState: StateFlow<BrowseUiState> = combine(
         queryFlow,
         selectedCategoryFlow,
-        devOnlyFlow,
+        combine(devOnlyFlow, selectedDifficultyFlow) { devOnly, difficulty -> devOnly to difficulty },
         filteredTermsFlow,
         isSeedReadyFlow
-    ) { query, category, devOnly, terms, isReady ->
+    ) { query, category, devAndDifficulty, terms, isReady ->
+        val (devOnly, difficulty) = devAndDifficulty
         BrowseUiState(
             query = query,
             selectedCategory = category,
             devOnly = devOnly,
+            selectedDifficulty = difficulty,
             terms = terms,
             isLoading = !isReady && terms.isEmpty()
         )
@@ -112,6 +127,18 @@ class BrowseViewModel(
         savedStateHandle[KEY_CATEGORY] = category
     }
 
+    fun onDifficultySelected(difficulty: String?) {
+        savedStateHandle[KEY_DIFFICULTY] = difficulty
+    }
+
+    /** Replaces all filters at once (used by Home shortcuts). */
+    fun applyFilter(category: String?, difficulty: String?, devOnly: Boolean) {
+        savedStateHandle[KEY_QUERY] = ""
+        savedStateHandle[KEY_CATEGORY] = category
+        savedStateHandle[KEY_DIFFICULTY] = difficulty
+        savedStateHandle[KEY_DEV_ONLY] = devOnly
+    }
+
     fun onDevOnlyToggle() {
         savedStateHandle[KEY_DEV_ONLY] = !devOnlyFlow.value
     }
@@ -121,6 +148,7 @@ class BrowseViewModel(
         private const val KEY_QUERY = "browse_query"
         private const val KEY_CATEGORY = "browse_category"
         private const val KEY_DEV_ONLY = "browse_dev_only"
+        private const val KEY_DIFFICULTY = "browse_difficulty"
 
         fun provideFactory(
             termRepository: TermRepository

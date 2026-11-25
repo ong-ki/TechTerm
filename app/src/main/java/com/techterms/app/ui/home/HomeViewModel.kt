@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.work.ExistingWorkPolicy
 import com.techterms.app.data.datastore.NotificationSettings
 import com.techterms.app.data.datastore.NotificationSettingsDataStore
+import com.techterms.app.data.datastore.ThemeMode
 import com.techterms.app.data.db.Term
 import com.techterms.app.data.repository.TermRepository
 import com.techterms.app.notification.helper.NotificationScheduler
@@ -30,7 +31,8 @@ data class HomeUiState(
     val notificationsEnabled: Boolean = NotificationSettings.DEFAULT_ENABLED,
     val notificationHour: Int = NotificationSettings.DEFAULT_HOUR,
     val notificationMinute: Int = NotificationSettings.DEFAULT_MINUTE,
-    val devTermsOnly: Boolean = NotificationSettings.DEFAULT_DEV_TERMS_ONLY
+    val devTermsOnly: Boolean = NotificationSettings.DEFAULT_DEV_TERMS_ONLY,
+    val seedFailed: Boolean = false
 )
 
 class HomeViewModel(
@@ -47,8 +49,9 @@ class HomeViewModel(
         isLoadingFlow,
         termOfTheDayFlow,
         snippetTermFlow,
-        settingsDataStore.settingsFlow
-    ) { isLoading, term, snippetTerm, settings ->
+        settingsDataStore.settingsFlow,
+        termRepository.seedFailed
+    ) { isLoading, term, snippetTerm, settings, seedFailed ->
         HomeUiState(
             isLoading = isLoading,
             termOfTheDay = term,
@@ -56,13 +59,43 @@ class HomeViewModel(
             notificationsEnabled = settings.enabled,
             notificationHour = settings.hour,
             notificationMinute = settings.minute,
-            devTermsOnly = settings.devTermsOnly
+            devTermsOnly = settings.devTermsOnly,
+            seedFailed = seedFailed
         )
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000L),
         initialValue = HomeUiState()
     )
+
+    val themeMode: StateFlow<ThemeMode> = settingsDataStore.themeModeFlow
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000L),
+            initialValue = ThemeMode.SYSTEM
+        )
+
+    fun setThemeMode(mode: ThemeMode) {
+        viewModelScope.launch {
+            try {
+                settingsDataStore.setThemeMode(mode)
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to save theme mode", e)
+            }
+        }
+    }
+
+    val stats: StateFlow<HomeStats> = termRepository.getAllTerms()
+        .map { terms -> HomeStats.from(terms) }
+        .catch { e ->
+            Log.e(TAG, "Failed to compute home stats", e)
+            emit(HomeStats())
+        }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000L),
+            initialValue = HomeStats()
+        )
 
     init {
         viewModelScope.launch {

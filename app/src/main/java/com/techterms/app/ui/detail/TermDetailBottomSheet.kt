@@ -119,7 +119,7 @@ fun TermDetailBottomSheet(
                 Text(
                     text = term.term,
                     style = MaterialTheme.typography.headlineMedium.copy(
-                        fontFamily = if (isCodeLike) CodeMonoFontFamily else EnglishSansFontFamily
+                        fontFamily = if (isCodeLike) CodeMonoFontFamily else TechTermsThemeTokens.termFontFamily
                     ),
                     color = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.weight(1f)

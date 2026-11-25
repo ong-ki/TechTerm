@@ -59,6 +59,7 @@ object TermCategories {
         "Linux & Terminal",
         "DevOps",
         "Software Design",
-        "Data & Formats"
+        "Data & Formats",
+        "UI Design"
     )
 }

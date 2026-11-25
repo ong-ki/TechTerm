@@ -1,5 +1,6 @@
 package com.techterms.app.ui.browse
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -15,12 +16,14 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
-import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.outlined.Code
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SearchOff
@@ -40,7 +43,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -53,19 +59,32 @@ import com.techterms.app.R
 import com.techterms.app.data.db.Term
 import com.techterms.app.data.db.TermCategories
 import com.techterms.app.ui.theme.MyanmarBodyMedium
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BrowseScreen(
     viewModel: BrowseViewModel,
     onTermClick: (Term) -> Unit,
+    onBack: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val listState = rememberLazyListState()
+    val coroutineScope = rememberCoroutineScope()
+    val isScrolledDown by remember {
+        derivedStateOf {
+            listState.firstVisibleItemIndex > 0 || listState.firstVisibleItemScrollOffset > 0
+        }
+    }
+
+    BackHandler(enabled = isScrolledDown) {
+        coroutineScope.launch { listState.animateScrollToItem(0) }
+    }
 
     Scaffold(
         modifier = modifier,
-        contentWindowInsets = WindowInsets.statusBars,
+        contentWindowInsets = WindowInsets.systemBars,
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
@@ -75,9 +94,18 @@ fun BrowseScreen(
                         style = MaterialTheme.typography.titleLarge
                     )
                 },
+                navigationIcon = {
+                    IconButton(onClick = onBack) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
+                            contentDescription = stringResource(R.string.action_back)
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background,
-                    titleContentColor = MaterialTheme.colorScheme.onBackground
+                    titleContentColor = MaterialTheme.colorScheme.onBackground,
+                    navigationIconContentColor = MaterialTheme.colorScheme.onBackground
                 )
             )
         }
@@ -157,6 +185,24 @@ fun BrowseScreen(
                         label = category,
                         selected = uiState.selectedCategory == category,
                         onClick = { viewModel.onCategorySelected(category) }
+                    )
+                }
+            }
+
+            uiState.selectedDifficulty?.let { difficulty ->
+                Row(modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)) {
+                    FilterChip(
+                        selected = true,
+                        onClick = { viewModel.onDifficultySelected(null) },
+                        shape = MaterialTheme.shapes.small,
+                        label = { Text(text = difficulty, style = MaterialTheme.typography.labelMedium) },
+                        trailingIcon = {
+                            Icon(
+                                imageVector = Icons.Rounded.Close,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp)
+                            )
+                        }
                     )
                 }
             }
@@ -256,6 +302,7 @@ fun BrowseScreen(
 
                 else -> {
                     LazyColumn(
+                        state = listState,
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(bottom = 16.dp)
                     ) {

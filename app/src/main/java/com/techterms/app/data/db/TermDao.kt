@@ -16,6 +16,7 @@ interface TermDao {
         """
         SELECT * FROM terms
         WHERE (:category IS NULL OR category = :category)
+          AND (:difficulty IS NULL OR difficulty = :difficulty)
           AND (:devOnly = 0 OR (codeSnippet IS NOT NULL AND codeSnippet != ''))
           AND (
             :query = ''
@@ -27,7 +28,12 @@ interface TermDao {
         ORDER BY term COLLATE NOCASE ASC
         """
     )
-    fun search(query: String, category: String?, devOnly: Boolean = false): Flow<List<Term>>
+    fun search(
+        query: String,
+        category: String?,
+        devOnly: Boolean = false,
+        difficulty: String? = null
+    ): Flow<List<Term>>
 
     @Query("SELECT * FROM terms WHERE id = :id LIMIT 1")
     suspend fun getById(id: Int): Term?
