@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="docs/icon.png" width="80" height="80" alt="TechTerms — Offline Burmese Tech Dictionary App Icon" />
+</p>
+
 # TechTerms — Offline Burmese Tech Dictionary & Myanmar Programming Terms App
 
 TechTerms is a fast, 100% offline **Burmese Tech Dictionary** and **Android Tech Terms App** built with Kotlin and Jetpack Compose for Myanmar developers, students, and IT learners. Master 249+ **Myanmar programming terms** and **Computer Science dictionary Myanmar** concepts with bilingual Burmese–English explanations, syntax-highlighted code snippets, and daily learning reminders.
@@ -7,7 +11,9 @@ TechTerms is a fast, 100% offline **Burmese Tech Dictionary** and **Android Tech
   <img src="https://img.shields.io/badge/Kotlin-2.0.21-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin 2.0.21" />
   <img src="https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white" alt="Jetpack Compose Material 3" />
   <img src="https://img.shields.io/badge/Release-v1.0.1-blue" alt="Release v1.0.1" />
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="License MIT" />
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green" alt="License MIT" />
+  </a>
   <a href="https://github.com/ong-ki/TechTerm/releases/latest">
     <img src="https://img.shields.io/badge/Download-APK-orange?logo=android" alt="Download APK" />
   </a>
@@ -116,4 +122,4 @@ Contributions to expand **Myanmar IT Terminology**, improve Burmese translations
 
 ## License
 
-This project is open source and available under the **MIT License** (see `LICENSE` if included in your repository).
+This project is open source and licensed under the [**MIT License**](LICENSE).
