@@ -21,7 +21,7 @@ TechTerms is a fast, 100% offline **Burmese Tech Dictionary** and **Android Tech
 
 | Home & Category Wave Graph | Search & Filter (`249 terms`) | Term Detail & Syntax Highlighting | Settings, Themes (Paper/Dark/Light) & About |
 | :---: | :---: | :---: | :---: |
-| ![Home screen with interactive Lessons wave graph and Term of the Day](docs/screenshots/home.png) | ![Browse screen with instant search, category chips, and Has Code filter](docs/screenshots/browse.png) | ![Term detail bottom sheet with Burmese meaning, example, and syntax-highlighted bash snippet](docs/screenshots/term_detail.png) | ![Settings screen with System/Light/Paper/Dark themes, notifications, and About section](docs/screenshots/settings.png) |
+| ![Home screen with interactive Lessons wave graph and Term of the Day](docs/screenshots/home.png) | ![Browse screen with instant search, category chips, and Has Code filter](docs/screenshots/browse.png) | ![Term detail bottom sheet with Burmese meaning, example, and Kotlin code snippet](docs/screenshots/term_detail.png) | ![Settings screen with System/Light/Paper/Dark themes, notifications, and About section](docs/screenshots/settings.png) |
 
 ---
 
